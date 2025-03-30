@@ -1,0 +1,97 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#baner, #stopka
+{
+    background-color: #171616;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+#main {
+    background-color: #292727;
+    display: flex; /* Zmiana z flex na grid */
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+    gap: 40px; /* Przerwa między blokami */
+    padding: 50px 10%; /* Padding dla całej siatki */
+}
+
+.blok {
+    background-color: #171616;
+    color: white;
+    font-size: 25px;
+    width: 30%; /* Trzy bloki w rzędzie */
+    max-width: 400px;
+    min-height: 250px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+    display: inline;
+    margin: 0 100px;
+}
+
+nav ul li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background-color: #312A2A;
+    border-radius: 10px;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease-in-out;
+    z-index: 0;
+}
+
+nav ul li:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#logo {
+    background-color: #312A2A;
+    color: white;
+    border-radius: 20px;
+    font-size: 65px;
+    width: 220px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
