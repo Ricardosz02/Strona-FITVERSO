@@ -1,47 +1,28 @@
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-#baner, #stopka
-{
+html, body {
+    height: 100%; /* Zajmuje pełną wysokość */
+    display: flex;
+    flex-direction: column; /* Ustawiamy flexbox w pionie */
+}
+
+#baner {
     background-color: #171616;
     width: 100%;
     height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 20px;
     text-align: center;
     color: white;
     font-size: 30px;
-}
-
-#main {
-    background-color: #292727;
-    display: grid; /* Zmiana z flex na grid */
-    grid-template-columns: repeat(3, 1fr); /* 3 kolumny */
-    grid-template-rows: repeat(2, 1fr); /* 2 wiersze */
-    width: 100%;
-    height: 80vh;
-    gap: 60px; /* Przerwa między blokami */
-    padding: 140px; /* Padding dla całej siatki */
-}
-
-#blok1, #blok2, #blok3, #blok4, #blok5, #blok6 {
-    background-color: #171616;
-    color: white;
-    font-size: 25px;
-    height: 100%;
-    margin: auto;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px; /* Dostosowanie paddingu */
-    text-align: center;
+    margin-bottom: 0;
+    flex-shrink: 0;
 }
 
 nav ul {
@@ -94,4 +75,182 @@ nav ul li:hover::before {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#logo_sb {
+    text-align: left;
+    margin-right: auto;
+    margin-left: 20px;
+}
+
+#main {
+    flex-grow: 1;  /* To wypełnia przestrzeń dostępnego miejsca */
+    background-color: #292727;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    height: auto;  /* Zmieniamy na auto, aby dopasować do zawartości */
+    gap: 60px;
+    padding: 140px;
+}
+
+.blok1, .blok2, .blok3, .blok4, .blok5, .blok6 {
+    background-color: #171616;
+    color: white;
+    font-size: 25px;
+    height: 100%;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+#stopka {
+    background-color: #171616;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin-top: auto;  /* To przykleja stopkę do dołu */
+    flex-shrink: 0;
+}
+
+#hamburger {
+    display: none;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+#sideMenu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #171616;
+    color: white;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 50px 20px;
+}
+
+#sideMenu.show {
+    right: 0;
+}
+
+#sideMenu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sideMenu ul li {
+    margin: 20px 0;
+}
+
+#sideMenu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Responsywność */
+
+/* ------------------------- */
+/* 📱 MOBILE (≤ 767px) */
+@media (max-width: 767px) {
+
+    /* Pokazanie logo_sb w wersji mobilnej */
+    #logo_sb {
+        display: block;
+        margin-left: 0; /* Wyrównanie logo do lewej strony */
+        text-align: left; /* Dodatkowo wyrównanie tekstu lub elementów wewnątrz logo */
+        list-style: none;           /* Usuwa kropkę */
+        text-decoration: none;      /* Usuwa podkreślenie */
+        color: inherit;             /* Dziedziczy kolor tekstu */
+        outline: none;              /* Usuwa obramowanie po kliknięciu */
+    }
+
+    #main {
+        grid-template-columns: 1fr; /* 1 kolumna dla małych ekranów */
+        gap: 30px;
+        padding: 40px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    #hamburger {
+        display: block;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    #baner, #stopka {
+        font-size: 20px;
+        height: 8vh;
+    }
+
+    #sideMenu.show {
+        right: 0;
+    }
+
+}
+
+/* ------------------------- */
+/* 📱📲 TABLET (768px – 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #main {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolumny dla tabletów */
+        gap: 40px;
+        padding: 80px;
+    }
+
+    /* Pokazanie logo_sb w wersji tablet */
+    #logo_sb {
+        display: block;
+        margin-left: 0; /* Wyrównanie logo do lewej strony */
+        text-align: left; /* Dodatkowo wyrównanie tekstu lub elementów wewnątrz logo */
+        list-style: none;           /* Usuwa kropkę */
+        text-decoration: none;      /* Usuwa podkreślenie */
+        color: inherit;             /* Dziedziczy kolor tekstu */
+        outline: none;              /* Usuwa obramowanie po kliknięciu */
+    }
+
+    /* Ukrywamy standardowe menu */
+    nav ul {
+        display: none;
+    }
+
+    /* Pokazujemy hamburgera */
+    #hamburger {
+        display: block;
+        margin-left: auto;
+        font-size: 40px;
+    }
+
+    #sideMenu.show {
+        right: 0;
+    }
+
+}
+
+/* ------------------------- */
+/* 📱📲 DESKTOP (≥ 1024px) */
+@media (min-width: 1024px) {
+    #logo_sb {
+        display: none;
+    }
 }
