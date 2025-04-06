@@ -95,3 +95,140 @@ nav ul li:hover::before {
     align-items: center;
     justify-content: center;
 }
+
+/* zmiany 06.04.2025 */
+
+#logo_sb {
+    text-align: left;
+    margin-right: auto;
+    margin-left: 20px;
+}
+
+#hamburger {
+    display: none;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+#sideMenu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #171616;
+    color: white;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 50px 20px;
+}
+
+#sideMenu.show {
+    right: 0;
+}
+
+#sideMenu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sideMenu ul li {
+    margin: 20px 0;
+}
+
+#sideMenu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* 📱 MOBILE (≤ 767px) */
+@media (max-width: 767px) {
+    #logo_sb {
+        display: block;
+        margin-left: 20px;
+        font-size: 30px;
+        color: white;
+        text-decoration: none;
+    }
+
+    #hamburger {
+        display: block;
+        margin-left: auto;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    #main {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .blok {
+        width: 100%;
+    }
+}
+
+/* 📲 TABLET (768px – 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #logo_sb {
+        display: block;
+        margin-left: 20px;
+        font-size: 35px;
+        color: white;
+        text-decoration: none;
+    }
+
+    #hamburger {
+        display: block;
+        margin-left: auto;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    #main {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        padding: 40px;
+    }
+
+    .blok {
+        width: 45%;
+        min-width: 250px;
+    }
+}
+
+/* 💻 DESKTOP (≥ 1024px) */
+@media (min-width: 1024px) {
+    #logo_sb {
+        display: none;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    #main {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        padding: 50px 10%;
+    }
+
+    .blok {
+        width: 30%;
+        max-width: 400px;
+    }
+}

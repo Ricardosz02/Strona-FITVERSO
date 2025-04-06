@@ -27,7 +27,7 @@
     flex-wrap: wrap;
 }
 
-#blok1
+.blok1
 {
     background-color: #171616;
     color: white;
@@ -98,4 +98,125 @@ nav ul li:hover::before {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* zmiany 06.04.2025 */
+
+#logo_sb {
+    text-align: left;
+    margin-right: auto;
+    margin-left: 20px;
+}
+
+#hamburger {
+    display: none;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+#sideMenu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #171616;
+    color: white;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 50px 20px;
+}
+
+#sideMenu.show {
+    right: 0;
+}
+
+#sideMenu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sideMenu ul li {
+    margin: 20px 0;
+}
+
+#sideMenu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* 📱 MOBILE (max-width: 767px) */
+@media (max-width: 767px) {
+    #hamburger {
+        display: block;
+    }
+
+    #logo_sb {
+        display: block;
+        font-size: 28px;
+        margin-left: 20px;
+        color: white;
+        text-decoration: none;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .blok1 {
+        width: 90%;
+        height: auto;
+        padding: 100px 20px;
+        font-size: 24px;
+    }
+}
+
+/* 📲 TABLET (768px – 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #hamburger {
+        display: block;
+    }
+
+    #logo_sb {
+        display: block;
+        font-size: 32px;
+        margin-left: 20px;
+        color: white;
+        text-decoration: none;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .blok1 {
+        width: 80%;
+        height: auto;
+        padding: 120px;
+        font-size: 28px;
+    }
+}
+
+/* 💻 DESKTOP (min-width: 1024px) */
+@media (min-width: 1024px) {
+    #hamburger {
+        display: none;
+    }
+
+    #logo_sb {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    .blok1 {
+        width: 75%;
+        height: 50vh;
+        padding: 200px;
+        font-size: 35px;
+    }
 }
