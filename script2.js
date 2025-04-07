@@ -47,4 +47,101 @@ document.addEventListener("DOMContentLoaded", function () {
             sideMenu.classList.remove("show");
         }
     });
+
+
+    // Trenerzy personalni
+
+    const trenerzy = [
+        {
+          imie: "Miłosz",
+          nazwisko: "Hamkało",
+          staz: "5 lat",
+          specjalizacja: "trening funkcjonalny, mobilność",
+          podopieczni: "osoby po kontuzjach i sportowcy amatorzy",
+          osiagniecia: [
+            "Fizjoterapeuta reprezentacji juniorów",
+            "Certyfikat FMS (Functional Movement Screen)"
+          ]
+        },
+        {
+          imie: "Piotr",
+          nazwisko: "Hajduk",
+          staz: "10 lat",
+          specjalizacja: "kulturystyka, sylwetka",
+          podopieczni: "zawodnicy fitness i kulturyści",
+          osiagniecia: [
+            "Trener Mistrzów Polski IFBB",
+            "Wykładowca akademicki AWF"
+          ]
+        },
+        {
+          imie: "Szymon",
+          nazwisko: "Moszny",
+          staz: "4 lata",
+          specjalizacja: "trening cardio, redukcja tkanki tłuszczowej",
+          podopieczni: "osoby początkujące",
+          osiagniecia: [
+            "Autor ebooka o spalaniu tłuszczu",
+            "Certyfikat ISSA (Certified Trainer)"
+          ]
+        },
+        {
+          imie: "Marek",
+          nazwisko: "Prawdzik",
+          staz: "7 lat",
+          specjalizacja: "crossfit, siła dynamiczna",
+          podopieczni: "pasjonaci crossfitu, wojskowi",
+          osiagniecia: [
+            "3 miejsce w CrossFit Open Polska",
+            "Współpracuje z jednostkami specjalnymi"
+          ]
+        },
+        {
+          imie: "Michał",
+          nazwisko: "Radomski",
+          staz: "6 lat",
+          specjalizacja: "kalistenika, street workout",
+          podopieczni: "młodzież i miłośnicy treningu z masą ciała",
+          osiagniecia: [
+            "Twórca aplikacji mobilnej do treningu kalistenicznego",
+            "Prowadzi kanał TikTok (100k+ followersów)"
+          ]
+        },
+        {
+          imie: "Sebastian",
+          nazwisko: "Suder",
+          staz: "9 lat",
+          specjalizacja: "siła, trójbój siłowy",
+          podopieczni: "zawodnicy przygotowujący się do zawodów",
+          osiagniecia: [
+            "Rekordzista Polski w martwym ciągu (kategoria open)",
+            "Uczestnik seminariów z Edem Coanem"
+          ]
+        }
+      ];
+      
+      document.querySelectorAll('.czytaj').forEach(p => {
+        p.addEventListener('click', () => {
+          const blok = p.parentElement;
+          const id = blok.getAttribute('data-id');
+          const infoDiv = blok.querySelector('.info');
+          const trener = trenerzy[id];
+      
+          if (infoDiv.style.display === 'block') {
+            infoDiv.style.display = 'none';
+            return;
+          }
+      
+          infoDiv.innerHTML = `
+            <strong>Staż:</strong> ${trener.staz}<br>
+            <strong>Specjalizacja:</strong> ${trener.specjalizacja}<br>
+            <strong>Podopieczni:</strong> ${trener.podopieczni}<br>
+            <strong>Osiągnięcia:</strong>
+            <ul>
+              ${trener.osiagniecia.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+          `;
+          infoDiv.style.display = 'block';
+        });
+      });
 });

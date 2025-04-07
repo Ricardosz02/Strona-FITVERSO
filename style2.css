@@ -95,7 +95,7 @@ nav ul li:hover::before {
     padding: 140px;
 }
 
-.blok1, .blok2, .blok3, .blok4, .blok5, .blok6 {
+.blok {
     background-color: #171616;
     color: white;
     font-size: 25px;
@@ -163,6 +163,51 @@ nav ul li:hover::before {
     font-size: 20px;
 }
 
+/* Styl dla konkretnego bloku z data-id */
+.blok[data-id="0"] {
+    background-image: url('./Pictures/milosz.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.blok[data-id="1"] {
+    background-image: url('./Pictures/piotr.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.blok[data-id="2"] {
+    background-image: url('./Pictures/szymon.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.blok[data-id="3"] {
+    background-image: url('./Pictures/marek.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.blok[data-id="4"] {
+    background-image: url('./Pictures/michal.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.blok[data-id="5"] {
+    background-image: url('./Pictures/sebastian.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Opcjonalnie półprzezroczyste tło dla tekstu */
+.blok h1,
+.blok .czytaj {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+}
+
 /* Responsywność */
 
 /* ------------------------- */
@@ -206,6 +251,29 @@ nav ul li:hover::before {
     #sideMenu.show {
         right: 0;
     }
+
+    /* info o trenerach */
+    .blok {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 15px 0;
+        border-radius: 8px;
+      }
+      
+      .info {
+        display: none;
+        margin-top: 10px;
+        background: #f3f3f3;
+        padding: 10px;
+        border-radius: 6px;
+      }
+      
+      p.czytaj {
+        color: blue;
+        cursor: pointer;
+        font-weight: bold;
+      }
+    
 
 }
 
@@ -252,5 +320,45 @@ nav ul li:hover::before {
 @media (min-width: 1024px) {
     #logo_sb {
         display: none;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0 40px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: clamp(40px, 5vw, 100px); /* Elastyczna przerwa między pozycjami */
+        width: 100%;
+        max-width: auto;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        font-size: clamp(18px, 1.5vw, 24px); /* Elastyczny rozmiar czcionki */
+        padding: 10px 20px;
+        border-radius: 10px;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    #main {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dynamiczna liczba kolumn */
+        gap: 50px;
+        padding: 80px 100px;
+        max-width: auto;
+        margin: 0 auto;
     }
 }
