@@ -165,37 +165,37 @@ nav ul li:hover::before {
 
 /* Styl dla konkretnego bloku z data-id */
 .blok[data-id="0"] {
-    background-image: url('./Pictures/milosz.jpg');
+    background-image: url('Pictures/milosz.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .blok[data-id="1"] {
-    background-image: url('./Pictures/piotr.jpg');
+    background-image: url('Pictures/piotr.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .blok[data-id="2"] {
-    background-image: url('./Pictures/szymon.jpg');
+    background-image: url('Pictures/szymon.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .blok[data-id="3"] {
-    background-image: url('./Pictures/marek.jpg');
+    background-image: url('Pictures/marek.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .blok[data-id="4"] {
-    background-image: url('./Pictures/michal.jpg');
+    background-image: url('Pictures/michal.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .blok[data-id="5"] {
-    background-image: url('./Pictures/sebastian.jpg');
+    background-image: url('Pictures/sebastian.jpg');
     background-size: cover;
     background-position: center;
 }
