@@ -47,4 +47,81 @@ document.addEventListener("DOMContentLoaded", function () {
             sideMenu.classList.remove("show");
         }
     });
+
+    // Kalkulator BMI
+    document.getElementById("calculateBMI").addEventListener("click", function () {
+        const weight = parseFloat(document.getElementById("weight").value);
+        const height = parseFloat(document.getElementById("height").value) / 100;  // Zamieniamy na metry
+
+        if (isNaN(weight) || isNaN(height) || height <= 0 || weight <= 0) {
+            document.getElementById("bmiResult").textContent = "Wprowadź poprawne dane!";
+            return;
+        }
+
+        const bmi = weight / (height * height);
+        let result = "";
+
+        if (bmi < 18.5) {
+            result = "Niedowaga";
+        } else if (bmi < 24.9) {
+            result = "Prawidłowa waga";
+        } else if (bmi < 29.9) {
+            result = "Nadwaga";
+        } else {
+            result = "Otyłość";
+        }
+
+        document.getElementById("bmiResult").textContent = `Twoje BMI: ${bmi.toFixed(2)} (${result})`;
+    });
+
+    // Kalkulator kaloryczności
+    document.getElementById("calculateCalories").addEventListener("click", function () {
+        const age = parseInt(document.getElementById("age").value);
+        const weight = parseFloat(document.getElementById("weightK").value);
+        const height = parseFloat(document.getElementById("heightK").value);
+        const gender = document.getElementById("gender").value;
+        const activityLevel = document.getElementById("activityLevel").value;
+
+        if (isNaN(age) || isNaN(weight) || isNaN(height) || age <= 0 || weight <= 0 || height <= 0) {
+            document.getElementById("calorieResult").textContent = "Wprowadź poprawne dane!";
+            return;
+        }
+
+        // Obliczenie BMR (podstawowa przemiana materii)
+        let bmr;
+        if (gender === "male") {
+            bmr = 10 * weight + 6.25 * height - 5 * age + 5; // Dla mężczyzn
+        } else {
+            bmr = 10 * weight + 6.25 * height - 5 * age - 161; // Dla kobiet
+        }
+
+        // Współczynnik aktywności
+        let activityFactor;
+        switch (activityLevel) {
+            case "sedentary":
+                activityFactor = 1.2; // Brak aktywności
+                break;
+            case "light":
+                activityFactor = 1.375; // Lekka aktywność
+                break;
+            case "moderate":
+                activityFactor = 1.55; // Średnia aktywność
+                break;
+            case "intense":
+                activityFactor = 1.725; // Intensywna aktywność
+                break;
+        }
+
+        const maintenanceCalories = bmr * activityFactor;
+        const calorieReduction = maintenanceCalories - 500; // Redukcja o 500 kcal na dzień
+        const calorieSurplus = maintenanceCalories + 500; // Nadwyżka o 500 kcal na dzień
+
+        // Wyświetlanie wyników
+        document.getElementById("calorieResult").innerHTML = `
+            Kalorie dla utrzymania wagi: ${maintenanceCalories.toFixed(2)} kcal<br>
+            Kalorie dla redukcji wagi: ${calorieReduction.toFixed(2)} kcal<br>
+            Kalorie dla przyrostu masy: ${calorieSurplus.toFixed(2)} kcal
+        `;
+    });
+
 });

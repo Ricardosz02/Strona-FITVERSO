@@ -25,14 +25,14 @@
     width: 100%;
     height: 80vh;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.blok1
+.blok1, .blok2
 {
     background-color: #171616;
     color: white;
     font-size: 35px;
-    width: 75%;
     height: 50vh;
     margin: auto;
     position: relative;
@@ -44,7 +44,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 200px;
+    padding: 100px;
     text-align: center;
 }
 
@@ -149,6 +149,12 @@ nav ul li:hover::before {
 
 /* 📱 MOBILE (max-width: 767px) */
 @media (max-width: 767px) {
+
+    #main {
+        flex-direction: column;  /* Ustawia bloki jeden pod drugim */
+        gap: 20px; /* Odstęp między blokami */
+    }
+
     #hamburger {
         display: block;
     }
@@ -165,16 +171,22 @@ nav ul li:hover::before {
         display: none;
     }
 
-    .blok1 {
+    .blok1, .blok2 {
         width: 90%;
         height: auto;
-        padding: 100px 20px;
+        padding: 60px 20px;
         font-size: 24px;
     }
 }
 
 /* 📲 TABLET (768px – 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
+
+    #main {
+        flex-direction: row;  /* Bloki obok siebie */
+        gap: 20px;
+    }
+
     #hamburger {
         display: block;
     }
@@ -191,9 +203,8 @@ nav ul li:hover::before {
         display: none;
     }
 
-    .blok1 {
-        width: 80%;
-        height: auto;
+    .blok1, .blok2 {
+        width: 48%;
         padding: 120px;
         font-size: 28px;
     }
@@ -201,6 +212,12 @@ nav ul li:hover::before {
 
 /* 💻 DESKTOP (min-width: 1024px) */
 @media (min-width: 1024px) {
+
+    #main {
+        flex-direction: row;  /* Bloki obok siebie */
+        gap: 20px;
+    }
+
     #hamburger {
         display: none;
     }
@@ -213,8 +230,8 @@ nav ul li:hover::before {
         display: flex;
     }
 
-    .blok1 {
-        width: 75%;
+    .blok1, .blok2 {
+        width: 45%;
         height: 50vh;
         padding: 200px;
         font-size: 35px;

@@ -32,11 +32,39 @@
 
     <div id="main">
         <div class="blok1">
-            <h1>DODATKOWA PODSTRONA</h1>
+            <h2>Kalkulator BMI</h2>
+            <label for="weight">Waga (kg):</label>
+            <input type="number" id="weight" placeholder="Waga w kg">
+            <label for="height">Wzrost (cm):</label>
+            <input type="number" id="height" placeholder="Wzrost w cm">
+            <button id="calculateBMI">Oblicz BMI</button>
+            <p id="bmiResult"></p> <!-- To tu pojawi się wynik -->
+        </div>        
 
-            <p>BMI ORAZ
-                ZAPOTRZEBOWANIE KCAL</p>
+        <div class="blok2">
+            <h2>Kalkulator Kaloryczności</h2>
+            <label for="age">Wiek:</label>
+            <input type="number" id="age" placeholder="Wiek">
+            <label for="weightK">Waga (kg):</label>
+            <input type="number" id="weightK" placeholder="Waga w kg">
+            <label for="heightK">Wzrost (cm):</label>
+            <input type="number" id="heightK" placeholder="Wzrost w cm">
+            <label for="gender">Płeć:</label>
+            <select id="gender">
+                <option value="male">Mężczyzna</option>
+                <option value="female">Kobieta</option>
+            </select>
+            <label for="activityLevel">Poziom aktywności:</label>
+            <select id="activityLevel">
+                <option value="sedentary">Brak aktywności</option>
+                <option value="light">Lekka aktywność</option>
+                <option value="moderate">Średnia aktywność</option>
+                <option value="intense">Intensywna aktywność</option>
+            </select>
+            <button id="calculateCalories">Oblicz Kalorie</button>
+            <p id="calorieResult"></p> <!-- To tu pojawią się wyniki -->
         </div>
+        
     </div>
 
     <div id="stopka">
