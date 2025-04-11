@@ -47,4 +47,84 @@ document.addEventListener("DOMContentLoaded", function () {
             sideMenu.classList.remove("show");
         }
     });
+
+    // ---------------------
+    // Paginacja i filtrowanie przepisów
+    // ---------------------
+    const przepisy = [
+        { nazwa: "Kurczak z ryżem", kategoria: "obiad", kalorie: 400 },
+        { nazwa: "Owsianka z owocami", kategoria: "śniadanie", kalorie: 250 },
+        { nazwa: "Sałatka warzywna", kategoria: "kolacja", kalorie: 150 },
+        { nazwa: "Kanapka z awokado", kategoria: "śniadanie", kalorie: 300 },
+        { nazwa: "Zupa krem z dyni", kategoria: "obiad", kalorie: 180 },
+        { nazwa: "Omlet z warzywami", kategoria: "śniadanie", kalorie: 280 },
+        { nazwa: "Makaron z tuńczykiem", kategoria: "obiad", kalorie: 450 },
+        { nazwa: "Smoothie bananowe", kategoria: "deser", kalorie: 200 },
+        { nazwa: "Tosty z masłem orzechowym", kategoria: "śniadanie", kalorie: 320 },
+        { nazwa: "Kurczak z warzywami", kategoria: "obiad", kalorie: 390 },
+        { nazwa: "Pudding chia", kategoria: "deser", kalorie: 220 }
+    ];
+
+    const recipesPerPage = 4;
+    let currentPage = 1;
+    let currentSort = 'nazwa';
+    let currentFilter = '';
+
+    const przepisyContainer = document.getElementById("przepisy");
+    const paginationContainer = document.getElementById("pagination");
+    const sortSelect = document.getElementById("sortSelect");
+    const filterSelect = document.getElementById("filterSelect");
+
+    function renderRecipes() {
+        let filtered = przepisy.filter(p => !currentFilter || p.kategoria === currentFilter);
+
+        filtered.sort((a, b) => {
+            if (currentSort === 'nazwa') return a.nazwa.localeCompare(b.nazwa);
+            if (currentSort === 'kalorie') return a.kalorie - b.kalorie;
+            if (currentSort === 'kalorie_desc') return b.kalorie - a.kalorie;
+        });
+
+        const totalPages = Math.ceil(filtered.length / recipesPerPage);
+        const start = (currentPage - 1) * recipesPerPage;
+        const end = start + recipesPerPage;
+        const currentRecipes = filtered.slice(start, end);
+
+        przepisyContainer.innerHTML = '';
+        currentRecipes.forEach(p => {
+            const div = document.createElement("div");
+            div.className = "przepis";
+            div.innerHTML = `<h3>${p.nazwa}</h3><p>Kategoria: ${p.kategoria}</p><p>Kalorie: ${p.kalorie}</p>`;
+            przepisyContainer.appendChild(div);
+        });
+
+        renderPagination(totalPages);
+    }
+
+    function renderPagination(totalPages) {
+        paginationContainer.innerHTML = '';
+        for (let i = 1; i <= totalPages; i++) {
+            const btn = document.createElement("button");
+            btn.textContent = i;
+            btn.className = (i === currentPage) ? "active" : "";
+            btn.addEventListener("click", () => {
+                currentPage = i;
+                renderRecipes();
+            });
+            paginationContainer.appendChild(btn);
+        }
+    }
+
+    sortSelect.addEventListener("change", function () {
+        currentSort = this.value;
+        renderRecipes();
+    });
+
+    filterSelect.addEventListener("change", function () {
+        currentFilter = this.value;
+        currentPage = 1;
+        renderRecipes();
+    });
+
+    renderRecipes();
+
 });

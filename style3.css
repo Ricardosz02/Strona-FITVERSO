@@ -53,16 +53,6 @@
     width: fit-content;
 }
 
-.blok {
-    background-color: #171616;
-    width: 100%;
-    max-width: 1400px;
-    padding: 40px;
-    text-align: center;
-    border-radius: 10px;
-    color: white;
-}
-
 nav ul {
     list-style: none;
     padding: 0;
@@ -160,6 +150,99 @@ nav ul li:hover::before {
     font-size: 20px;
 }
 
+/* przepisy */
+
+#filters {
+    background-color: #171616;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 18px;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#filters label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#filters select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background-color: #312A2A;
+    color: white;
+}
+
+.recipe-container {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.recipe-card {
+    background-color: #171616;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.recipe-card h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.recipe-card p {
+    font-size: 16px;
+}
+
+#pagination {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.page-button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #312A2A;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.page-button.active {
+    background-color: #ff9800;
+}
+
+.page-button:hover {
+    background-color: #555;
+}
+
+.przepis {
+    background-color: #171616;
+    width: 100%;
+    max-width: 1400px;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    margin: 20px auto;
+}
+
 /* ------------------------- */
 /* 📱 MOBILE (≤ 767px) */
 @media (max-width: 767px) {
@@ -178,6 +261,9 @@ nav ul li:hover::before {
         flex-direction: column;
         gap: 30px;
         padding: 40px 20px;
+        flex-grow: 1;
+        height: auto; /* Zmiana wysokości na auto, aby dostosować do treści */
+        overflow-y: auto; /* Umożliwienie przewijania, jeśli treść jest zbyt długa */
     }
 
     nav ul {
@@ -202,13 +288,40 @@ nav ul li:hover::before {
         padding: 20px;
     }
 
-    .blok {
-        padding: 20px;
-    }
-
     #sortowanie {
         font-size: 16px;
         padding: 10px 20px;
+    }
+
+    .recipe-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .recipe-card {
+        background-color: #171616;
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Ustawienie stopki na dole strony */
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    #baner {
+        position: relative;
+    }
+
+    #stopka {
+        margin-top: auto;
     }
 }
 
@@ -248,13 +361,24 @@ nav ul li:hover::before {
         padding: 30px;
     }
 
-    .blok {
-        padding: 30px;
-    }
-
     #sortowanie {
         font-size: 17px;
         padding: 12px 25px;
+    }
+
+    .recipe-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .recipe-card {
+        background-color: #171616;
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+        flex: 1;
+        max-width: 300px;
     }
 }
 
@@ -271,5 +395,38 @@ nav ul li:hover::before {
 
     nav ul {
         display: flex;
+    }
+
+    .recipe-container {
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .recipe-card {
+        display: table-row;
+        background-color: transparent;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .recipe-card > * {
+        display: table-cell;
+        padding: 15px;
+        background-color: #171616;
+        border: 1px solid #312A2A;
+    }
+
+    .recipe-header {
+        display: table-row;
+        font-weight: bold;
+        background-color: #312A2A;
+        color: white;
+    }
+
+    .recipe-header > * {
+        display: table-cell;
+        padding: 15px;
+        border: 1px solid #312A2A;
     }
 }
