@@ -27,19 +27,24 @@ html, body {
     flex-shrink: 0;
 }
 
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 nav ul {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    align-items: center;
     list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    align-items: center;
+    gap: 100px;
 }
 
 nav ul li {
-    position: relative;
-    display: inline;
-    margin: 0 100px;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li a {
@@ -49,34 +54,45 @@ nav ul li a {
     font-weight: bold;
 }
 
-nav ul li::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 150%;
-    height: 150%;
+.nav-button {
     background-color: #312A2A;
-    border-radius: 10px;
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.3s ease-in-out;
-    z-index: 0;
+    color: white;
+    border-radius: 20px;
+    font-size: 25px;
+    padding: 15px 30px;
+    display: inline-block;
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
-nav ul li:hover::before {
-    transform: translate(-50%, -50%) scale(1);
+.nav-button:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 #logo {
     background-color: #312A2A;
-    color: white;
+    width: 200px;
+    height: 100px;
     border-radius: 20px;
-    font-size: 65px;
-    width: 220px;
-    height: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#logo img {
+    width: 110%; /* Dostosowanie rozmiaru obrazka do szerokości kontenera */
+    max-width: 200px; /* Ustalenie maksymalnej szerokości obrazka */
+    height: auto; /* Zachowanie proporcji obrazka */
+    width: auto; /* Zachowanie proporcji obrazka */
+    border-radius: 20px;
+}
+
+.nav-button-logo {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.nav-button-logo:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 #logo_sb {
@@ -192,7 +208,7 @@ nav ul li:hover::before {
         font-size: 40px;
         color: white;
         cursor: pointer;
-        margin-left: auto;
+        margin-left: 75%;
     }
 
     .blok {
@@ -239,6 +255,8 @@ nav ul li:hover::before {
         display: block;
         margin-left: auto;
         font-size: 40px;
+        margin-right: 0;
+        margin-left: 85%
     }
 
     #baner, #stopka {
@@ -250,6 +268,32 @@ nav ul li:hover::before {
 /* ------------------------- */
 /* 📱📲 DESKTOP (≥ 1024px) */
 @media (min-width: 1024px) {
+
+    #baner {
+        min-height: 100px; /* Minimalna wysokość banera */
+    }
+
+    .blok {
+        font-size: 2vw; /* Rozmiar czcionki zależny od szerokości okna */
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around; /* Równomierne rozstawienie elementów */
+        padding: 0;
+        gap: 5vw; /* Przerwy między elementami */
+    }
+
+    nav ul li {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        padding: 15px 30px;
+        font-size: 30px;
+    }
+
     #logo_sb {
         display: none;
     }
