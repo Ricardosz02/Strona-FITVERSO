@@ -15,7 +15,7 @@
             <ul>
                 <li><a href="trenerzy.html" class="nav-button">TRENERZY</a></li>
                 <li><a href="przepisy.html" class="nav-button">PRZEPISY</a></li>
-                <li><a href="index.html" id="logo"class="nav-button-logo"><img src="Pictures/Logo.png" alt="Logo"></a></li>
+                <li><a href="index.html" id="logo" class="nav-button-logo"><img src="Pictures/Logo.png" alt="Logo"></a></li>
                 <li><a href="cwiczenia.html" class="nav-button">ĆWICZENIA</a></li>
                 <li><a href="kalkulator.html" class="nav-button">KALKULATOR</a></li>
             </ul>
@@ -32,34 +32,59 @@
     </div>
 
     <div id="main">
-        <div class="blok">
-            <h2>Witamy na naszej stronie fitness!</h2>
-            <br><br>
-            <p>Oferujemy kompleksową pomoc w dążeniu do lepszej formy. Na naszej platformie znajdziesz trenerów personalnych, przepisy na zdrowe posiłki, plany ćwiczeń dostosowane do Twoich potrzeb oraz narzędzia do monitorowania postępów. Niezależnie od Twojego poziomu zaawansowania, mamy coś dla Ciebie!</p>
+        <div class="blok" id="blok1">
+            <div class="blok-inner">
+                <div class="blok-text">
+                    <h2>Witamy na stronie FITVERSO!</h2>
+                    <br><br>
+                    <p>Oferujemy kompleksową pomoc w dążeniu do lepszej formy. Na naszej platformie znajdziesz trenerów personalnych, przepisy na zdrowe posiłki, plany ćwiczeń dostosowane do Twoich potrzeb oraz narzędzia do monitorowania postępów. Niezależnie od Twojego poziomu zaawansowania, mamy coś dla Ciebie!</p>
+                </div>
+                <img src="Pictures/blok1.png" class="blok-image" alt="blok1">
+                </div>    
+            </div>
+
+        <div class="blok reverse" id="blok2" onclick="window.location.href='trenerzy.html'">
+            <div class="blok-inner">
+                <img src="Pictures/blok2.jpg" class="blok-image" alt="blok2">
+                <div class="blok-text">
+                    <h2>Trenerzy</h2>
+                    <br><br>
+                    <p>Znajdź idealnego trenera, który pomoże Ci osiągnąć Twoje cele fitnessowe! Na naszej stronie znajdziesz profesjonalnych trenerów personalnych, którzy oferują dostosowane plany treningowe, porady dietetyczne oraz indywidualne sesje treningowe. Sprawdź opinie, zapoznaj się z ich doświadczeniem i zarezerwuj sesję już teraz!</p>
+                </div>
+            </div>    
         </div>
 
-        <div class="blok" onclick="window.location.href='trenerzy.html'">
-            <h2>Trenerzy</h2>
-            <br><br>
-            <p>Znajdź idealnego trenera, który pomoże Ci osiągnąć Twoje cele fitnessowe! Na naszej stronie znajdziesz profesjonalnych trenerów personalnych, którzy oferują dostosowane plany treningowe, porady dietetyczne oraz indywidualne sesje treningowe. Sprawdź opinie, zapoznaj się z ich doświadczeniem i zarezerwuj sesję już teraz!</p>
+        <div class="blok" id="blok3" onclick="window.location.href='przepisy.html'">
+            <div class="blok-inner">
+                <div class="blok-text">
+                    <h2>Przepisy</h2>
+                    <br><br>
+                    <p>Zróżnicowana dieta to klucz do sukcesu w dążeniu do wymarzonej sylwetki. Na naszej stronie znajdziesz przepisy, które pomogą Ci utrzymać zdrową dietę, pełną smacznych, wartościowych posiłków. Odkryj zdrowe przepisy na każdy posiłek dnia i dostosuj je do swoich celów fitnessowych. Ciesz się pysznością każdego kęsa, jednocześnie dbając o swoją formę!</p>
+                </div>
+                <img src="Pictures/blok3.jpg" class="blok-image" alt="blok3">
+            </div>    
         </div>
 
-        <div class="blok" onclick="window.location.href='przepisy.html'">
-            <h2>Przepisy</h2>
-            <br><br>
-            <p>Zróżnicowana dieta to klucz do sukcesu w dążeniu do wymarzonej sylwetki. Na naszej stronie znajdziesz przepisy, które pomogą Ci utrzymać zdrową dietę, pełną smacznych, wartościowych posiłków. Odkryj zdrowe przepisy na każdy posiłek dnia i dostosuj je do swoich celów fitnessowych. Ciesz się pysznością każdego kęsa, jednocześnie dbając o swoją formę!</p>
+        <div class="blok reverse" id="blok4" onclick="window.location.href='cwiczenia.html'">
+            <div class="blok-inner">
+                <img src="Pictures/blok4.jpg" class="blok-image" alt="blok4">
+                <div class="blok-text">
+                    <h2>Ćwiczenia</h2>
+                    <br><br>
+                    <p>Niezależnie od tego, czy dopiero zaczynasz swoją przygodę z fitnessem, czy jesteś doświadczonym sportowcem, nasza sekcja ćwiczeń pomoże Ci osiągnąć Twoje cele. Oferujemy szeroką gamę ćwiczeń, które możesz dopasować do swojego poziomu zaawansowania i dostępnego sprzętu. Znajdź ćwiczenia, które najlepiej odpowiadają Twoim potrzebom, i twórz skuteczne plany treningowe, które pomogą Ci zbudować formę, którą chcesz mieć!</p>
+                </div>
+            </div>    
         </div>
 
-        <div class="blok" onclick="window.location.href='cwiczenia.html'">
-            <h2>Ćwiczenia</h2>
-            <br><br>
-            <p>Niezależnie od tego, czy dopiero zaczynasz swoją przygodę z fitnessem, czy jesteś doświadczonym sportowcem, nasza sekcja ćwiczeń pomoże Ci osiągnąć Twoje cele. Oferujemy szeroką gamę ćwiczeń, które możesz dopasować do swojego poziomu zaawansowania i dostępnego sprzętu. Znajdź ćwiczenia, które najlepiej odpowiadają Twoim potrzebom, i twórz skuteczne plany treningowe, które pomogą Ci zbudować formę, którą chcesz mieć!</p>
-        </div>
-
-        <div class="blok" onclick="window.location.href='kalkulator.html'">
-            <h2>Kalkulator BMI oraz zapotrzebowanie kaloryczne</h2>
-            <br><br>
-            <p>Nasza strona oferuje dwa zaawansowane narzędzia, które pomogą Ci w monitorowaniu swojego zdrowia i formy fizycznej: Kalkulator BMI oraz Kalkulator zapotrzebowania kalorycznego. Dzięki nim szybko i łatwo uzyskasz informacje, które pozwolą Ci lepiej dostosować swoją dietę i plan treningowy do indywidualnych potrzeb.</p>
+        <div class="blok" id="blok5" onclick="window.location.href='kalkulator.html'">
+            <div class="blok-inner">
+                <div class="blok-text">
+                    <h2>Kalkulator BMI oraz kalkulator zapotrzebowania kalorycznego</h2>
+                    <br><br>
+                    <p>Nasza strona oferuje dwa zaawansowane narzędzia, które pomogą Ci w monitorowaniu swojego zdrowia i formy fizycznej: Kalkulator BMI oraz Kalkulator zapotrzebowania kalorycznego. Dzięki nim szybko i łatwo uzyskasz informacje, które pozwolą Ci lepiej dostosować swoją dietę i plan treningowy do indywidualnych potrzeb.</p>
+                </div>
+                <img src="Pictures/blok5.jpg" class="blok-image" alt="blok5">
+            </div>    
         </div>
     </div>
 

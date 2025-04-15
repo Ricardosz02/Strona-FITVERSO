@@ -27,19 +27,13 @@ html, body {
     flex-shrink: 0;
 }
 
-nav {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
 nav ul {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    align-items: center;
     list-style: none;
     padding: 0;
-    gap: 100px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
 }
 
 nav ul li {
@@ -127,7 +121,31 @@ nav ul li a {
     padding: 300px;
     transition: box-shadow 0.3s ease-in-out;
     cursor: pointer;
+
+    overflow: hidden;
 }
+
+/* bloki z obrazkami */
+.blok-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 150px;
+}
+  
+.blok-text {
+    flex: 1;
+    text-align: left;
+}
+  
+.blok-image {
+    display: none; /* Ukryj domyślnie (tablet, mobile) */
+    width: 650px;  /* lub inna wartość, np. 250px */
+    height: auto;  /* zachowuje proporcje */
+    border-radius: 20px; /* opcjonalnie zaokrąglenie rogów */
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.6); /* Dodany cień wokół obrazka */
+}
+/* bloki koniec */
 
 #stopka {
     background-color: #171616;
@@ -184,6 +202,21 @@ nav ul li a {
     font-size: 20px;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #000000; /* tło paska */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #960303; /* kolor samego "uchwytu" */
+  }
+
+
+  
+
 /* ------------------------- */
 /* 📱 MOBILE (≤ 767px) */
 @media (max-width: 767px) {
@@ -208,7 +241,16 @@ nav ul li a {
         font-size: 40px;
         color: white;
         cursor: pointer;
-        margin-left: 75%;
+        margin-left: auto;
+    }
+
+    .blok-text {
+        text-align: center; /* Wyśrodkowanie tekstu */
+        font-size: 18px; /* Możesz dostosować rozmiar czcionki */
+        background-color: rgba(0, 0, 0, 0.7); /* Przyciemnione tło z przezroczystością */
+        padding: 20px;
+        border-radius: 20px; /* Opcjonalnie, zaokrąglone rogi */
+        box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.6);
     }
 
     .blok {
@@ -221,6 +263,47 @@ nav ul li a {
         font-size: 20px;
         height: 8vh;
     }
+
+    /* tlo blokow */
+    /* Tło dla pierwszego bloku */
+  #blok1 {
+    background-image: url('Pictures/blok1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Tło dla drugiego bloku */
+  #blok2 {
+    background-image: url('Pictures/blok2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Tło dla trzeciego bloku */
+  #blok3 {
+    background-image: url('Pictures/blok3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Tło dla czwartego bloku */
+  #blok4 {
+    background-image: url('Pictures/blok4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Tło dla piątego bloku */
+  #blok5 {
+    background-image: url('Pictures/blok5.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
 }
 
@@ -239,6 +322,15 @@ nav ul li a {
         outline: none;              /* Usuwa obramowanie po kliknięciu */
     }
 
+    .blok-text {
+        text-align: center; /* Wyśrodkowanie tekstu */
+        font-size: 25px; /* Możesz dostosować rozmiar czcionki */
+        background-color: rgba(0, 0, 0, 0.7); /* Przyciemnione tło z przezroczystością */
+        padding: 20px;
+        border-radius: 20px; /* Opcjonalnie, zaokrąglone rogi */
+        box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.6);
+    }
+
     .blok {
         font-size: 25px;
         width: 85%;
@@ -253,15 +345,54 @@ nav ul li a {
     /* Pokazujemy hamburgera */
     #hamburger {
         display: block;
-        margin-left: auto;
         font-size: 40px;
-        margin-right: 0;
-        margin-left: 85%
+        margin-left: auto;
     }
 
     #baner, #stopka {
         font-size: 24px;
     }
+
+    /* tlo blokow */
+    /* Tło dla pierwszego bloku */
+  #blok1 {
+    background-image: url('Pictures/blok1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Tło dla drugiego bloku */
+  #blok2 {
+    background-image: url('Pictures/blok2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Tło dla trzeciego bloku */
+  #blok3 {
+    background-image: url('Pictures/blok3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Tło dla czwartego bloku */
+  #blok4 {
+    background-image: url('Pictures/blok4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Tło dla piątego bloku */
+  #blok5 {
+    background-image: url('Pictures/blok5.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
 }
 
@@ -274,7 +405,28 @@ nav ul li a {
     }
 
     .blok {
-        font-size: 2vw; /* Rozmiar czcionki zależny od szerokości okna */
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        height: auto;
+        padding: 120px;
+    }
+
+    .blok h2 {
+        font-size: 2vw;
+    }
+
+    .blok p{
+        font-size: 1vw;
+    }
+
+    .blok-image {
+        display: block; /* Pokaż obrazek tylko na desktopie */
+        width: 50%;
+        max-width: 650px;
+        height: auto;
+        object-fit: contain;
     }
 
     nav ul {
@@ -297,4 +449,9 @@ nav ul li a {
     #logo_sb {
         display: none;
     }
+
+    .blok1, .blok2, .blok3, .blok4, .blok5 {
+        background-image: none; /* Brak tła na desktopie */
+      }
+
 }

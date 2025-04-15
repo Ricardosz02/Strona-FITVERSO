@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     logoImg.alt = 'Logo'; // Alternatywny tekst
 
     // Ustawienia rozmiaru obrazka
-    logoImg.style.width = '10000px'; // Ustawienie szerokości obrazka
+    logoImg.style.width = '180px'; // Ustawienie szerokości obrazka
     logoImg.style.height = 'auto'; // Automatyczna wysokość, zachowująca proporcje obrazu
     logoImg.style.maxWidth = '100%'; // Zapewnienie, że obrazek nie wyjdzie poza kontener
     logoImg.style.borderRadius = '20px'; // Zaokrąglone rogi obrazka
@@ -41,8 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const sideMenu = document.getElementById("sideMenu");
 
     if (hamburger && sideMenu) {
-        hamburger.addEventListener("click", function () {
+        hamburger.addEventListener("click", function (event) {
             sideMenu.classList.toggle("show");
+            event.stopPropagation(); // Zapobiega zamknięciu menu, gdy klikniesz hamburger
         });
     }
 
@@ -51,5 +52,20 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!sideMenu.contains(event.target) && event.target !== hamburger) {
             sideMenu.classList.remove("show");
         }
+    });
+
+    // Powolne powiększanie .blok-inner
+    document.querySelectorAll('.blok').forEach(blok => {
+        const inner = blok.querySelector('.blok-inner');
+
+        inner.style.transition = 'transform 0.6s ease';
+        
+        blok.addEventListener('mouseenter', () => {
+            inner.style.transform = 'scale(1.05)';
+        });
+    
+        blok.addEventListener('mouseleave', () => {
+            inner.style.transform = 'scale(1)';
+        });
     });
 });
