@@ -47,34 +47,47 @@ nav ul li a {
     font-weight: bold;
 }
 
-nav ul li::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 150%;
-    height: 150%;
-    background-color: #312A2A;
-    border-radius: 10px;
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.3s ease-in-out;
-    z-index: 0;
-}
-
-nav ul li:hover::before {
-    transform: translate(-50%, -50%) scale(1);
-}
-
-#logo {
+.nav-button {
     background-color: #312A2A;
     color: white;
     border-radius: 20px;
-    font-size: 65px;
-    width: 220px;
-    height: 90px;
+    font-size: 25px;
+    padding: 15px 30px;
+    display: inline-block;
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+
+
+#logo {
+    background-color: #312A2A;
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#logo img {
+    width: 110%; /* Dostosowanie rozmiaru obrazka do szerokości kontenera */
+    max-width: 200px; /* Ustalenie maksymalnej szerokości obrazka */
+    height: auto; /* Zachowanie proporcji obrazka */
+    width: auto; /* Zachowanie proporcji obrazka */
+    border-radius: 20px;
+}
+
+.nav-button-logo {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.nav-button-logo:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 #logo_sb {
@@ -88,10 +101,10 @@ nav ul li:hover::before {
     background-color: #292727;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: auto;
     width: 100%;
     height: auto;  /* Zmieniamy na auto, aby dopasować do zawartości */
-    gap: 60px;
+    gap: 20px;
     padding: 140px;
 }
 
@@ -201,12 +214,54 @@ nav ul li:hover::before {
 }
 
 /* Opcjonalnie półprzezroczyste tło dla tekstu */
-.blok h1,
-.blok .czytaj {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px;
-    border-radius: 5px;
+
+
+.info {
+    display: none; /* Ukryj domyślnie */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    text-align: left;
+
+    z-index: 10; /* Przypisanie wyższego z-index, aby element był na wierzchu */
+    position: relative; /* Upewnij się, że z-index działa */
 }
+
+
+.blok .blok-content {
+    display: flex;
+    flex-direction: column; /* Ustawienie elementów jeden pod drugim */
+    align-items: center; /* Wyrównanie do środka */
+    background-color: rgba(0, 0, 0, 0.4); /* Przezroczyste tło */
+    padding: 15px; /* Wewnętrzne marginesy */
+    border-radius: 20px; /* Zaokrąglone rogi */
+}
+
+.blok h1, .blok p {
+    margin: 0; /* Usuwa domyślne marginesy */
+}
+
+.blok p {
+    cursor: pointer; /* Dodanie wskaźnika ręki, gdy najeżdżasz na "Czytaj więcej" */
+}
+
+/* Dodatkowy styl dla div .info, jeśli chcesz, aby był ukryty początkowo */
+.blok .info {
+    display: block; /* Zawsze blok, ale kontrolujemy wysokość */
+    height: 0; /* Początkowo wysokość wynosi 0 */
+    overflow: hidden; /* Ukrywa nadmiar */
+    opacity: 0; /* Początkowo niewidoczny */
+    transition: height 0.5s ease, opacity 0.5s ease; /* Animacja dla wysokości i przezroczystości */
+}
+
+.blok .info.show {
+    opacity: 1; /* W pełni widoczny */
+    transition: opacity 0.5s ease;
+}
+
+
+
 
 /* Responsywność */
 
@@ -263,13 +318,13 @@ nav ul li:hover::before {
       .info {
         display: none;
         margin-top: 10px;
-        background: #f3f3f3;
+        background-color: rgba(0, 0, 0, 0.7);
         padding: 10px;
         border-radius: 6px;
       }
       
       p.czytaj {
-        color: blue;
+        color: white;
         cursor: pointer;
         font-weight: bold;
       }
@@ -318,6 +373,20 @@ nav ul li:hover::before {
 /* ------------------------- */
 /* 📱📲 DESKTOP (≥ 1024px) */
 @media (min-width: 1024px) {
+
+    #main {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dynamiczna liczba kolumn */
+        gap: 50px;
+        padding: 80px 100px;
+        max-width: auto;
+        margin: 0 auto;
+    }
+
+    #baner {
+        min-height: 100px; /* Minimalna wysokość banera */
+    }
+
     #logo_sb {
         display: none;
     }
@@ -354,11 +423,4 @@ nav ul li:hover::before {
         display: none;
     }
 
-    #main {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dynamiczna liczba kolumn */
-        gap: 50px;
-        padding: 80px 100px;
-        max-width: auto;
-        margin: 0 auto;
-    }
 }
