@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Pictures/LogoSq.png" type="image/png">
     <link rel="stylesheet" href="style3.css">
     <script src="script3.js"></script>
     <title>PRZEPISY</title>
@@ -12,11 +13,11 @@
         <div id="hamburger">☰</div> <!-- Tylko przycisk -->
         <nav>
             <ul>
-                <li><a href="trenerzy.html">TRENERZY</a></li>
-                <li><a href="przepisy.html">PRZEPISY</a></li>
-                <li><a href="index.html" id="logo">LOGO</a></li>
-                <li><a href="cwiczenia.html">ĆWICZENIA</a></li>
-                <li><a href="kalkulator.html">KALKULATOR</a></li>
+                <li><a href="trenerzy.html" class="nav-button">TRENERZY</a></li>
+                <li><a href="przepisy.html" class="nav-button">PRZEPISY</a></li>
+                <li><a href="index.html" id="logo" class="nav-button-logo"><img src="Pictures/Logo.png" alt="Logo"></a></li>
+                <li><a href="cwiczenia.html" class="nav-button">ĆWICZENIA</a></li>
+                <li><a href="kalkulator.html" class="nav-button">KALKULATOR</a></li>
             </ul>
         </nav>
     </div>
@@ -50,6 +51,8 @@
                     <option value="nazwa">Nazwa (A-Z)</option>
                     <option value="kalorie">Kalorie (rosnąco)</option>
                     <option value="kalorie_desc">Kalorie (malejąco)</option>
+                    <option value="czas">Czas przygotowania (rosnąco)</option>
+                    <option value="czas_desc">Czas przygotowania (malejąco)</option>
                 </select>
             </div>
 

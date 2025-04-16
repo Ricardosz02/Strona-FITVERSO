@@ -3,14 +3,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const logoSb = document.createElement('a');
     logoSb.href = 'index.html';
     logoSb.id = 'logo_sb';
-    logoSb.textContent = 'LOGO';
 
-    // Dodanie obwódki w innym kolorze oraz zaokrąglonych rogów
-    const borderColor = '#312A2A'; // Kolor obwódki i tła
-    logoSb.style.border = `3px solid ${borderColor}`; // Obwódka w wybranym kolorze
-    logoSb.style.padding = '10px'; // Dodanie odstępu wewnętrznego
-    logoSb.style.borderRadius = '15px'; // Zaokrąglone rogi
-    logoSb.style.backgroundColor = borderColor; // Tło w tym samym kolorze
+    // Tworzenie elementu img i przypisanie mu ścieżki do obrazka
+    const logoImg = document.createElement('img');
+    logoImg.src = 'Pictures/Logo.png'; // Ścieżka do obrazka
+    logoImg.alt = 'Logo'; // Alternatywny tekst
+
+    // Ustawienia rozmiaru obrazka
+    logoImg.style.width = '180px'; // Ustawienie szerokości obrazka
+    logoImg.style.height = 'auto'; // Automatyczna wysokość, zachowująca proporcje obrazu
+    logoImg.style.maxWidth = '100%'; // Zapewnienie, że obrazek nie wyjdzie poza kontener
+    logoImg.style.borderRadius = '20px'; // Zaokrąglone rogi obrazka
+
+    // Dodanie obrazka do linku logo
+    logoSb.appendChild(logoImg);
 
     // Dodanie logo do kontenera
     const baner = document.getElementById('baner');
@@ -52,17 +58,271 @@ document.addEventListener("DOMContentLoaded", function () {
     // Paginacja i filtrowanie przepisów
     // ---------------------
     const przepisy = [
-        { nazwa: "Kurczak z ryżem", kategoria: "obiad", kalorie: 400 },
-        { nazwa: "Owsianka z owocami", kategoria: "śniadanie", kalorie: 250 },
-        { nazwa: "Sałatka warzywna", kategoria: "kolacja", kalorie: 150 },
-        { nazwa: "Kanapka z awokado", kategoria: "śniadanie", kalorie: 300 },
-        { nazwa: "Zupa krem z dyni", kategoria: "obiad", kalorie: 180 },
-        { nazwa: "Omlet z warzywami", kategoria: "śniadanie", kalorie: 280 },
-        { nazwa: "Makaron z tuńczykiem", kategoria: "obiad", kalorie: 450 },
-        { nazwa: "Smoothie bananowe", kategoria: "deser", kalorie: 200 },
-        { nazwa: "Tosty z masłem orzechowym", kategoria: "śniadanie", kalorie: 320 },
-        { nazwa: "Kurczak z warzywami", kategoria: "obiad", kalorie: 390 },
-        { nazwa: "Pudding chia", kategoria: "deser", kalorie: 220 }
+        { 
+            nazwa: "Kurczak z ryżem", 
+            kategoria: "obiad", 
+            kalorie: 400, 
+            czas: "30 min", 
+            obraz: "Pictures/przepis1.jpg",
+            skladniki: [
+                "twaróg 200g",
+                "przyprawa Adobo 1 łyżka",
+                "żółte pomidorki koktajlowe 200g",
+                "dojrzałe awokado 1 sztuka",
+                "cytryna 1 sztuka",
+                "rukola 50 gramów",
+                "pieprz czarny mielony 2 szczypty",
+                "pszenne tosty kromki 8 sztuk"
+            ],
+            przygotowanie: [
+                "Awokado przekrój wzdłuż na pół. Wyjmij pestkę. Następnie łyżką wyjmij miąższ i pokrój w plastry. Skrop sokiem z cytryny.",
+                "Umyj pomidorki i przekrój na pół. Wyciśnij sok z cytryny. Umyj i osusz rukolę.",
+                "Ser twarogowy wymieszaj z przyprawą Adobo.",
+                "Posmaruj serkiem pieczywo. Na 4 kromkach połóż na wierzchu awokado, pomidorki oraz rukolą. Posyp szczyptą pieprzu oraz przyprawą Meksykańską.",
+                "Przykryj pozostałym pieczywem. Przekrój na trójkąty i podawaj."
+            ] 
+        },
+        { 
+            nazwa: "Owsianka z owocami", 
+            kategoria: "śniadanie", 
+            kalorie: 250, 
+            czas: "10 min", 
+            obraz: "Pictures/przepis1.jpg",
+            skladniki: [
+                "twaróg 200g",
+                "przyprawa Adobo 1 łyżka",
+                "żółte pomidorki koktajlowe 200g",
+                "dojrzałe awokado 1 sztuka",
+                "cytryna 1 sztuka",
+                "rukola 50 gramów",
+                "pieprz czarny mielony 2 szczypty",
+                "pszenne tosty kromki 8 sztuk"
+            ],
+            przygotowanie: [
+                "Awokado przekrój wzdłuż na pół. Wyjmij pestkę. Następnie łyżką wyjmij miąższ i pokrój w plastry. Skrop sokiem z cytryny.",
+                "Umyj pomidorki i przekrój na pół. Wyciśnij sok z cytryny. Umyj i osusz rukolę.",
+                "Ser twarogowy wymieszaj z przyprawą Adobo.",
+                "Posmaruj serkiem pieczywo. Na 4 kromkach połóż na wierzchu awokado, pomidorki oraz rukolą. Posyp szczyptą pieprzu oraz przyprawą Meksykańską.",
+                "Przykryj pozostałym pieczywem. Przekrój na trójkąty i podawaj."
+            ] 
+        },
+        { 
+            nazwa: "Sałatka warzywna", 
+            kategoria: "kolacja", 
+            kalorie: 150, 
+            czas: "20 min", 
+            obraz: "Pictures/przepis1.jpg",
+            skladniki: [
+                "twaróg 200g",
+                "przyprawa Adobo 1 łyżka",
+                "żółte pomidorki koktajlowe 200g",
+                "dojrzałe awokado 1 sztuka",
+                "cytryna 1 sztuka",
+                "rukola 50 gramów",
+                "pieprz czarny mielony 2 szczypty",
+                "pszenne tosty kromki 8 sztuk"
+            ],
+            przygotowanie: [
+                "Awokado przekrój wzdłuż na pół. Wyjmij pestkę. Następnie łyżką wyjmij miąższ i pokrój w plastry. Skrop sokiem z cytryny.",
+                "Umyj pomidorki i przekrój na pół. Wyciśnij sok z cytryny. Umyj i osusz rukolę.",
+                "Ser twarogowy wymieszaj z przyprawą Adobo.",
+                "Posmaruj serkiem pieczywo. Na 4 kromkach połóż na wierzchu awokado, pomidorki oraz rukolą. Posyp szczyptą pieprzu oraz przyprawą Meksykańską.",
+                "Przykryj pozostałym pieczywem. Przekrój na trójkąty i podawaj."
+            ] 
+        },
+        { 
+            nazwa: "Kanapka z awokado", 
+            kategoria: "śniadanie", 
+            kalorie: 300, 
+            czas: "10 min", 
+            obraz: "Pictures/przepis1.jpg",
+            skladniki: [
+                "twaróg 200g",
+                "przyprawa Adobo 1 łyżka",
+                "żółte pomidorki koktajlowe 200g",
+                "dojrzałe awokado 1 sztuka",
+                "cytryna 1 sztuka",
+                "rukola 50 gramów",
+                "pieprz czarny mielony 2 szczypty",
+                "pszenne tosty kromki 8 sztuk"
+            ],
+            przygotowanie: [
+                "Awokado przekrój wzdłuż na pół. Wyjmij pestkę. Następnie łyżką wyjmij miąższ i pokrój w plastry. Skrop sokiem z cytryny.",
+                "Umyj pomidorki i przekrój na pół. Wyciśnij sok z cytryny. Umyj i osusz rukolę.",
+                "Ser twarogowy wymieszaj z przyprawą Adobo.",
+                "Posmaruj serkiem pieczywo. Na 4 kromkach połóż na wierzchu awokado, pomidorki oraz rukolą. Posyp szczyptą pieprzu oraz przyprawą Meksykańską.",
+                "Przykryj pozostałym pieczywem. Przekrój na trójkąty i podawaj."
+            ] 
+        },
+        { 
+            nazwa: "Zupa krem z dyni", 
+            kategoria: "obiad", 
+            kalorie: 180, 
+            czas: "25 min", 
+            obraz: "Pictures/przepis1.jpg",
+            skladniki: [
+                "twaróg 200g",
+                "przyprawa Adobo 1 łyżka",
+                "żółte pomidorki koktajlowe 200g",
+                "dojrzałe awokado 1 sztuka",
+                "cytryna 1 sztuka",
+                "rukola 50 gramów",
+                "pieprz czarny mielony 2 szczypty",
+                "pszenne tosty kromki 8 sztuk"
+            ],
+            przygotowanie: [
+                "Awokado przekrój wzdłuż na pół. Wyjmij pestkę. Następnie łyżką wyjmij miąższ i pokrój w plastry. Skrop sokiem z cytryny.",
+                "Umyj pomidorki i przekrój na pół. Wyciśnij sok z cytryny. Umyj i osusz rukolę.",
+                "Ser twarogowy wymieszaj z przyprawą Adobo.",
+                "Posmaruj serkiem pieczywo. Na 4 kromkach połóż na wierzchu awokado, pomidorki oraz rukolą. Posyp szczyptą pieprzu oraz przyprawą Meksykańską.",
+                "Przykryj pozostałym pieczywem. Przekrój na trójkąty i podawaj."
+            ] 
+        },
+        { 
+            nazwa: "Omlet z warzywami", 
+            kategoria: "śniadanie", 
+            kalorie: 280, 
+            czas: "10 min", 
+            obraz: "Pictures/przepis1.jpg",
+            skladniki: [
+                "twaróg 200g",
+                "przyprawa Adobo 1 łyżka",
+                "żółte pomidorki koktajlowe 200g",
+                "dojrzałe awokado 1 sztuka",
+                "cytryna 1 sztuka",
+                "rukola 50 gramów",
+                "pieprz czarny mielony 2 szczypty",
+                "pszenne tosty kromki 8 sztuk"
+            ],
+            przygotowanie: [
+                "Awokado przekrój wzdłuż na pół. Wyjmij pestkę. Następnie łyżką wyjmij miąższ i pokrój w plastry. Skrop sokiem z cytryny.",
+                "Umyj pomidorki i przekrój na pół. Wyciśnij sok z cytryny. Umyj i osusz rukolę.",
+                "Ser twarogowy wymieszaj z przyprawą Adobo.",
+                "Posmaruj serkiem pieczywo. Na 4 kromkach połóż na wierzchu awokado, pomidorki oraz rukolą. Posyp szczyptą pieprzu oraz przyprawą Meksykańską.",
+                "Przykryj pozostałym pieczywem. Przekrój na trójkąty i podawaj."
+            ] 
+        },
+        { 
+            nazwa: "Makaron z tuńczykiem", 
+            kategoria: "obiad", 
+            kalorie: 450, 
+            czas: "20 min", 
+            obraz: "Pictures/przepis1.jpg",
+            skladniki: [
+                "twaróg 200g",
+                "przyprawa Adobo 1 łyżka",
+                "żółte pomidorki koktajlowe 200g",
+                "dojrzałe awokado 1 sztuka",
+                "cytryna 1 sztuka",
+                "rukola 50 gramów",
+                "pieprz czarny mielony 2 szczypty",
+                "pszenne tosty kromki 8 sztuk"
+            ],
+            przygotowanie: [
+                "Awokado przekrój wzdłuż na pół. Wyjmij pestkę. Następnie łyżką wyjmij miąższ i pokrój w plastry. Skrop sokiem z cytryny.",
+                "Umyj pomidorki i przekrój na pół. Wyciśnij sok z cytryny. Umyj i osusz rukolę.",
+                "Ser twarogowy wymieszaj z przyprawą Adobo.",
+                "Posmaruj serkiem pieczywo. Na 4 kromkach połóż na wierzchu awokado, pomidorki oraz rukolą. Posyp szczyptą pieprzu oraz przyprawą Meksykańską.",
+                "Przykryj pozostałym pieczywem. Przekrój na trójkąty i podawaj."
+            ] 
+        },
+        { 
+            nazwa: "Smoothie bananowe", 
+            kategoria: "deser", 
+            kalorie: 200, 
+            czas: "5 min", 
+            obraz: "Pictures/przepis1.jpg",
+            skladniki: [
+                "twaróg 200g",
+                "przyprawa Adobo 1 łyżka",
+                "żółte pomidorki koktajlowe 200g",
+                "dojrzałe awokado 1 sztuka",
+                "cytryna 1 sztuka",
+                "rukola 50 gramów",
+                "pieprz czarny mielony 2 szczypty",
+                "pszenne tosty kromki 8 sztuk"
+            ],
+            przygotowanie: [
+                "Awokado przekrój wzdłuż na pół. Wyjmij pestkę. Następnie łyżką wyjmij miąższ i pokrój w plastry. Skrop sokiem z cytryny.",
+                "Umyj pomidorki i przekrój na pół. Wyciśnij sok z cytryny. Umyj i osusz rukolę.",
+                "Ser twarogowy wymieszaj z przyprawą Adobo.",
+                "Posmaruj serkiem pieczywo. Na 4 kromkach połóż na wierzchu awokado, pomidorki oraz rukolą. Posyp szczyptą pieprzu oraz przyprawą Meksykańską.",
+                "Przykryj pozostałym pieczywem. Przekrój na trójkąty i podawaj."
+            ] 
+        },
+        { 
+            nazwa: "Tosty z masłem orzechowym", 
+            kategoria: "śniadanie", 
+            kalorie: 320, 
+            czas: "10 min", 
+            obraz: "Pictures/przepis1.jpg",
+            skladniki: [
+                "twaróg 200g",
+                "przyprawa Adobo 1 łyżka",
+                "żółte pomidorki koktajlowe 200g",
+                "dojrzałe awokado 1 sztuka",
+                "cytryna 1 sztuka",
+                "rukola 50 gramów",
+                "pieprz czarny mielony 2 szczypty",
+                "pszenne tosty kromki 8 sztuk"
+            ],
+            przygotowanie: [
+                "Awokado przekrój wzdłuż na pół. Wyjmij pestkę. Następnie łyżką wyjmij miąższ i pokrój w plastry. Skrop sokiem z cytryny.",
+                "Umyj pomidorki i przekrój na pół. Wyciśnij sok z cytryny. Umyj i osusz rukolę.",
+                "Ser twarogowy wymieszaj z przyprawą Adobo.",
+                "Posmaruj serkiem pieczywo. Na 4 kromkach połóż na wierzchu awokado, pomidorki oraz rukolą. Posyp szczyptą pieprzu oraz przyprawą Meksykańską.",
+                "Przykryj pozostałym pieczywem. Przekrój na trójkąty i podawaj."
+            ] 
+        },
+        { 
+            nazwa: "Kurczak z warzywami", 
+            kategoria: "obiad", 
+            kalorie: 390, 
+            czas: "30 min", 
+            obraz: "Pictures/przepis1.jpg",
+            skladniki: [
+                "twaróg 200g",
+                "przyprawa Adobo 1 łyżka",
+                "żółte pomidorki koktajlowe 200g",
+                "dojrzałe awokado 1 sztuka",
+                "cytryna 1 sztuka",
+                "rukola 50 gramów",
+                "pieprz czarny mielony 2 szczypty",
+                "pszenne tosty kromki 8 sztuk"
+            ],
+            przygotowanie: [
+                "Awokado przekrój wzdłuż na pół. Wyjmij pestkę. Następnie łyżką wyjmij miąższ i pokrój w plastry. Skrop sokiem z cytryny.",
+                "Umyj pomidorki i przekrój na pół. Wyciśnij sok z cytryny. Umyj i osusz rukolę.",
+                "Ser twarogowy wymieszaj z przyprawą Adobo.",
+                "Posmaruj serkiem pieczywo. Na 4 kromkach połóż na wierzchu awokado, pomidorki oraz rukolą. Posyp szczyptą pieprzu oraz przyprawą Meksykańską.",
+                "Przykryj pozostałym pieczywem. Przekrój na trójkąty i podawaj."
+            ]
+             
+        },
+        { 
+            nazwa: "Pudding chia", 
+            kategoria: "deser", 
+            kalorie: 220, 
+            czas: "15 min", 
+            obraz: "Pictures/przepis1.jpg",
+            skladniki: [
+                "twaróg 200g",
+                "przyprawa Adobo 1 łyżka",
+                "żółte pomidorki koktajlowe 200g",
+                "dojrzałe awokado 1 sztuka",
+                "cytryna 1 sztuka",
+                "rukola 50 gramów",
+                "pieprz czarny mielony 2 szczypty",
+                "pszenne tosty kromki 8 sztuk"
+            ],
+            przygotowanie: [
+                "Awokado przekrój wzdłuż na pół. Wyjmij pestkę. Następnie łyżką wyjmij miąższ i pokrój w plastry. Skrop sokiem z cytryny.",
+                "Umyj pomidorki i przekrój na pół. Wyciśnij sok z cytryny. Umyj i osusz rukolę.",
+                "Ser twarogowy wymieszaj z przyprawą Adobo.",
+                "Posmaruj serkiem pieczywo. Na 4 kromkach połóż na wierzchu awokado, pomidorki oraz rukolą. Posyp szczyptą pieprzu oraz przyprawą Meksykańską.",
+                "Przykryj pozostałym pieczywem. Przekrój na trójkąty i podawaj."
+            ] 
+        }
     ];
 
     const recipesPerPage = 4;
@@ -75,6 +335,78 @@ document.addEventListener("DOMContentLoaded", function () {
     const sortSelect = document.getElementById("sortSelect");
     const filterSelect = document.getElementById("filterSelect");
 
+
+    // Funkcja przewijająca do góry
+function scrollToTop() {
+    const scrollTargets = [
+        document.getElementById("main"),
+        document.scrollingElement,
+        document.body
+    ];
+    for (const el of scrollTargets) {
+        if (el && el.scrollTop > 0) {
+            el.scrollTo({ top: 0, behavior: 'smooth' });
+            break;
+        }
+    }
+}
+
+// Obsługa kliknięcia przycisku "Na górę"
+document.addEventListener("DOMContentLoaded", () => {
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    if (scrollBtn) {
+        scrollBtn.addEventListener("click", scrollToTop);
+    }
+});
+
+
+    function czasNaMinuty(czas) {
+        const match = czas.match(/\d+/);
+        return match ? parseInt(match[0]) : 0;
+    }
+    
+    
+    function toggleRecipeDetails(przepisDiv, przepis, button) {
+        let detailsDiv = przepisDiv.querySelector(".recipe-details");
+        if (detailsDiv) {
+            const isVisible = detailsDiv.classList.contains("visible");
+            detailsDiv.classList.toggle("visible");
+            button.textContent = isVisible ? "Pokaż szczegóły" : "Ukryj szczegóły";
+            return;
+        }
+    
+        detailsDiv = document.createElement("div");
+        detailsDiv.className = "recipe-details";
+        detailsDiv.style.opacity = "0";
+        detailsDiv.style.maxHeight = "0";
+        detailsDiv.innerHTML = `
+            <div class="details-container">
+                <div class="skladniki">
+                    <h4>Składniki:</h4>
+                    <ul>
+                        ${przepis.skladniki.map(skladnik => `<li>${skladnik}</li>`).join('')}
+                    </ul>
+                </div>
+                <div class="przygotowanie">
+                    <h4>Przygotowanie:</h4>
+                    <ol>
+                        ${przepis.przygotowanie.map(krok => `<li>${krok}</li>`).join('')}
+                    </ol>
+                </div>
+            </div>
+        `;
+        przepisDiv.querySelector(".blok2").appendChild(detailsDiv);
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                detailsDiv.classList.add("visible");
+                detailsDiv.style.opacity = "";
+                detailsDiv.style.maxHeight = "";
+            });
+        });
+        button.textContent = "Ukryj szczegóły";
+    }
+
+
     function renderRecipes() {
         let filtered = przepisy.filter(p => !currentFilter || p.kategoria === currentFilter);
 
@@ -82,6 +414,8 @@ document.addEventListener("DOMContentLoaded", function () {
             if (currentSort === 'nazwa') return a.nazwa.localeCompare(b.nazwa);
             if (currentSort === 'kalorie') return a.kalorie - b.kalorie;
             if (currentSort === 'kalorie_desc') return b.kalorie - a.kalorie;
+            if (currentSort === 'czas') return czasNaMinuty(a.czas) - czasNaMinuty(b.czas);
+            if (currentSort === 'czas_desc') return czasNaMinuty(b.czas) - czasNaMinuty(a.czas);
         });
 
         const totalPages = Math.ceil(filtered.length / recipesPerPage);
@@ -93,7 +427,23 @@ document.addEventListener("DOMContentLoaded", function () {
         currentRecipes.forEach(p => {
             const div = document.createElement("div");
             div.className = "przepis";
-            div.innerHTML = `<h3>${p.nazwa}</h3><p>Kategoria: ${p.kategoria}</p><p>Kalorie: ${p.kalorie}</p>`;
+            div.innerHTML = `
+            <div class="blok1">
+                <div class="przepis-tresc">
+                    <h3>${p.nazwa}</h3>
+                    <p>Kategoria: ${p.kategoria}</p>
+                    <p>Kalorie: ${p.kalorie}</p>
+                    <p>Czas przygotowania: ${p.czas}</p>
+                </div>
+                <div class="przepis-obraz">
+                    <img src="${p.obraz}" alt="${p.nazwa}">
+                </div>
+            </div>
+            <div class="blok2"></div>
+            <button class="details-button">Pokaż szczegóły</button>
+            `;
+            const button = div.querySelector(".details-button");
+            button.addEventListener("click", () => toggleRecipeDetails(div, p, button));
             przepisyContainer.appendChild(div);
         });
 
@@ -102,13 +452,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function renderPagination(totalPages) {
         paginationContainer.innerHTML = '';
+    
         for (let i = 1; i <= totalPages; i++) {
             const btn = document.createElement("button");
             btn.textContent = i;
-            btn.className = (i === currentPage) ? "active" : "";
+            btn.className = "pagination-button";
+            if (i === currentPage) {
+                btn.classList.add("active");
+            }
             btn.addEventListener("click", () => {
                 currentPage = i;
                 renderRecipes();
+                scrollToTop();
             });
             paginationContainer.appendChild(btn);
         }
