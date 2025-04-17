@@ -3,14 +3,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const logoSb = document.createElement('a');
     logoSb.href = 'index.html';
     logoSb.id = 'logo_sb';
-    logoSb.textContent = 'LOGO';
 
-    // Dodanie obwódki w innym kolorze oraz zaokrąglonych rogów
-    const borderColor = '#312A2A'; // Kolor obwódki i tła
-    logoSb.style.border = `3px solid ${borderColor}`; // Obwódka w wybranym kolorze
-    logoSb.style.padding = '10px'; // Dodanie odstępu wewnętrznego
-    logoSb.style.borderRadius = '15px'; // Zaokrąglone rogi
-    logoSb.style.backgroundColor = borderColor; // Tło w tym samym kolorze
+    // Tworzenie elementu img i przypisanie mu ścieżki do obrazka
+    const logoImg = document.createElement('img');
+    logoImg.src = 'Pictures/Logo.png'; // Ścieżka do obrazka
+    logoImg.alt = 'Logo'; // Alternatywny tekst
+
+    // Ustawienia rozmiaru obrazka
+    logoImg.style.width = '180px'; // Ustawienie szerokości obrazka
+    logoImg.style.height = 'auto'; // Automatyczna wysokość, zachowująca proporcje obrazu
+    logoImg.style.maxWidth = '100%'; // Zapewnienie, że obrazek nie wyjdzie poza kontener
+    logoImg.style.borderRadius = '20px'; // Zaokrąglone rogi obrazka
+
+    // Dodanie obrazka do linku logo
+    logoSb.appendChild(logoImg);
 
     // Dodanie logo do kontenera
     const baner = document.getElementById('baner');
@@ -46,5 +52,18 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!sideMenu.contains(event.target) && event.target !== hamburger) {
             sideMenu.classList.remove("show");
         }
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const bloki = document.querySelectorAll(".blok");
+    
+        bloki.forEach(blok => {
+            blok.addEventListener("click", function () {
+                const link = blok.getAttribute("data-link");
+                if (link) {
+                    window.location.href = link;
+                }
+            });
+        });
     });
 });

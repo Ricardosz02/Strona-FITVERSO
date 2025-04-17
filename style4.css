@@ -5,17 +5,19 @@
     box-sizing: border-box;
 }
 
-#baner, #stopka
-{
+#baner {
     background-color: #171616;
     width: 100%;
     height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 20px;
     text-align: center;
     color: white;
     font-size: 30px;
+    margin-bottom: 0;
+    flex-shrink: 0;
 }
 
 #main {
@@ -54,9 +56,8 @@ nav ul {
 }
 
 nav ul li {
-    position: relative;
-    display: inline;
-    margin: 0 100px;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li a {
@@ -66,34 +67,59 @@ nav ul li a {
     font-weight: bold;
 }
 
-nav ul li::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 150%;
-    height: 150%;
+.nav-button {
     background-color: #312A2A;
-    border-radius: 10px;
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.3s ease-in-out;
-    z-index: 0;
+    color: white;
+    border-radius: 20px;
+    font-size: 25px;
+    padding: 15px 30px;
+    display: inline-block;
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
-nav ul li:hover::before {
-    transform: translate(-50%, -50%) scale(1);
+.nav-button:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 #logo {
     background-color: #312A2A;
-    color: white;
+    width: 200px;
+    height: 100px;
     border-radius: 20px;
-    font-size: 65px;
-    width: 220px;
-    height: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#logo img {
+    width: 110%; /* Dostosowanie rozmiaru obrazka do szerokości kontenera */
+    max-width: 200px; /* Ustalenie maksymalnej szerokości obrazka */
+    height: auto; /* Zachowanie proporcji obrazka */
+    width: auto; /* Zachowanie proporcji obrazka */
+    border-radius: 20px;
+}
+
+.nav-button-logo {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.nav-button-logo:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+#stopka {
+    background-color: #171616;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin-top: 0;
+    flex-shrink: 0;
 }
 
 /* zmiany 06.04.2025 */
@@ -141,6 +167,40 @@ nav ul li:hover::before {
     color: white;
     text-decoration: none;
     font-size: 20px;
+}
+
+/* Ustawienie tła obrazkowego dla poszczególnych bloków */
+.blok:nth-child(1) {
+    background-image: url('Pictures/trening-silowy.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.blok:nth-child(2) {
+    background-image: url('Pictures/cardio.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.blok:nth-child(3) {
+    background-image: url('Pictures/stretching.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Opcjonalne przyciemnienie, żeby tekst był bardziej czytelny */
+.blok p {
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 50px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#main a.blok {
+    text-decoration: none;
 }
 
 /* 📱 MOBILE (≤ 767px) */
@@ -208,16 +268,31 @@ nav ul li:hover::before {
 
 /* 💻 DESKTOP (≥ 1024px) */
 @media (min-width: 1024px) {
-    #logo_sb {
-        display: none;
+
+    #baner {
+        min-height: 100px; /* Minimalna wysokość banera */
     }
 
-    #hamburger {
-        display: none;
+    .blok {
+        width: 30%;
+        max-width: 400px;
     }
 
     nav ul {
         display: flex;
+        justify-content: space-around; /* Równomierne rozstawienie elementów */
+        padding: 0;
+        gap: 5vw; /* Przerwy między elementami */
+    }
+
+    nav ul li {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        padding: 15px 30px;
+        font-size: 30px;
     }
 
     #main {
@@ -227,8 +302,11 @@ nav ul li:hover::before {
         padding: 50px 10%;
     }
 
-    .blok {
-        width: 30%;
-        max-width: 400px;
+    #logo_sb {
+        display: none;
+    }
+    
+    #hamburger {
+        display: none;
     }
 }
