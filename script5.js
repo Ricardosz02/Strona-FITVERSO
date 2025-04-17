@@ -3,14 +3,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const logoSb = document.createElement('a');
     logoSb.href = 'index.html';
     logoSb.id = 'logo_sb';
-    logoSb.textContent = 'LOGO';
 
-    // Dodanie obwódki w innym kolorze oraz zaokrąglonych rogów
-    const borderColor = '#312A2A'; // Kolor obwódki i tła
-    logoSb.style.border = `3px solid ${borderColor}`; // Obwódka w wybranym kolorze
-    logoSb.style.padding = '10px'; // Dodanie odstępu wewnętrznego
-    logoSb.style.borderRadius = '15px'; // Zaokrąglone rogi
-    logoSb.style.backgroundColor = borderColor; // Tło w tym samym kolorze
+    // Tworzenie elementu img i przypisanie mu ścieżki do obrazka
+    const logoImg = document.createElement('img');
+    logoImg.src = 'Pictures/Logo.png'; // Ścieżka do obrazka
+    logoImg.alt = 'Logo'; // Alternatywny tekst
+
+    // Ustawienia rozmiaru obrazka
+    logoImg.style.width = '180px'; // Ustawienie szerokości obrazka
+    logoImg.style.height = 'auto'; // Automatyczna wysokość, zachowująca proporcje obrazu
+    logoImg.style.maxWidth = '100%'; // Zapewnienie, że obrazek nie wyjdzie poza kontener
+    logoImg.style.borderRadius = '20px'; // Zaokrąglone rogi obrazka
+
+    // Dodanie obrazka do linku logo
+    logoSb.appendChild(logoImg);
 
     // Dodanie logo do kontenera
     const baner = document.getElementById('baner');
@@ -52,26 +58,101 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("calculateBMI").addEventListener("click", function () {
         const weight = parseFloat(document.getElementById("weight").value);
         const height = parseFloat(document.getElementById("height").value) / 100;  // Zamieniamy na metry
+        const resultElement = document.getElementById("bmiResult");
+        const infoElement = document.getElementById("bmiInfo");
+        // Wskaźnik graficzny BMI
+        const pointer = document.getElementById("bmiPointer");
+        const bar = document.getElementById("bmiBarContainer");
 
         if (isNaN(weight) || isNaN(height) || height <= 0 || weight <= 0) {
-            document.getElementById("bmiResult").textContent = "Wprowadź poprawne dane!";
+            resultElement.textContent = "Wprowadź poprawne dane!";
+            resultElement.style.color = "white";
+            infoElement.innerHTML = ""; // wyczyść opis
             return;
         }
 
         const bmi = weight / (height * height);
-        let result = "";
+        let resultText = "";
+        let color = "";
 
-        if (bmi < 18.5) {
-            result = "Niedowaga";
-        } else if (bmi < 24.9) {
-            result = "Prawidłowa waga";
-        } else if (bmi < 29.9) {
-            result = "Nadwaga";
+        if (bmi < 16.0) {
+            resultText = "Wygłodzenie";
+            color = "rgb(165, 217, 235)";
+        } else if (bmi < 17.0) {
+            resultText = "Wychudzenie";
+            color = "rgb(89, 201, 238)";
+        } else if (bmi < 18.5) {
+            resultText = "Niedowaga";
+            color = "#00BFFF";
+        } else if (bmi < 25.0) {
+            resultText = "Pożądana masa ciała";
+            color = "#32CD32";
+        } else if (bmi < 30.0) {
+            resultText = "Nadwaga";
+            color = "#FFA500";
+        } else if (bmi < 35.0) {
+            resultText = "Otyłość I stopnia";
+            color = "#FF6347";
+        } else if (bmi < 40.0) {
+            resultText = "Otyłość II stopnia";
+            color = "#FF4500";
         } else {
-            result = "Otyłość";
+            resultText = "Otyłość III stopnia";
+            color = "#8B0000";
         }
 
-        document.getElementById("bmiResult").textContent = `Twoje BMI: ${bmi.toFixed(2)} (${result})`;
+        resultElement.textContent = `Twoje BMI: ${bmi.toFixed(2)} (${resultText})`;
+        resultElement.style.color = color;
+        resultElement.classList.remove("fade-in");
+        void resultElement.offsetWidth;
+        resultElement.classList.add("fade-in");
+
+        // Zakresy BMI: 15 - 40 (dla wizualizacji)
+        const minBMI = 12;
+        const maxBMI = 45;
+        let position = 0;
+
+        if (bmi < minBMI) {
+            position = 0;
+        } else if (bmi > maxBMI) {
+            position = 100;
+        } else {
+            position = ((bmi - minBMI) / (maxBMI - minBMI)) * 100;
+        }
+
+        // Animacja wskaźnika
+        pointer.style.opacity = 0;
+        setTimeout(() => {
+            pointer.style.left = `calc(${position}% - 10px)`;
+            pointer.style.opacity = 1;
+        }, 50);
+
+        // Opis przedziałów BMI
+        infoElement.innerHTML = `
+        <div style="
+        margin-top: 10px;
+        font-size: 16px;
+        background-color: #312A2A;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        ">
+            <strong>Zakresy BMI:</strong><br>
+            <span style="color:rgb(165, 217, 235);">• Wygłodzenie:</span> BMI &lt; 16.0<br>
+            <span style="color:rgb(89, 201, 238);">• Wychudzenie:</span> 16.0 – 16.99<br>
+            <span style="color: #00BFFF;">• Niedowaga:</span> 17.0 – 18.49<br>
+            <span style="color: #32CD32;">• Pożądana masa ciała:</span> 18.5 – 24.99<br>
+            <span style="color: #FFA500;">• Nadwaga:</span> 25.0 – 29.99<br>
+            <span style="color: #FF6347;">• Otyłość I stopnia:</span> 30.0 – 34.99<br>
+            <span style="color: #FF4500;">• Otyłość II stopnia:</span> 35.0 – 39.99<br>
+            <span style="color: #8B0000;">• Otyłość III stopnia:</span> BMI ≥ 40.0
+        </div>
+    `;
+
+    infoElement.classList.remove("fade-in");   // reset animacji
+    void infoElement.offsetWidth;              // wymuszenie przeliczenia layoutu
+    infoElement.classList.add("fade-in");      // dodanie animacji
+
     });
 
     // Kalkulator kaloryczności
@@ -81,6 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const height = parseFloat(document.getElementById("heightK").value);
         const gender = document.getElementById("gender").value;
         const activityLevel = document.getElementById("activityLevel").value;
+        const calorieResultElement = document.getElementById("calorieResult");
 
         if (isNaN(age) || isNaN(weight) || isNaN(height) || age <= 0 || weight <= 0 || height <= 0) {
             document.getElementById("calorieResult").textContent = "Wprowadź poprawne dane!";
@@ -117,11 +199,23 @@ document.addEventListener("DOMContentLoaded", function () {
         const calorieSurplus = maintenanceCalories + 500; // Nadwyżka o 500 kcal na dzień
 
         // Wyświetlanie wyników
-        document.getElementById("calorieResult").innerHTML = `
+        calorieResultElement.classList.remove("fade-in");
+        void calorieResultElement.offsetWidth;
+        calorieResultElement.innerHTML = `
+        <div style="
+        margin-top: 10px;
+        font-size: 22px;
+        background-color: #312A2A;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        ">
             Kalorie dla utrzymania wagi: ${maintenanceCalories.toFixed(2)} kcal<br>
             Kalorie dla redukcji wagi: ${calorieReduction.toFixed(2)} kcal<br>
             Kalorie dla przyrostu masy: ${calorieSurplus.toFixed(2)} kcal
+        </div>
         `;
+        calorieResultElement.classList.add("fade-in");
     });
 
 });

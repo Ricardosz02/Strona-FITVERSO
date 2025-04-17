@@ -5,8 +5,62 @@
     box-sizing: border-box;
 }
 
-#baner, #stopka
+/* Cały kontener strony */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Pełna wysokość ekranu */
+}
+
+#baner {
+    background-color: #171616;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+#main
 {
+    background-color: #292727;
+    display: flex;
+    width: 100%;
+    flex: 1; /* Zajmuje resztę dostępnej przestrzeni */
+    gap: 20px;
+    padding: 20px;
+    height: 80vh;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.blok1, .blok2 {
+    background-color: #171616;
+    color: white;
+    font-size: 35px;
+    min-height: 50vh;           /* minimalna wysokość */
+    height: auto;               /* pozwala rosnąć dynamicznie */
+    overflow: visible;          /* pokazuje całą zawartość */
+    margin: auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 100px;
+    text-align: center;
+    transition: all 0.5s ease;  /* płynne rozszerzanie */
+    transform: none;            /* usuwamy translateY */
+    position: static;           /* usuwamy top/bottom */
+}
+
+#stopka {
     background-color: #171616;
     width: 100%;
     height: 10vh;
@@ -16,36 +70,8 @@
     text-align: center;
     color: white;
     font-size: 30px;
-}
-
-#main
-{
-    background-color: #292727;
-    display: flex;
-    width: 100%;
-    height: 80vh;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.blok1, .blok2
-{
-    background-color: #171616;
-    color: white;
-    font-size: 35px;
-    height: 50vh;
-    margin: auto;
-    position: relative;
-    top: 20%;
-    bottom: 20%;
-    transform: translateY(-50%);
-    border-radius: 10px;
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 100px;
-    text-align: center;
+    margin-top: auto;
+    flex-shrink: 0;
 }
 
 nav ul {
@@ -58,9 +84,8 @@ nav ul {
 }
 
 nav ul li {
-    position: relative;
-    display: inline;
-    margin: 0 100px;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li a {
@@ -70,34 +95,47 @@ nav ul li a {
     font-weight: bold;
 }
 
-nav ul li::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 150%;
-    height: 150%;
+.nav-button {
     background-color: #312A2A;
-    border-radius: 10px;
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.3s ease-in-out;
-    z-index: 0;
+    color: white;
+    border-radius: 20px;
+    font-size: 25px;
+    padding: 15px 30px;
+    display: inline-block;
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
-nav ul li:hover::before {
-    transform: translate(-50%, -50%) scale(1);
+.nav-button:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 #logo {
     background-color: #312A2A;
-    color: white;
+    width: 200px;
+    height: 100px;
     border-radius: 20px;
-    font-size: 65px;
-    width: 220px;
-    height: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#logo img {
+    width: 110%; /* Dostosowanie rozmiaru obrazka do szerokości kontenera */
+    max-width: 200px; /* Ustalenie maksymalnej szerokości obrazka */
+    height: auto; /* Zachowanie proporcji obrazka */
+    width: auto; /* Zachowanie proporcji obrazka */
+    border-radius: 20px;
+}
+
+
+
+.nav-button-logo {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.nav-button-logo:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 /* zmiany 06.04.2025 */
@@ -147,12 +185,132 @@ nav ul li:hover::before {
     font-size: 20px;
 }
 
+/* Styl wskaźnika */
+#bmiBarContainer {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    margin: 15px 0;
+}
+
+#bmiBar {
+    display: flex;
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bmiSegment {
+    height: 100%;
+}
+
+.starving { background-color: rgb(165, 217, 235); width: 12.1%; }     /* <16.0 */
+.emaciation { background-color: rgb(89, 201, 238); width: 3%; }       /* 16.0–16.99 */
+.underweight { background-color: #00BFFF; width: 4.5%; }              /* 17.0–18.49 */
+.normal { background-color: #32CD32; width: 19.7%; }                  /* 18.5–24.99 */
+.overweight { background-color: #FFA500; width: 15.1%; }              /* 25.0–29.99 */
+.obese { background-color: #FF6347; width: 15.1%; }                   /* 30.0–34.99 */
+.obese2 { background-color: #FF4500; width: 15.1%; }                  /* 35.0–39.99 */
+.obese3 { background-color: #8B0000; width: 15.2%; }                  /* 40.0+ */
+
+#bmiPointer {
+    position: absolute;
+    top: -15px; /* nad paskiem */
+    font-size: 20px;
+    color: black;
+    transition: left 0.3s ease;
+    pointer-events: none;
+    opacity: 0; /* domyślnie ukryty */
+}
+
+
+/* animacja BMI */
+.fade-in {
+    opacity: 0;
+    transform: translateY(10px); /* lekkie przesunięcie w dół */
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* tlo dla informacji w blokach */
+.form-box {
+    background-color: #312A2A;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.form-box input,
+.form-box select,
+.form-box button {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+}
+
+.form-box button {
+    background-color: #FFA500;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-box button:hover {
+    background-color: #e69500;
+}
+
+
 /* 📱 MOBILE (max-width: 767px) */
 @media (max-width: 767px) {
+    /* Cały kontener strony */
+    body {
+        display: flex;
+        flex-direction: column;
+        height: 100%; /* Zmiana z height na min-height dla lepszej kompatybilności */
+        margin: 0;
+        padding: 0;
+    }
 
     #main {
-        flex-direction: column;  /* Ustawia bloki jeden pod drugim */
-        gap: 20px; /* Odstęp między blokami */
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        flex: 1 !important; /* Wypełnia dostępną przestrzeń */
+        flex-wrap: nowrap !important;
+        padding: 20px;
+        min-height: calc(100vh - 20vh); /* Wysokość ekranu minus baner i stopka */
+    }
+
+    /* Stopka */
+    #stopka {
+        background-color: #171616;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        font-size: 30px;
+        margin-top: auto !important; /* Przypina stopkę do dołu */
+        flex-shrink: 0;
     }
 
     #hamburger {
@@ -172,7 +330,7 @@ nav ul li:hover::before {
     }
 
     .blok1, .blok2 {
-        width: 90%;
+        width: 80% !important;
         height: auto;
         padding: 60px 20px;
         font-size: 24px;
@@ -182,9 +340,23 @@ nav ul li:hover::before {
 /* 📲 TABLET (768px – 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
 
+    /* Cały kontener strony */
+    body {
+        display: flex;
+        flex-direction: column;
+        height: 100%; /* Zmiana z height na min-height dla lepszej kompatybilności */
+        margin: 0;
+        padding: 0;
+    }
+
     #main {
-        flex-direction: row;  /* Bloki obok siebie */
-        gap: 20px;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        flex: 1 !important; /* Wypełnia dostępną przestrzeń */
+        flex-wrap: nowrap !important;
+        padding: 20px;
+        min-height: calc(100vh - 20vh); /* Wysokość ekranu minus baner i stopka */
     }
 
     #hamburger {
@@ -204,18 +376,62 @@ nav ul li:hover::before {
     }
 
     .blok1, .blok2 {
-        width: 48%;
-        padding: 120px;
-        font-size: 28px;
+        width: 80% !important;
+        height: auto;
+        padding: 60px 20px;
+        font-size: 24px;
+    }
+
+    /* Stopka */
+    #stopka {
+        background-color: #171616;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        font-size: 30px;
+        margin-top: auto !important; /* Przypina stopkę do dołu */
+        flex-shrink: 0;
     }
 }
 
 /* 💻 DESKTOP (min-width: 1024px) */
 @media (min-width: 1024px) {
 
+    #baner {
+        min-height: 100px; /* Minimalna wysokość banera */
+    }
+
+    .blok1, .blok2 {
+        width: 40%;
+        height: 100%;
+        padding: 50px;
+        font-size: 40px;
+    }
+
     #main {
         flex-direction: row;  /* Bloki obok siebie */
         gap: 20px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around; /* Równomierne rozstawienie elementów */
+        padding: 0;
+        gap: 5vw; /* Przerwy między elementami */
+    }
+
+    nav ul li {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        padding: 15px 30px;
+        font-size: 30px;
     }
 
     #hamburger {
@@ -224,16 +440,5 @@ nav ul li:hover::before {
 
     #logo_sb {
         display: none;
-    }
-
-    nav ul {
-        display: flex;
-    }
-
-    .blok1, .blok2 {
-        width: 45%;
-        height: 50vh;
-        padding: 200px;
-        font-size: 35px;
     }
 }
