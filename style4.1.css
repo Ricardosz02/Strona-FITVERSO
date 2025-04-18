@@ -196,6 +196,12 @@ nav ul li a {
     margin: 0; /* Usuwa domyślne marginesy */
 }
 
+.blok a {
+    text-decoration: none;      /* usuwa podkreślenie */
+    color: inherit;             /* dziedziczy kolor z rodzica */
+    display: block;             /* żeby <a> zajmowało cały obszar bloku */
+}
+
 
 /* Styl dla konkretnego bloku z data-id */
 .blok[data-id="0"] {
