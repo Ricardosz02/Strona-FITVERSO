@@ -1,0 +1,504 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#baner {
+    background-color: #171616;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+#container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    gap: 20px;
+    width: 80%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+nav ul li {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-button {
+    background-color: #312A2A;
+    color: white;
+    border-radius: 20px;
+    font-size: 25px;
+    padding: 15px 30px;
+    display: inline-block;
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+#logo {
+    background-color: #312A2A;
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo img {
+    width: 110%;
+    max-width: 200px;
+    height: auto;
+    width: auto;
+    border-radius: 20px;
+}
+
+.nav-button-logo {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.nav-button-logo:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+#logo_sb {
+    text-align: left;
+    margin-right: auto;
+    margin-left: 20px;
+}
+
+#main {
+    background-color: #292727;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 80vh;
+    padding: 50px 20%;
+    gap: 40px;
+    overflow-y: auto;
+}
+
+#stopka {
+    background-color: #171616;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin-top: 0;
+    flex-shrink: 0;
+}
+
+/* Boczne menu wysuwane przycisk */
+#hamburger {
+    display: none;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Boczne menu wysuwane */
+#sideMenu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #171616;
+    color: white;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 50px 20px;
+}
+
+#sideMenu.show {
+    right: 0;
+}
+
+#sideMenu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sideMenu ul li {
+    margin: 20px 0;
+}
+
+#sideMenu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Ćwiczenia */
+.exercise-container {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cwiczenie {
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    transition: box-shadow 0.3s;
+    color: #fff;
+}
+
+.blok1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.cwiczenie-tresc {
+    flex: 1;
+    text-align: center;
+}
+
+.cwiczenie-tresc h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.cwiczenie-tresc p {
+    font-size: 16px;
+}
+
+.details-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.details-button:hover {
+    background-color: #555;
+}
+
+/* Szczegóły ćwiczenia */
+.blok2 .exercise-details {
+    padding: 0 10px;
+    background: #312A2A;
+    color: #fff;
+    border-radius: 20px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.blok2 .exercise-details.visible {
+    max-height: 800px; /* Zwiększona wartość dla większej ilości treści */
+    opacity: 1;
+    padding: 10px 10px;
+}
+
+.details-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.miesnie, .pozycja_wyjsciowa, .ruch {
+    width: 33%;
+}
+
+.miesnie h4, .pozycja_wyjsciowa h4, .ruch h4 {
+    margin-top: 0;
+    text-align: left;
+    font-size: 18px;
+}
+
+.miesnie ul, .pozycja_wyjsciowa ol, .ruch ol {
+    margin: 10px 0;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 14px;
+}
+
+/* Stylizacja przycisków nawigacji */
+#pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pagination-button {
+    background-color: #960303;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.pagination-button:hover {
+    background-color: #960303;
+    border-color: #690303;
+    color: #000;
+    transform: scale(1.05);
+}
+
+.pagination-button.active {
+    background-color: #690303;
+    color: white;
+    border-color: #420303;
+}
+
+/* Suwak */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #960303;
+}
+
+/* ------------------------- */
+/* 📱 MOBILE (≤ 767px) */
+@media (max-width: 767px) {
+    #logo_sb {
+        display: block;
+        margin-left: 0;
+        text-align: left;
+        list-style: none;
+        text-decoration: none;
+        color: inherit;
+        outline: none;
+    }
+
+    #main {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 20px;
+        flex-grow: 1;
+        height: auto;
+        overflow-y: auto;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    #hamburger {
+        display: block;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    #baner, #stopka {
+        font-size: 20px;
+        height: 8vh;
+    }
+
+    #container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .exercise-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cwiczenie {
+        overflow: hidden;
+    }
+
+    .blok1 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cwiczenie-tresc {
+        width: 100%;
+        font-size: 1.1rem;
+        line-height: 1.3;
+    }
+
+    .details-container {
+        flex-direction: column;
+    }
+
+    .miesnie, .pozycja_wyjsciowa, .ruch {
+        width: 100%;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    #baner {
+        position: relative;
+    }
+
+    #stopka {
+        margin-top: auto;
+    }
+}
+
+/* ------------------------- */
+/* 📲 TABLET (768px – 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 40px;
+        padding: 60px 40px;
+    }
+
+    #logo_sb {
+        display: block;
+        margin-left: 0;
+        text-align: left;
+        list-style: none;
+        text-decoration: none;
+        color: inherit;
+        outline: none;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    #hamburger {
+        display: block;
+        font-size: 40px;
+        margin-left: auto;
+    }
+
+    #container {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .exercise-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .cwiczenie {
+        overflow: hidden;
+    }
+
+    .cwiczenie-tresc {
+        width: 100%;
+        font-size: 1.3rem;
+        line-height: 1.4;
+    }
+
+    .details-container {
+        flex-direction: column;
+    }
+
+    .miesnie, .pozycja_wyjsciowa, .ruch {
+        width: 100%;
+    }
+}
+
+/* ------------------------- */
+/* 💻 DESKTOP (≥ 1024px) */
+@media (min-width: 1024px) {
+    #baner {
+        min-height: 100px;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        gap: 5vw;
+    }
+
+    nav ul li {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        padding: 15px 30px;
+        font-size: 30px;
+    }
+
+    #logo_sb {
+        display: none;
+    }
+
+    .cwiczenie {
+        overflow: hidden;
+    }
+
+    .cwiczenie-tresc {
+        width: 100%;
+        font-size: 1.7rem;
+        line-height: 1.4;
+    }
+}
