@@ -1,0 +1,485 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#baner {
+    background-color: #171616;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+nav ul li {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-button {
+    background-color: #312A2A;
+    color: white;
+    border-radius: 20px;
+    font-size: 25px;
+    padding: 15px 30px;
+    display: inline-block;
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+#logo {
+    background-color: #312A2A;
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo img {
+    width: 110%; /* Dostosowanie rozmiaru obrazka do szerokości kontenera */
+    max-width: 200px; /* Ustalenie maksymalnej szerokości obrazka */
+    height: auto; /* Zachowanie proporcji obrazka */
+    width: auto; /* Zachowanie proporcji obrazka */
+    border-radius: 20px;
+}
+
+.nav-button-logo {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.nav-button-logo:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+#logo_sb {
+    text-align: left;  /* Wyrównuje tekst do lewej */
+    margin-right: auto;   /* Ustawia logo na lewo */
+    margin-left: 20px;    /* Opcjonalnie, dodaj odstęp z lewej strony */
+}
+
+#main {
+    flex-grow: 1;
+    background-color: #292727;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.blok {
+    background-color: #171616;
+    color: white;
+    font-size: 35px;
+    width: 75%;
+    height: 75vh;
+    margin: 50px;
+    border-radius: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 300px;
+    transition: box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+
+    overflow: hidden;
+}
+
+/* bloki z obrazkami */
+.blok-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 150px;
+}
+  
+.blok-text {
+    flex: 1;
+    text-align: left;
+}
+  
+.blok-image {
+    display: none; /* Ukryj domyślnie (tablet, mobile) */
+    width: 650px;  /* lub inna wartość, np. 250px */
+    height: auto;  /* zachowuje proporcje */
+    border-radius: 20px; /* opcjonalnie zaokrąglenie rogów */
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.6); /* Dodany cień wokół obrazka */
+}
+/* bloki koniec */
+
+#stopka {
+    background-color: #171616;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin-top: 0;
+    flex-shrink: 0;
+}
+
+/* Boczne menu wysuwane przycisk */
+#hamburger {
+    display: none;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Boczne menu wysuwane */
+#sideMenu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #171616;
+    color: white;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 50px 20px;
+}
+
+#sideMenu.show {
+    right: 0;
+}
+
+#sideMenu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sideMenu ul li {
+    margin: 20px 0;
+}
+
+#sideMenu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #000000; /* tło paska */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #960303; /* kolor samego "uchwytu" */
+  }
+
+
+  
+
+/* ------------------------- */
+/* 📱 MOBILE (≤ 767px) */
+@media (max-width: 767px) {
+
+    /* Pokazanie logo_sb w wersji mobilnej */
+    #logo_sb {
+        display: block;
+        margin-left: 0; /* Wyrównanie logo do lewej strony */
+        text-align: left; /* Dodatkowo wyrównanie tekstu lub elementów wewnątrz logo */
+        list-style: none;           /* Usuwa kropkę */
+        text-decoration: none;      /* Usuwa podkreślenie */
+        color: inherit;             /* Dziedziczy kolor tekstu */
+        outline: none;              /* Usuwa obramowanie po kliknięciu */
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    #hamburger {
+        display: block;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    .blok-text {
+        text-align: center; /* Wyśrodkowanie tekstu */
+        font-size: 18px; /* Możesz dostosować rozmiar czcionki */
+        background-color: rgba(0, 0, 0, 0.7); /* Przyciemnione tło z przezroczystością */
+        padding: 20px;
+        border-radius: 20px; /* Opcjonalnie, zaokrąglone rogi */
+        box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.6);
+    }
+
+    .blok {
+        font-size: 20px;
+        width: 90%;
+        padding: 30px;
+    }
+
+    #baner, #stopka {
+        font-size: 20px;
+        height: 8vh;
+    }
+
+    /* tlo blokow */
+    /* Tło dla pierwszego bloku */
+    #blok1 {
+        background-image: url('Pictures/cardio1.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    
+      /* Tło dla drugiego bloku */
+      #blok2 {
+        background-image: url('Pictures/cardio2.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    
+      /* Tło dla trzeciego bloku */
+      #blok3 {
+        background-image: url('Pictures/cardio3.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    
+      /* Tło dla czwartego bloku */
+      #blok4 {
+        background-image: url('Pictures/cardio4.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    
+      /* Tło dla piątego bloku */
+      #blok5 {
+        background-image: url('Pictures/cardio5.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    
+      #blok6 {
+        background-image: url('Pictures/cardio6.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    
+      #blok7 {
+        background-image: url('Pictures/cardio7.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+}
+
+/* ------------------------- */
+/* 📱📲 TABLET (768px – 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* Pokazanie logo_sb w wersji tablet */
+    #logo_sb {
+        display: block;
+        margin-left: 0; /* Wyrównanie logo do lewej strony */
+        text-align: left; /* Dodatkowo wyrównanie tekstu lub elementów wewnątrz logo */
+        list-style: none;           /* Usuwa kropkę */
+        text-decoration: none;      /* Usuwa podkreślenie */
+        color: inherit;             /* Dziedziczy kolor tekstu */
+        outline: none;              /* Usuwa obramowanie po kliknięciu */
+    }
+
+    .blok-text {
+        text-align: center; /* Wyśrodkowanie tekstu */
+        font-size: 25px; /* Możesz dostosować rozmiar czcionki */
+        background-color: rgba(0, 0, 0, 0.7); /* Przyciemnione tło z przezroczystością */
+        padding: 20px;
+        border-radius: 20px; /* Opcjonalnie, zaokrąglone rogi */
+        box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.6);
+    }
+
+    .blok {
+        font-size: 25px;
+        width: 85%;
+        padding: 60px;
+    }
+
+    /* Ukrywamy standardowe menu */
+    nav ul {
+        display: none;
+    }
+
+    /* Pokazujemy hamburgera */
+    #hamburger {
+        display: block;
+        font-size: 40px;
+        margin-left: auto;
+    }
+
+    #baner, #stopka {
+        font-size: 24px;
+    }
+
+    /* tlo blokow */
+    /* Tło dla pierwszego bloku */
+  #blok1 {
+    background-image: url('Pictures/cardio1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Tło dla drugiego bloku */
+  #blok2 {
+    background-image: url('Pictures/cardio2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Tło dla trzeciego bloku */
+  #blok3 {
+    background-image: url('Pictures/cardio3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Tło dla czwartego bloku */
+  #blok4 {
+    background-image: url('Pictures/cardio4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Tło dla piątego bloku */
+  #blok5 {
+    background-image: url('Pictures/cardio5.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #blok6 {
+    background-image: url('Pictures/cardio6.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #blok7 {
+    background-image: url('Pictures/cardio7.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+}
+
+/* ------------------------- */
+/* 📱📲 DESKTOP (≥ 1024px) */
+@media (min-width: 1024px) {
+
+    #baner {
+        min-height: 100px; /* Minimalna wysokość banera */
+    }
+
+    .blok {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        height: auto;
+        padding: 120px;
+    }
+
+    .blok h2 {
+        font-size: 2vw;
+    }
+
+    .blok p{
+        font-size: 1vw;
+    }
+
+    .blok-image {
+        display: block; /* Pokaż obrazek tylko na desktopie */
+        width: 50%;
+        max-width: 650px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around; /* Równomierne rozstawienie elementów */
+        padding: 0;
+        gap: 5vw; /* Przerwy między elementami */
+    }
+
+    nav ul li {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        padding: 15px 30px;
+        font-size: 30px;
+    }
+
+    #logo_sb {
+        display: none;
+    }
+
+    .blok1, .blok2, .blok3, .blok4, .blok5 {
+        background-image: none; /* Brak tła na desktopie */
+      }
+
+}
