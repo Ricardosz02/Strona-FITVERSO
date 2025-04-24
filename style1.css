@@ -32,6 +32,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: space-between;
+    gap: 1vw;   /* Relatywny odstęp skalujący się z szerokością okna */
     gap: 20px;
     align-items: center;
 }
@@ -52,11 +53,13 @@ nav ul li a {
     background-color: #312A2A;
     color: white;
     border-radius: 20px;
-    font-size: 25px;
+    font-size: 1vw;
     padding: 15px 30px;
     display: inline-block;
     text-align: center;
     transition: box-shadow 0.3s ease-in-out;
+    width: 10vw; /* Szerokość przycisków skalująca się z szerokością okna */
+    min-width: 150px; /* Minimalna szerokość dla czytelności */
 }
 
 .nav-button:hover {
@@ -90,9 +93,16 @@ nav ul li a {
 }
 
 #logo_sb {
+    display: none;
     text-align: left;  /* Wyrównuje tekst do lewej */
     margin-right: auto;   /* Ustawia logo na lewo */
-    margin-left: 20px;    /* Opcjonalnie, dodaj odstęp z lewej strony */
+    margin-left: 10px;    /* Opcjonalnie, dodaj odstęp z lewej strony */
+}
+
+#logo_sb img {
+    max-width: 100%; /* Zapewnia skalowanie obrazka */
+    height: auto;
+    border-radius: 20px;
 }
 
 #main {
@@ -224,12 +234,18 @@ nav ul li a {
     /* Pokazanie logo_sb w wersji mobilnej */
     #logo_sb {
         display: block;
-        margin-left: 0; /* Wyrównanie logo do lewej strony */
         text-align: left; /* Dodatkowo wyrównanie tekstu lub elementów wewnątrz logo */
         list-style: none;           /* Usuwa kropkę */
         text-decoration: none;      /* Usuwa podkreślenie */
         color: inherit;             /* Dziedziczy kolor tekstu */
         outline: none;              /* Usuwa obramowanie po kliknięciu */
+    }
+
+    #logo_sb img {
+        width: 30vw; /* Skalowanie logo względem szerokości ekranu */
+        max-width: 100px; /* Maksymalna szerokość dla małych ekranów */
+        min-width: 60px; /* Minimalna szerokość dla czytelności */
+        height: auto;
     }
 
     nav ul {
