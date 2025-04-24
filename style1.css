@@ -234,6 +234,7 @@ nav ul li a {
     /* Pokazanie logo_sb w wersji mobilnej */
     #logo_sb {
         display: block;
+        margin-left: 10px;
         text-align: left; /* Dodatkowo wyrównanie tekstu lub elementów wewnątrz logo */
         list-style: none;           /* Usuwa kropkę */
         text-decoration: none;      /* Usuwa podkreślenie */
@@ -242,9 +243,9 @@ nav ul li a {
     }
 
     #logo_sb img {
-        width: 30vw; /* Skalowanie logo względem szerokości ekranu */
-        max-width: 100px; /* Maksymalna szerokość dla małych ekranów */
-        min-width: 60px; /* Minimalna szerokość dla czytelności */
+        width: 25vw; /* Mniejsze skalowanie względem szerokości ekranu */
+        max-width: 80px; /* Mniejsza maksymalna szerokość dla iPhone XS */
+        min-width: 50px; /* Minimalna szerokość dla czytelności */
         height: auto;
     }
 
