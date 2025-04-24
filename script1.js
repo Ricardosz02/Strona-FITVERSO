@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Ustawienia rozmiaru obrazka
     logoImg.style.height = 'auto'; // Automatyczna wysokość, zachowująca proporcje obrazu
     logoImg.style.maxWidth = '100%'; // Zapewnienie, że obrazek nie wyjdzie poza kontener
-    logoImg.style.borderRadius = '20px'; // Zaokrąglone rogi obrazka
+    logoImg.style.borderRadius = '10px'; // Zaokrąglone rogi obrazka
 
     // Dodanie obrazka do linku logo
     logoSb.appendChild(logoImg);

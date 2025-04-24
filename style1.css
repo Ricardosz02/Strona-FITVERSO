@@ -243,9 +243,9 @@ nav ul li a {
     }
 
     #logo_sb img {
-        width: 25vw; /* Mniejsze skalowanie względem szerokości ekranu */
-        max-width: 80px; /* Mniejsza maksymalna szerokość dla iPhone XS */
-        min-width: 50px; /* Minimalna szerokość dla czytelności */
+        width: 15vw; /* Mniejsze skalowanie względem szerokości ekranu */
+        max-width: 60px; /* Mniejsza maksymalna szerokość dla iPhone XS */
+        min-width: 40px; /* Minimalna szerokość dla czytelności */
         height: auto;
     }
 
