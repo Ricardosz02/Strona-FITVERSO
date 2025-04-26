@@ -34,6 +34,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: space-between;
+    gap: 1vw;   /* Relatywny odstęp skalujący się z szerokością okna */
     gap: 20px;
     align-items: center;
 }
@@ -54,11 +55,13 @@ nav ul li a {
     background-color: #312A2A;
     color: white;
     border-radius: 20px;
-    font-size: 25px;
+    font-size: 1vw;
     padding: 15px 30px;
     display: inline-block;
     text-align: center;
     transition: box-shadow 0.3s ease-in-out;
+    width: 10vw; /* Szerokość przycisków skalująca się z szerokością okna */
+    min-width: 150px; /* Minimalna szerokość dla czytelności */
 }
 
 .nav-button:hover {
@@ -76,10 +79,10 @@ nav ul li a {
 }
 
 #logo img {
-    width: 110%;
-    max-width: 200px;
-    height: auto;
-    width: auto;
+    width: 110%; /* Dostosowanie rozmiaru obrazka do szerokości kontenera */
+    max-width: 200px; /* Ustalenie maksymalnej szerokości obrazka */
+    height: auto; /* Zachowanie proporcji obrazka */
+    width: auto; /* Zachowanie proporcji obrazka */
     border-radius: 20px;
 }
 
@@ -92,9 +95,16 @@ nav ul li a {
 }
 
 #logo_sb {
-    text-align: left;
-    margin-right: auto;
-    margin-left: 20px;
+    display: none;
+    text-align: left;  /* Wyrównuje tekst do lewej */
+    margin-right: auto;   /* Ustawia logo na lewo */
+    margin-left: 10px;    /* Opcjonalnie, dodaj odstęp z lewej strony */
+}
+
+#logo_sb img {
+    max-width: 100%; /* Zapewnia skalowanie obrazka */
+    height: auto;
+    border-radius: 20px;
 }
 
 #main {
@@ -315,14 +325,31 @@ nav ul li a {
 /* ------------------------- */
 /* 📱 MOBILE (≤ 767px) */
 @media (max-width: 767px) {
+    #baner {
+        height: 10vh; /* Zwiększona wysokość banera */
+        padding: 0 5px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     #logo_sb {
-        display: block;
-        margin-left: 0;
+        display: flex;
+        align-items: center; /* Wyśrodkowanie pionowe logo */
+        margin-left: 5px;
+        margin-right: auto;
         text-align: left;
         list-style: none;
         text-decoration: none;
         color: inherit;
         outline: none;
+    }
+
+    #logo_sb img {
+        width: 30vw; /* Nieco większe skalowanie dla większego banera */
+        max-width: 60px; /* Maksymalna szerokość dostosowana do iPhone XS */
+        min-width: 40px; /* Minimalna szerokość dla czytelności */
+        height: auto;
+        border-radius: 20px;
     }
 
     #main {
@@ -340,14 +367,14 @@ nav ul li a {
 
     #hamburger {
         display: block;
-        font-size: 40px;
+        font-size: 30px;
         color: white;
         cursor: pointer;
-        margin-left: auto;
+        margin-right: 5px;
     }
 
-    #baner, #stopka {
-        font-size: 20px;
+    #stopka {
+        font-size: 16px;
         height: 8vh;
     }
 
@@ -410,14 +437,31 @@ nav ul li a {
         padding: 60px 40px;
     }
 
+    #baner {
+        height: 10vh; /* Zwiększona wysokość banera */
+        padding: 0 10px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     #logo_sb {
-        display: block;
-        margin-left: 0;
+        display: flex;
+        align-items: center; /* Wyśrodkowanie pionowe logo */
+        margin-left: 10px;
+        margin-right: auto;
         text-align: left;
         list-style: none;
         text-decoration: none;
         color: inherit;
         outline: none;
+    }
+
+    #logo_sb img {
+        width: 22vw; /* Nieco większe skalowanie dla większego banera */
+        max-width: 90px; /* Maksymalna szerokość dla tabletów */
+        min-width: 50px; /* Minimalna szerokość dla czytelności */
+        height: auto;
+        border-radius: 20px;
     }
 
     nav ul {
@@ -427,7 +471,12 @@ nav ul li a {
     #hamburger {
         display: block;
         font-size: 40px;
-        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    #stopka {
+        font-size: 18px;
+        height: 8vh;
     }
 
     #container {
@@ -473,9 +522,9 @@ nav ul li a {
 
     nav ul {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-around; /* Równomierne rozstawienie elementów */
         padding: 0;
-        gap: 5vw;
+        gap: 5vw; /* Przerwy między elementami */
     }
 
     nav ul li {
