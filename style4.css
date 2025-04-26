@@ -51,6 +51,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: space-between;
+    gap: 1vw;   /* Relatywny odstęp skalujący się z szerokością okna */
     gap: 20px;
     align-items: center;
 }
@@ -71,11 +72,13 @@ nav ul li a {
     background-color: #312A2A;
     color: white;
     border-radius: 20px;
-    font-size: 25px;
+    font-size: 1vw;
     padding: 15px 30px;
     display: inline-block;
     text-align: center;
     transition: box-shadow 0.3s ease-in-out;
+    width: 10vw; /* Szerokość przycisków skalująca się z szerokością okna */
+    min-width: 150px; /* Minimalna szerokość dla czytelności */
 }
 
 .nav-button:hover {
@@ -108,6 +111,19 @@ nav ul li a {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
+#logo_sb {
+    display: none;
+    text-align: left;  /* Wyrównuje tekst do lewej */
+    margin-right: auto;   /* Ustawia logo na lewo */
+    margin-left: 10px;    /* Opcjonalnie, dodaj odstęp z lewej strony */
+}
+
+#logo_sb img {
+    max-width: 100%; /* Zapewnia skalowanie obrazka */
+    height: auto;
+    border-radius: 20px;
+}
+
 #stopka {
     background-color: #171616;
     width: 100%;
@@ -123,12 +139,6 @@ nav ul li a {
 }
 
 /* zmiany 06.04.2025 */
-
-#logo_sb {
-    text-align: left;
-    margin-right: auto;
-    margin-left: 20px;
-}
 
 #hamburger {
     display: none;
@@ -205,21 +215,43 @@ nav ul li a {
 
 /* 📱 MOBILE (≤ 767px) */
 @media (max-width: 767px) {
-    #logo_sb {
-        display: block;
-        margin-left: 20px;
-        font-size: 30px;
-        color: white;
-        text-decoration: none;
+    #baner {
+        height: 10vh; /* Zwiększona wysokość banera */
+        padding: 0 5px;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    #hamburger {
-        display: block;
-        margin-left: auto;
+    #logo_sb {
+        display: flex;
+        align-items: center; /* Wyśrodkowanie pionowe logo */
+        margin-left: 5px;
+        margin-right: auto;
+        text-align: left;
+        list-style: none;
+        text-decoration: none;
+        color: inherit;
+        outline: none;
+    }
+
+    #logo_sb img {
+        width: 30vw; /* Nieco większe skalowanie dla większego banera */
+        max-width: 60px; /* Maksymalna szerokość dostosowana do iPhone XS */
+        min-width: 40px; /* Minimalna szerokość dla czytelności */
+        height: auto;
+        border-radius: 20px;
     }
 
     nav ul {
         display: none;
+    }
+
+    #hamburger {
+        display: block;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        margin-right: 5px;
     }
 
     #main {
@@ -232,25 +264,55 @@ nav ul li a {
     .blok {
         width: 100%;
     }
+
+    #stopka {
+        font-size: 16px;
+        height: 8vh;
+    }
 }
 
 /* 📲 TABLET (768px – 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
-    #logo_sb {
-        display: block;
-        margin-left: 20px;
-        font-size: 35px;
-        color: white;
-        text-decoration: none;
+    #baner {
+        height: 10vh; /* Zwiększona wysokość banera */
+        padding: 0 10px;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    #hamburger {
-        display: block;
-        margin-left: auto;
+    #logo_sb {
+        display: flex;
+        align-items: center; /* Wyśrodkowanie pionowe logo */
+        margin-left: 10px;
+        margin-right: auto;
+        text-align: left;
+        list-style: none;
+        text-decoration: none;
+        color: inherit;
+        outline: none;
+    }
+
+    #logo_sb img {
+        width: 22vw; /* Nieco większe skalowanie dla większego banera */
+        max-width: 90px; /* Maksymalna szerokość dla tabletów */
+        min-width: 50px; /* Minimalna szerokość dla czytelności */
+        height: auto;
+        border-radius: 20px;
     }
 
     nav ul {
         display: none;
+    }
+
+    #hamburger {
+        display: block;
+        font-size: 40px;
+        margin-right: 10px;
+    }
+
+    #stopka {
+        font-size: 18px;
+        height: 8vh;
     }
 
     #main {
@@ -295,18 +357,15 @@ nav ul li a {
         font-size: 30px;
     }
 
+    #logo_sb {
+        display: none;
+    }
+
     #main {
         flex-wrap: wrap;
         justify-content: center;
         gap: 40px;
         padding: 50px 10%;
     }
-
-    #logo_sb {
-        display: none;
-    }
     
-    #hamburger {
-        display: none;
-    }
 }
