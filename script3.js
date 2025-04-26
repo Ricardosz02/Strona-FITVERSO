@@ -58,75 +58,65 @@ document.addEventListener("DOMContentLoaded", function () {
     // ---------------------
     const przepisy = [
         { 
-            nazwa: "Kurczak z ryżem", 
+            nazwa: "Owsianka Bounty", 
+            kategoria: "deser", 
+            kalorie: 415, 
+            czas: "15 min", 
+            obraz: "Pictures/przepis1.jpg",
+            skladniki: [
+                "Płatki owsiane - 40g",
+                "Woda - 300ml",
+                "Skyr naturalny - 150g",
+                "Kilka kropel aromatu kokosowego",
+                "Kakao - 5g",
+                "Erytrytol (wg uznania)",
+                "Wiórki kokosowe - 15g",
+                "Baton Bounty - 1szt"
+            ],
+            przygotowanie: [
+                "Płatki zalewamy wodą i gotujemy, dodajemy aromat + ewentualnie słodzik i czekamy, aż napęcznieją.",
+                "Połowę skyra oraz część wiórek dodajemy do owsianki i mieszamy.",
+                "Drugą połowę mieszamy ze słodzikiem i kakao.",
+                "Owsiankę przedkładamy do miseczki, dekorujemy skyrem czekoladowym, wiórkami kokosowymi i cukierkiem bounty."
+            ] 
+        },
+        { 
+            nazwa: "Makaron w sosie śmietanowym", 
             kategoria: "obiad", 
-            kalorie: 400, 
+            kalorie: 1184, 
             czas: "30 min", 
-            obraz: "Pictures/przepis1.jpg",
+            obraz: "Pictures/przepis2.jpg",
             skladniki: [
-                "twaróg 200g",
-                "przyprawa Adobo 1 łyżka",
-                "żółte pomidorki koktajlowe 200g",
-                "dojrzałe awokado 1 sztuka",
-                "cytryna 1 sztuka",
-                "rukola 50 gramów",
-                "pieprz czarny mielony 2 szczypty",
-                "pszenne tosty kromki 8 sztuk"
+                "Makaron penne - 200g",
+                "Szpinak mrożony - 200g",
+                "Kurczak - 200g",
+                "Serki topione śmietanowe (w trójkącie) - 4szt",
+                "Garść rukoli",
+                "Przyprawy wg uznania (np. sól, przyprawa do kurczaka, zioła prowansalskie)"
             ],
             przygotowanie: [
-                "Awokado przekrój wzdłuż na pół. Wyjmij pestkę. Następnie łyżką wyjmij miąższ i pokrój w plastry. Skrop sokiem z cytryny.",
-                "Umyj pomidorki i przekrój na pół. Wyciśnij sok z cytryny. Umyj i osusz rukolę.",
-                "Ser twarogowy wymieszaj z przyprawą Adobo.",
-                "Posmaruj serkiem pieczywo. Na 4 kromkach połóż na wierzchu awokado, pomidorki oraz rukolą. Posyp szczyptą pieprzu oraz przyprawą Meksykańską.",
-                "Przykryj pozostałym pieczywem. Przekrój na trójkąty i podawaj."
+                "Makaron gotujemy wg instrukcji.",
+                "Kurczaka kroimy, przyprawiamy i podsmażamy. Dodajemy rozmrożony szpinak, przyprawiamy i podsmażamy jeszcze przez chwilę.",
+                "Makaron odcedzamy dodajemy do reszty, dorzucamy serki topione oraz rukolę, dokładnie mieszamy i podsmażamy, aż serki się roztopią.",
+                "Wykładamy na talerz i dekorujemy."
             ] 
         },
         { 
-            nazwa: "Owsianka z owocami", 
+            nazwa: "Koktajl jagodowy", 
             kategoria: "śniadanie", 
-            kalorie: 250, 
-            czas: "10 min", 
-            obraz: "Pictures/przepis1.jpg",
+            kalorie: 400, 
+            czas: "5 min", 
+            obraz: "Pictures/przepis3.jpg",
             skladniki: [
-                "twaróg 200g",
-                "przyprawa Adobo 1 łyżka",
-                "żółte pomidorki koktajlowe 200g",
-                "dojrzałe awokado 1 sztuka",
-                "cytryna 1 sztuka",
-                "rukola 50 gramów",
-                "pieprz czarny mielony 2 szczypty",
-                "pszenne tosty kromki 8 sztuk"
+                "Mleko 1,5% tłuszczu - 1 szklanka",
+                "Banan - 1szt",
+                "Czarne jagody (lub borówki amerykańskie) - 50g",
+                "Płatki owsiane - 2 łyżki",
+                "Orzechu włoskie - 3szt"
             ],
             przygotowanie: [
-                "Awokado przekrój wzdłuż na pół. Wyjmij pestkę. Następnie łyżką wyjmij miąższ i pokrój w plastry. Skrop sokiem z cytryny.",
-                "Umyj pomidorki i przekrój na pół. Wyciśnij sok z cytryny. Umyj i osusz rukolę.",
-                "Ser twarogowy wymieszaj z przyprawą Adobo.",
-                "Posmaruj serkiem pieczywo. Na 4 kromkach połóż na wierzchu awokado, pomidorki oraz rukolą. Posyp szczyptą pieprzu oraz przyprawą Meksykańską.",
-                "Przykryj pozostałym pieczywem. Przekrój na trójkąty i podawaj."
-            ] 
-        },
-        { 
-            nazwa: "Sałatka warzywna", 
-            kategoria: "kolacja", 
-            kalorie: 150, 
-            czas: "20 min", 
-            obraz: "Pictures/przepis1.jpg",
-            skladniki: [
-                "twaróg 200g",
-                "przyprawa Adobo 1 łyżka",
-                "żółte pomidorki koktajlowe 200g",
-                "dojrzałe awokado 1 sztuka",
-                "cytryna 1 sztuka",
-                "rukola 50 gramów",
-                "pieprz czarny mielony 2 szczypty",
-                "pszenne tosty kromki 8 sztuk"
-            ],
-            przygotowanie: [
-                "Awokado przekrój wzdłuż na pół. Wyjmij pestkę. Następnie łyżką wyjmij miąższ i pokrój w plastry. Skrop sokiem z cytryny.",
-                "Umyj pomidorki i przekrój na pół. Wyciśnij sok z cytryny. Umyj i osusz rukolę.",
-                "Ser twarogowy wymieszaj z przyprawą Adobo.",
-                "Posmaruj serkiem pieczywo. Na 4 kromkach połóż na wierzchu awokado, pomidorki oraz rukolą. Posyp szczyptą pieprzu oraz przyprawą Meksykańską.",
-                "Przykryj pozostałym pieczywem. Przekrój na trójkąty i podawaj."
+                "Płatki owsiane i posiekane orzechy zalać na kilka minut mlekiem.",
+                "Następnie dodać owoce i zblendować na koktajl."
             ] 
         },
         { 
@@ -134,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
             kategoria: "śniadanie", 
             kalorie: 300, 
             czas: "10 min", 
-            obraz: "Pictures/przepis1.jpg",
+            obraz: "Pictures/przepis4.jpg",
             skladniki: [
                 "twaróg 200g",
                 "przyprawa Adobo 1 łyżka",
@@ -154,172 +144,205 @@ document.addEventListener("DOMContentLoaded", function () {
             ] 
         },
         { 
-            nazwa: "Zupa krem z dyni", 
-            kategoria: "obiad", 
-            kalorie: 180, 
-            czas: "25 min", 
-            obraz: "Pictures/przepis1.jpg",
-            skladniki: [
-                "twaróg 200g",
-                "przyprawa Adobo 1 łyżka",
-                "żółte pomidorki koktajlowe 200g",
-                "dojrzałe awokado 1 sztuka",
-                "cytryna 1 sztuka",
-                "rukola 50 gramów",
-                "pieprz czarny mielony 2 szczypty",
-                "pszenne tosty kromki 8 sztuk"
-            ],
-            przygotowanie: [
-                "Awokado przekrój wzdłuż na pół. Wyjmij pestkę. Następnie łyżką wyjmij miąższ i pokrój w plastry. Skrop sokiem z cytryny.",
-                "Umyj pomidorki i przekrój na pół. Wyciśnij sok z cytryny. Umyj i osusz rukolę.",
-                "Ser twarogowy wymieszaj z przyprawą Adobo.",
-                "Posmaruj serkiem pieczywo. Na 4 kromkach połóż na wierzchu awokado, pomidorki oraz rukolą. Posyp szczyptą pieprzu oraz przyprawą Meksykańską.",
-                "Przykryj pozostałym pieczywem. Przekrój na trójkąty i podawaj."
-            ] 
-        },
-        { 
-            nazwa: "Omlet z warzywami", 
+            nazwa: "Szakszuka", 
             kategoria: "śniadanie", 
-            kalorie: 280, 
-            czas: "10 min", 
-            obraz: "Pictures/przepis1.jpg",
-            skladniki: [
-                "twaróg 200g",
-                "przyprawa Adobo 1 łyżka",
-                "żółte pomidorki koktajlowe 200g",
-                "dojrzałe awokado 1 sztuka",
-                "cytryna 1 sztuka",
-                "rukola 50 gramów",
-                "pieprz czarny mielony 2 szczypty",
-                "pszenne tosty kromki 8 sztuk"
-            ],
-            przygotowanie: [
-                "Awokado przekrój wzdłuż na pół. Wyjmij pestkę. Następnie łyżką wyjmij miąższ i pokrój w plastry. Skrop sokiem z cytryny.",
-                "Umyj pomidorki i przekrój na pół. Wyciśnij sok z cytryny. Umyj i osusz rukolę.",
-                "Ser twarogowy wymieszaj z przyprawą Adobo.",
-                "Posmaruj serkiem pieczywo. Na 4 kromkach połóż na wierzchu awokado, pomidorki oraz rukolą. Posyp szczyptą pieprzu oraz przyprawą Meksykańską.",
-                "Przykryj pozostałym pieczywem. Przekrój na trójkąty i podawaj."
-            ] 
-        },
-        { 
-            nazwa: "Makaron z tuńczykiem", 
-            kategoria: "obiad", 
-            kalorie: 450, 
+            kalorie: 400, 
             czas: "20 min", 
-            obraz: "Pictures/przepis1.jpg",
+            obraz: "Pictures/przepis5.jpg",
             skladniki: [
-                "twaróg 200g",
-                "przyprawa Adobo 1 łyżka",
-                "żółte pomidorki koktajlowe 200g",
-                "dojrzałe awokado 1 sztuka",
-                "cytryna 1 sztuka",
-                "rukola 50 gramów",
-                "pieprz czarny mielony 2 szczypty",
-                "pszenne tosty kromki 8 sztuk"
+                "Pomidory krojone z puszki - 200g",
+                "Jajka - 2szt",
+                "Czerwona fasolka z puszki - 80g",
+                "Cebula - 0,5szt",
+                "Ząbek czosnku - 1 ząbek",
+                "Oliwa z oliwek - 1 łyżka",
+                "Posiekana natka pietruszki - 2 łyżczeki",
+                "Przyprawy: sól, pieprz, papryka słodka i ostra, kmin rzymski, cynamon"
             ],
             przygotowanie: [
-                "Awokado przekrój wzdłuż na pół. Wyjmij pestkę. Następnie łyżką wyjmij miąższ i pokrój w plastry. Skrop sokiem z cytryny.",
-                "Umyj pomidorki i przekrój na pół. Wyciśnij sok z cytryny. Umyj i osusz rukolę.",
-                "Ser twarogowy wymieszaj z przyprawą Adobo.",
-                "Posmaruj serkiem pieczywo. Na 4 kromkach połóż na wierzchu awokado, pomidorki oraz rukolą. Posyp szczyptą pieprzu oraz przyprawą Meksykańską.",
-                "Przykryj pozostałym pieczywem. Przekrój na trójkąty i podawaj."
+                "Na patelni rozgrzać olej, przesmażyć posiekaną cebulę i rozdrobniony czosnek.",
+                "Dodać na patelnię pomidory oraz przyprawy – gotować 4 min.",
+                "Następnie dodać wypłukaną fasolkę i wymieszać.",
+                "Na pomidory wbić jajka i doprawić solą.",
+                "Przykryć i gotować około 3 min – aż białko się zetnie.",
+                "Przed podaniem posypać natką pietruszki."
             ] 
         },
         { 
-            nazwa: "Smoothie bananowe", 
-            kategoria: "deser", 
-            kalorie: 200, 
-            czas: "5 min", 
-            obraz: "Pictures/przepis1.jpg",
+            nazwa: "Czekoladowe pancakes", 
+            kategoria: "kolacja",
+            kalorie: 510, 
+            czas: "25 min", 
+            obraz: "Pictures/przepis6.jpg",
             skladniki: [
-                "twaróg 200g",
-                "przyprawa Adobo 1 łyżka",
-                "żółte pomidorki koktajlowe 200g",
-                "dojrzałe awokado 1 sztuka",
-                "cytryna 1 sztuka",
-                "rukola 50 gramów",
-                "pieprz czarny mielony 2 szczypty",
-                "pszenne tosty kromki 8 sztuk"
+                "Banan - 1szt",
+                "Gorzka czekolada - 30g",
+                "Proszek budyniowy - 6 łyżeczek",
+                "Erytrol - 2 łyżki",
+                "Mleko - 0,5 szklanki",
+                "Mąka orkiszowa pełnoziarnista - 4 łyżki",
+                "Mąka przenna typ 500 - 4 łyżki",
+                "Jaja kurze - 1szt",
+                "Oliwa z oliwek - 2 łyżeczki"
             ],
             przygotowanie: [
-                "Awokado przekrój wzdłuż na pół. Wyjmij pestkę. Następnie łyżką wyjmij miąższ i pokrój w plastry. Skrop sokiem z cytryny.",
-                "Umyj pomidorki i przekrój na pół. Wyciśnij sok z cytryny. Umyj i osusz rukolę.",
-                "Ser twarogowy wymieszaj z przyprawą Adobo.",
-                "Posmaruj serkiem pieczywo. Na 4 kromkach połóż na wierzchu awokado, pomidorki oraz rukolą. Posyp szczyptą pieprzu oraz przyprawą Meksykańską.",
-                "Przykryj pozostałym pieczywem. Przekrój na trójkąty i podawaj."
+                "W kielichu blendera umieszczamy wszystkie składniki oprócz borówek i oliwy. Blendujemy na gładką masę, w razie potrzeby dolewamy odrobinę wody, aby uzyskać preferowaną konsystencję ciasta. Jedną kostkę czekolady możemy pozostawić do dekoracji.",
+                "Zblendowaną masę dosładzamy erytrolem wedle uznania.",
+                "Na patelni rozgrzewamy oliwę. Wylewamy małe porcje ciasta, zachowując odstępy między placuszkami. Zmniejszamy moc palnika i na wolnym ogniu smażymy placuszki do ścięcia masy. Aby masa szybciej się ścięła, możemy przykryć patelnię pokrywką. Gdy placuszki są ścięte, obracamy je na drugą stronę za pomocą płaskiej szpatułki i smażymy do zarumienienia.",
+                "Gotowe placuszki przekładamy na talerz. Podajemy razem z owocami. Przed podaniem możemy rozpuścić pozostawioną czekoladę (np. w mikrofali) i polać nią placuszki lub zetrzeć na tarce o małych oczkach i posypać danie."
             ] 
         },
         { 
-            nazwa: "Tosty z masłem orzechowym", 
-            kategoria: "śniadanie", 
-            kalorie: 320, 
-            czas: "10 min", 
-            obraz: "Pictures/przepis1.jpg",
-            skladniki: [
-                "twaróg 200g",
-                "przyprawa Adobo 1 łyżka",
-                "żółte pomidorki koktajlowe 200g",
-                "dojrzałe awokado 1 sztuka",
-                "cytryna 1 sztuka",
-                "rukola 50 gramów",
-                "pieprz czarny mielony 2 szczypty",
-                "pszenne tosty kromki 8 sztuk"
-            ],
-            przygotowanie: [
-                "Awokado przekrój wzdłuż na pół. Wyjmij pestkę. Następnie łyżką wyjmij miąższ i pokrój w plastry. Skrop sokiem z cytryny.",
-                "Umyj pomidorki i przekrój na pół. Wyciśnij sok z cytryny. Umyj i osusz rukolę.",
-                "Ser twarogowy wymieszaj z przyprawą Adobo.",
-                "Posmaruj serkiem pieczywo. Na 4 kromkach połóż na wierzchu awokado, pomidorki oraz rukolą. Posyp szczyptą pieprzu oraz przyprawą Meksykańską.",
-                "Przykryj pozostałym pieczywem. Przekrój na trójkąty i podawaj."
-            ] 
-        },
-        { 
-            nazwa: "Kurczak z warzywami", 
+            nazwa: "Indyk w sosie serowym", 
             kategoria: "obiad", 
-            kalorie: 390, 
-            czas: "30 min", 
-            obraz: "Pictures/przepis1.jpg",
+            kalorie: 1935, 
+            czas: "80 min", 
+            obraz: "Pictures/przepis7.jpg",
             skladniki: [
-                "twaróg 200g",
-                "przyprawa Adobo 1 łyżka",
-                "żółte pomidorki koktajlowe 200g",
-                "dojrzałe awokado 1 sztuka",
-                "cytryna 1 sztuka",
-                "rukola 50 gramów",
-                "pieprz czarny mielony 2 szczypty",
-                "pszenne tosty kromki 8 sztuk"
+                "Filet z indyka - 400g",
+                "Oliwa z oliwek - 10ml",
+                "Ser typu Cheddar - 75g",
+                "Śmietana 18% - 200ml",
+                "Ciepła woda (może być ta z gotującego się makaronu) - 100ml",
+                "Cebula - 1szt",
+                "Ząbki czosnku - 2szt",
+                "Szpinak - 2 garści",
+                "Przyprawa do sosu - pół łyżeczki soli, płaska łyżeczka cukru/erytrytolu/ksylitolu, odrobina świeżo zmielonego pieprzu",
+                "Przyprawa do mięsa - 10 ml oliwy z oliwek, 1 płaska łyżeczka przyprawy do drobiu, czosnek, odrobina chili, 1/2 łyżeczki słodkiej papryki",
+                "Makaron penne - 250g",
+                "Świeża natka pietruszki - 1szt"
             ],
             przygotowanie: [
-                "Awokado przekrój wzdłuż na pół. Wyjmij pestkę. Następnie łyżką wyjmij miąższ i pokrój w plastry. Skrop sokiem z cytryny.",
-                "Umyj pomidorki i przekrój na pół. Wyciśnij sok z cytryny. Umyj i osusz rukolę.",
-                "Ser twarogowy wymieszaj z przyprawą Adobo.",
-                "Posmaruj serkiem pieczywo. Na 4 kromkach połóż na wierzchu awokado, pomidorki oraz rukolą. Posyp szczyptą pieprzu oraz przyprawą Meksykańską.",
-                "Przykryj pozostałym pieczywem. Przekrój na trójkąty i podawaj."
+                "Mięso pokroić w drobną kostkę, dodać oliwę i przyprawy i odstawić do lodówki na 30-60 minut.",
+                "Cebulę drobno pokroić, rozgrzać patelnię i wlać oliwę.",
+                "Wrzucić cebulę i zeszklić, dodać mięso. Całość wymieszać i smażyć do momentu aż mięso będzie lekko zarumienione. Na patelnię wrzucić szpinak i wymieszać.",
+                "W międzyczasie zagotować wodę na makaron i zacząć gotować makaron.",
+                "Do miseczki wlać 200 ml śmietany, zmniejszyć ogień na patelni.",
+                "Do miseczki ze śmietaną dodać odrobinę mięsa z patelni i wymieszać. Zabieg wykonujemy aby ewentualnie nie zważyć śmietany.",
+                "Na patelnię wrzucić 2 pokrojone lub wyciśnięte ząbki czosnku. Dodać śmietanę. Wymieszać i doprowadzić do wrzenia, co jakiś czas mieszając.",
+                "Dodawać stopniowo ciepłej wody cały czas mieszając.",
+                "Ser zetrzeć na tarce. Dodać na patelnię. Przyprawić do smaku cukrem/słodzikiem i odrobiną soli i startego pieprzu.",
+                "Gotować całość przez 2-3 minuty od czasu do czasu mieszając.",
+                "Na patelnię wrzucić makaron i wymieszać. Posypać natką pietruszki."
+            ] 
+        },
+        { 
+            nazwa: "Biała fit pizza z patelni", 
+            kategoria: "obiad", 
+            kalorie: 527, 
+            czas: "15 min", 
+            obraz: "Pictures/przepis8.jpg",
+            skladniki: [
+                "Dodatki:",
+                "Szpinak - 3 garście",
+                "Cebula - 1/4szt",
+                "Szynka dojrzewająca - 2-3 plasterki",
+                "Mozzarella - 50g",
+                "Pomidor - 5 plastrów",
+                "Papryka - 1szt",
+                "Sos:",
+                "Jogurt naturalny - 3 łyżki",
+                "Czosnek - 1 ząbek",
+                "Woda lub mleko - 30ml",
+                "Sok z cytryny - 1 łyżka",
+                "Sól - 1/3 łyżeczki",
+                "Erytrol lub ksylitol - 1 łyżeczka",
+                "Oregano - szczypta",
+                "Pieprz - szczypta",
+                "Ciasto:",
+                "Mąka pszenna pełnoziarnista - 25g",
+                "Mąka ryżowa - 25g",
+                "Jajko - 1szt",
+                "Proszek do pieczenia - 1/2 łyżeczki",
+                "Otręby lub płatki owsiane - 1 łyżeczka",
+                "Oliwa z oliwek - 1 łyżka",
+                "Mleko - 30ml",
+                "Woda - 30ml",
+                "Przyprawy - 1/2 łyżeczki soli, 1/2 łyżeczki bazylii"
+            ],
+            przygotowanie: [
+                "Podsmażyć cebulę i szpinak, po podsmażeniu zdjąć z patelni.",
+                "Przygotować sos czyli wszystkie składniki wymieszać ze sobą w miseczce.",
+                "Wylać ciasto na rozgrzaną patelnię, za pomocą łyżki uformować placek w kształcie koła.",
+                "Gdy pojawią się liczne pęcherzyki przewrócić ciasto na drugą stronę i zdjąć z palnika.",
+                "Posmarować ciasto sosem (ja użyłem 2/3 sosu), nałożyć szpinak, cebulę i pozostałe dodatki.",
+                "Smażyć pod przykrywką  przez 12 minut.",
+                "Zdjąć z patelni, pokroić polać resztą sosu i udekorować np. rukolą."
+            ] 
+        },
+        { 
+            nazwa: "Mocno czekoladowe trufle z mleka zagęszczonego i kakao", 
+            kategoria: "deser", 
+            kalorie: 648, 
+            czas: "10 min", 
+            obraz: "Pictures/przepis9.jpg",
+            skladniki: [
+                "Mleko zagęszczone słodzone gostyńskie - 120g",
+                "Ciemne kakao - 60g",
+                "Czekolada do picia w proszku (do obtoczenia trufel) - 5g"
+            ],
+            przygotowanie: [
+                "Z podanego przepisu wychodzi 18 kulek po 10 g każda.",
+                "Mleko zagęszczone słodzone (użyte gostyńskie z tubki) wlać do szklanej miski i podgrzać w mikrofalówce przez 25 sekund (moc 800 W). Dodać przesiany przez sitko proszek kakaowy i dokładnie wymieszać łopatką.",
+                "Masę przełożyć do folii spożywczej, lekko spłaszczyć i schłodzić w zamrażalniku przez ok. 30-40 minut.",
+                "Następnie masę podzielić na 18 kawałków (po 10 g). Z każdej części uformować kulkę i następnie obtoczyć ją w czekoladzie w proszku.",
+                "Kulki przechowywać w lodówce."
+            ] 
+        },
+        { 
+            nazwa: "Cebulaki", 
+            kategoria: "kolacja", 
+            kalorie: 2291, 
+            czas: "60 min", 
+            obraz: "Pictures/przepis10.jpg",
+            skladniki: [
+                "Ciasto:",
+                "Mąka pszenna typ 450 - 400g",
+                "Drożdże suszone - 7g",
+                "Cukier - 0,5 łyżeczki",
+                "Sól - 1 łyżeczka",
+                "Letnia woda - 230g",
+                "Olej rzepakowy - 30g",
+                "Dodatki:",
+                "Ser żołty mozzarella - 175g",
+                "Cebula - 1szt",
+                "Masło - 1 łyżeczka",
+                "Ketchup łagodny - 35g",
+                "Przyprawa do pizzy"
+            ],
+            przygotowanie: [
+                "Ser żółty zetrzeć na tarce o grubych oczkach.",
+                "Cebulę pokroić w piórka. Na patelni rozgrzać masło i zeszklić cebulę.",
+                "Do miski dodać mąkę, drożdże, cukier i sól, wymieszać. Następnie wlać letnią wodę i olej, wymieszać wszystko łyżką i zarobić ciasto. Wyrabiać przez kilka minut. Ciasto powinno być gładkie i odchodzić od dłoni. Na koniec uformować je w kulę, lekko oprószyć, miskę przykryć folią i odstawić do wyrośnięcia na ok. 40 minut.",
+                "Po tym czasie ciasto podzielić na 7 równych części i z każdej uformować dłońmi okrągły placek, pozostawiając delikatnie wyższe brzegi.",
+                "Układać je na blaszce wyłożonej papierem do pieczenia.",
+                "Każdy placek posmarować cienką warstwą ketchupu, oprószyć przyprawą do pizzy, następnie nałożyć podsmażoną cebulę i starty ser (po ok. 25 g mozzarelli na sztukę).",
+                "Piec w temp. 250°C (opcja góra-dół) przez ok. 10 minut. Cebulaki upiec w dwóch turach."
             ]
              
         },
         { 
-            nazwa: "Pudding chia", 
-            kategoria: "deser", 
-            kalorie: 220, 
-            czas: "15 min", 
-            obraz: "Pictures/przepis1.jpg",
+            nazwa: "Sałatka z kurczakiem i ryżem czerwonym", 
+            kategoria: "kolacja", 
+            kalorie: 232, 
+            czas: "20 min", 
+            obraz: "Pictures/przepis11.jpg",
             skladniki: [
-                "twaróg 200g",
-                "przyprawa Adobo 1 łyżka",
-                "żółte pomidorki koktajlowe 200g",
-                "dojrzałe awokado 1 sztuka",
-                "cytryna 1 sztuka",
-                "rukola 50 gramów",
-                "pieprz czarny mielony 2 szczypty",
-                "pszenne tosty kromki 8 sztuk"
+                "Ryż czerowny - 20g",
+                "Filet z kurczaka - 80g",
+                "Pomidor - 120g",
+                "Seler naciowy - 45g",
+                "Miks sałat - 1 garść",
+                "Kiełki rzodkiewki - 8g",
+                "Olej rzepakowy - 5g",
+                "Cytryna - 20g"
             ],
             przygotowanie: [
-                "Awokado przekrój wzdłuż na pół. Wyjmij pestkę. Następnie łyżką wyjmij miąższ i pokrój w plastry. Skrop sokiem z cytryny.",
-                "Umyj pomidorki i przekrój na pół. Wyciśnij sok z cytryny. Umyj i osusz rukolę.",
-                "Ser twarogowy wymieszaj z przyprawą Adobo.",
-                "Posmaruj serkiem pieczywo. Na 4 kromkach połóż na wierzchu awokado, pomidorki oraz rukolą. Posyp szczyptą pieprzu oraz przyprawą Meksykańską.",
-                "Przykryj pozostałym pieczywem. Przekrój na trójkąty i podawaj."
+                "Komosę ryżową ugotuj.",
+                "Fileta z kurczaka dopraw, używając ulubionych przypraw.",
+                "Podduś na niewielkiej ilości oleju.",
+                "Pomidora i selera naciowego pokrój w kosteczkę.",
+                "Wymieszaj wszystkie składniki, skrop sokiem z cytryny i dopraw do smaku."
             ] 
         }
     ];
