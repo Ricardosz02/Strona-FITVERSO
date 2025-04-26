@@ -230,23 +230,31 @@ nav ul li a {
 /* ------------------------- */
 /* 📱 MOBILE (≤ 767px) */
 @media (max-width: 767px) {
+    #baner {
+        height: 8vh;
+        padding: 0 5px;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-    /* Pokazanie logo_sb w wersji mobilnej */
     #logo_sb {
-        display: block;
-        margin-left: 10px;
-        text-align: left; /* Dodatkowo wyrównanie tekstu lub elementów wewnątrz logo */
-        list-style: none;           /* Usuwa kropkę */
-        text-decoration: none;      /* Usuwa podkreślenie */
-        color: inherit;             /* Dziedziczy kolor tekstu */
-        outline: none;              /* Usuwa obramowanie po kliknięciu */
+        display: flex;
+        align-items: center; /* Wyśrodkowanie pionowe logo */
+        margin-left: 5px;
+        margin-right: auto;
+        text-align: left;
+        list-style: none;
+        text-decoration: none;
+        color: inherit;
+        outline: none;
     }
 
     #logo_sb img {
-        width: 20vw; /* Mniejsze skalowanie względem szerokości ekranu */
-        max-width: 80px; /* Mniejsza maksymalna szerokość dla iPhone XS */
-        min-width: 60px; /* Minimalna szerokość dla czytelności */
+        width: 22vw; /* Mniejsze skalowanie dla mobilnych */
+        max-width: 50px; /* Bardzo mała maksymalna szerokość dla iPhone XS */
+        min-width: 40px; /* Minimalna szerokość dla czytelności */
         height: auto;
+        border-radius: 20px;
     }
 
     nav ul {
@@ -255,18 +263,18 @@ nav ul li a {
 
     #hamburger {
         display: block;
-        font-size: 40px;
+        font-size: 30px;
         color: white;
         cursor: pointer;
-        margin-left: auto;
+        margin-right: 5px;
     }
 
     .blok-text {
-        text-align: center; /* Wyśrodkowanie tekstu */
-        font-size: 18px; /* Możesz dostosować rozmiar czcionki */
-        background-color: rgba(0, 0, 0, 0.7); /* Przyciemnione tło z przezroczystością */
+        text-align: center;
+        font-size: 18px;
+        background-color: rgba(0, 0, 0, 0.7);
         padding: 20px;
-        border-radius: 20px; /* Opcjonalnie, zaokrąglone rogi */
+        border-radius: 20px;
         box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.6);
     }
 
@@ -276,82 +284,83 @@ nav ul li a {
         padding: 30px;
     }
 
-    #baner, #stopka {
+    #stopka {
         font-size: 20px;
         height: 8vh;
     }
 
-    /* tlo blokow */
-    /* Tło dla pierwszego bloku */
-  #blok1 {
-    background-image: url('Pictures/blok1.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+    #blok1 {
+        background-image: url('Pictures/blok1.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
-  /* Tło dla drugiego bloku */
-  #blok2 {
-    background-image: url('Pictures/blok2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+    #blok2 {
+        background-image: url('Pictures/blok2.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
-  /* Tło dla trzeciego bloku */
-  #blok3 {
-    background-image: url('Pictures/blok3.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+    #blok3 {
+        background-image: url('Pictures/blok3.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
-  /* Tło dla czwartego bloku */
-  #blok4 {
-    background-image: url('Pictures/blok4.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+    #blok4 {
+        background-image: url('Pictures/blok4.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
-  /* Tło dla piątego bloku */
-  #blok5 {
-    background-image: url('Pictures/blok5.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
+    #blok5 {
+        background-image: url('Pictures/blok5.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 }
 
 /* ------------------------- */
 /* 📱📲 TABLET (768px – 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
+    #baner {
+        height: 8vh;
+        padding: 0 10px;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-    /* Pokazanie logo_sb w wersji tablet */
     #logo_sb {
-        display: block;
+        display: flex;
+        align-items: center; /* Wyśrodkowanie pionowe logo */
         margin-left: 10px;
-        text-align: left; /* Dodatkowo wyrównanie tekstu lub elementów wewnątrz logo */
-        list-style: none;           /* Usuwa kropkę */
-        text-decoration: none;      /* Usuwa podkreślenie */
-        color: inherit;             /* Dziedziczy kolor tekstu */
-        outline: none;              /* Usuwa obramowanie po kliknięciu */
+        margin-right: auto;
+        text-align: left;
+        list-style: none;
+        text-decoration: none;
+        color: inherit;
+        outline: none;
     }
 
     #logo_sb img {
-        width: 50vw; /* Mniejsze skalowanie względem szerokości ekranu */
-        max-width: 140px; /* Mniejsza maksymalna szerokość dla iPhone XS */
-        min-width: 100px; /* Minimalna szerokość dla czytelności */
+        width: 17vw; /* Odpowiednie skalowanie dla tabletów */
+        max-width: 80px; /* Maksymalna szerokość dla tabletów */
+        min-width: 50px; /* Minimalna szerokość dla czytelności */
         height: auto;
+        border-radius: 20px;
     }
 
     .blok-text {
-        text-align: center; /* Wyśrodkowanie tekstu */
-        font-size: 25px; /* Możesz dostosować rozmiar czcionki */
-        background-color: rgba(0, 0, 0, 0.7); /* Przyciemnione tło z przezroczystością */
+        text-align: center;
+        font-size: 25px;
+        background-color: rgba(0, 0, 0, 0.7);
         padding: 20px;
-        border-radius: 20px; /* Opcjonalnie, zaokrąglone rogi */
+        border-radius: 20px;
         box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.6);
     }
 
@@ -361,63 +370,55 @@ nav ul li a {
         padding: 60px;
     }
 
-    /* Ukrywamy standardowe menu */
     nav ul {
         display: none;
     }
 
-    /* Pokazujemy hamburgera */
     #hamburger {
         display: block;
         font-size: 40px;
-        margin-left: auto;
+        margin-right: 10px;
     }
 
-    #baner, #stopka {
+    #stopka {
         font-size: 24px;
+        height: 8vh;
     }
 
-    /* tlo blokow */
-    /* Tło dla pierwszego bloku */
-  #blok1 {
-    background-image: url('Pictures/blok1.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+    #blok1 {
+        background-image: url('Pictures/blok1.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
-  /* Tło dla drugiego bloku */
-  #blok2 {
-    background-image: url('Pictures/blok2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+    #blok2 {
+        background-image: url('Pictures/blok2.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
-  /* Tło dla trzeciego bloku */
-  #blok3 {
-    background-image: url('Pictures/blok3.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+    #blok3 {
+        background-image: url('Pictures/blok3.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
-  /* Tło dla czwartego bloku */
-  #blok4 {
-    background-image: url('Pictures/blok4.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+    #blok4 {
+        background-image: url('Pictures/blok4.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
-  /* Tło dla piątego bloku */
-  #blok5 {
-    background-image: url('Pictures/blok5.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
+    #blok5 {
+        background-image: url('Pictures/blok5.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 }
 
 /* ------------------------- */
