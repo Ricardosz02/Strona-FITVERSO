@@ -231,7 +231,7 @@ nav ul li a {
 /* 📱 MOBILE (≤ 767px) */
 @media (max-width: 767px) {
     #baner {
-        height: 8vh;
+        height: 10vh; /* Zwiększona wysokość banera */
         padding: 0 5px;
         justify-content: space-between;
         align-items: center;
@@ -250,8 +250,8 @@ nav ul li a {
     }
 
     #logo_sb img {
-        width: 22vw; /* Mniejsze skalowanie dla mobilnych */
-        max-width: 50px; /* Bardzo mała maksymalna szerokość dla iPhone XS */
+        width: 30vw; /* Nieco większe skalowanie dla większego banera */
+        max-width: 60px; /* Maksymalna szerokość dostosowana do iPhone XS */
         min-width: 40px; /* Minimalna szerokość dla czytelności */
         height: auto;
         border-radius: 20px;
@@ -329,7 +329,7 @@ nav ul li a {
 /* 📱📲 TABLET (768px – 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
     #baner {
-        height: 8vh;
+        height: 10vh; /* Zwiększona wysokość banera */
         padding: 0 10px;
         justify-content: space-between;
         align-items: center;
@@ -348,8 +348,8 @@ nav ul li a {
     }
 
     #logo_sb img {
-        width: 17vw; /* Odpowiednie skalowanie dla tabletów */
-        max-width: 80px; /* Maksymalna szerokość dla tabletów */
+        width: 22vw; /* Nieco większe skalowanie dla większego banera */
+        max-width: 90px; /* Maksymalna szerokość dla tabletów */
         min-width: 50px; /* Minimalna szerokość dla czytelności */
         height: auto;
         border-radius: 20px;
