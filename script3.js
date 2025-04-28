@@ -38,11 +38,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // Wysuwane menu
     const hamburger = document.getElementById("hamburger");
     const sideMenu = document.getElementById("sideMenu");
+    const closeMenu = document.getElementById("closeMenu");
 
     if (hamburger && sideMenu) {
         hamburger.addEventListener("click", function (event) {
             sideMenu.classList.toggle("show");
-            event.stopPropagation(); // Zapobiega zamknięciu menu, gdy klikniesz hamburger
+            event.stopPropagation();
+        });
+
+        closeMenu.addEventListener("click", function () {
+            sideMenu.classList.remove("show");
         });
     }
 
@@ -52,6 +57,52 @@ document.addEventListener("DOMContentLoaded", function () {
             sideMenu.classList.remove("show");
         }
     });
+
+    // Dynamiczne generowanie podmenu dla "Ćwiczenia" z symbolem +/-
+    const submenuToggle = document.querySelector(".submenu-toggle");
+    const toggleIcon = document.querySelector(".toggle-icon");
+    const submenuParent = document.querySelector(".submenu-parent");
+
+    if (submenuToggle && toggleIcon && submenuParent) {
+        // Tworzenie podmenu dynamicznie
+        const submenu = document.createElement("ul");
+        submenu.classList.add("submenu");
+
+        // Dane dla podmenu
+        const submenuItems = [
+            { text: "TRENING SIŁOWY", href: "trening-silowy.html" },
+            { text: "CARDIO", href: "cardio.html" },
+            { text: "STRETCHING", href: "stretching.html" }
+        ];
+
+        // Generowanie elementów podmenu
+        submenuItems.forEach(item => {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = item.href;
+            a.textContent = item.text;
+            li.appendChild(a);
+            submenu.appendChild(li);
+        });
+
+        // Dodanie podmenu do DOM
+        submenuParent.appendChild(submenu);
+
+        // Obsługa kliknięcia w symbol "+"/"−"
+        toggleIcon.addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            submenu.classList.toggle("show");
+            // Zmiana symbolu +/-
+            toggleIcon.textContent = submenu.classList.contains("show") ? "−" : "+";
+        });
+
+        // Kliknięcie w "Ćwiczenia" przenosi na podstronę (brak event.preventDefault)
+        submenuToggle.addEventListener("click", function (event) {
+            // Domyślne zachowanie linku (przejście na cwiczenia.html)
+        });
+    }
 
     // ---------------------
     // Paginacja i filtrowanie przepisów

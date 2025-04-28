@@ -1,25 +1,131 @@
-*
-{
+/* --------------------------------------- */
+/* Reset stylów */
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* --------------------------------------- */
+/* Baner */
 #baner {
-    background-color: #171616;
     width: 100%;
     height: 10vh;
+    position: sticky !important;
+    top: 0;
+    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 20px;
-    text-align: center;
+    background: #171616;
     color: white;
     font-size: 30px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
     margin-bottom: 0;
     flex-shrink: 0;
 }
 
+/* --------------------------------------- */
+/* Nawigacja */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+  
+nav ul li {
+    display: flex;
+    justify-content: center;
+}
+  
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+  
+.nav-button {
+    width: 10vw;
+    min-width: 150px;
+    padding: 15px 30px;
+    background: rgba(49, 42, 42, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 1vw;
+    text-align: center;
+    border-radius: 20px;
+    display: inline-block;
+    transition: box-shadow 0.3s ease-in-out;
+}
+  
+.nav-button:hover {
+    background: rgba(49, 42, 42, 0.9);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+/* --------------------------------------- */
+/* Logo */
+#logo {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #312A2A;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+  
+#logo img {
+      max-width: 110%;
+      max-width: 200px;
+      height: auto;
+      width: auto;
+      border-radius: 20px;
+}
+  
+.nav-button-logo {
+    transition: box-shadow 0.3s ease-in-out;
+}
+  
+.nav-button-logo:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+  
+#logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+  
+/* Logo (mobilne i tabletowe) */
+#logo_sb {
+    display: none;
+    margin-left: 10px;
+    margin-right: auto;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+  
+#logo_sb img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+  
+#logo_sb:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+/* --------------------------------------- */
+/* Kontener główny */
 #container {
     flex: 1;
     display: flex;
@@ -28,95 +134,6 @@
     padding: 50px 20px;
     gap: 20px;
     width: 80%;
-}
-
-#sortowanie {
-    background-color: #171616;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 20px;
-    font-size: 18px;
-    text-align: center;
-    cursor: pointer;
-    width: fit-content;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    gap: 1vw;   /* Relatywny odstęp skalujący się z szerokością okna */
-    gap: 20px;
-    align-items: center;
-}
-
-nav ul li {
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li a {
-    position: relative;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.nav-button {
-    background-color: #312A2A;
-    color: white;
-    border-radius: 20px;
-    font-size: 1vw;
-    padding: 15px 30px;
-    display: inline-block;
-    text-align: center;
-    transition: box-shadow 0.3s ease-in-out;
-    width: 10vw; /* Szerokość przycisków skalująca się z szerokością okna */
-    min-width: 150px; /* Minimalna szerokość dla czytelności */
-}
-
-.nav-button:hover {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-}
-
-#logo {
-    background-color: #312A2A;
-    width: 200px;
-    height: 100px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#logo img {
-    width: 110%; /* Dostosowanie rozmiaru obrazka do szerokości kontenera */
-    max-width: 200px; /* Ustalenie maksymalnej szerokości obrazka */
-    height: auto; /* Zachowanie proporcji obrazka */
-    width: auto; /* Zachowanie proporcji obrazka */
-    border-radius: 20px;
-}
-
-.nav-button-logo {
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-.nav-button-logo:hover {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-}
-
-#logo_sb {
-    display: none;
-    text-align: left;  /* Wyrównuje tekst do lewej */
-    margin-right: auto;   /* Ustawia logo na lewo */
-    margin-left: 10px;    /* Opcjonalnie, dodaj odstęp z lewej strony */
-}
-
-#logo_sb img {
-    max-width: 100%; /* Zapewnia skalowanie obrazka */
-    height: auto;
-    border-radius: 20px;
 }
 
 #main {
@@ -131,69 +148,188 @@ nav ul li a {
     overflow-y: auto;
 }
 
+/* --------------------------------------- */
+/* Stopka */
 #stopka {
-    background-color: #171616;
     width: 100%;
     height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    background-color: #171616;
     color: white;
     font-size: 30px;
+    text-align: center;
     margin-top: 0;
     flex-shrink: 0;
 }
 
-/* Boczne menu wysuwane przycisk */
+/* --------------------------------------- */
+/* Przycisk sortowania */
+#sortowanie {
+    background-color: #171616;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    width: fit-content;
+}
+
+/* --------------------------------------- */
+/* Menu boczne */
 #hamburger {
     display: none;
     font-size: 40px;
     color: white;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
-
-/* Boczne menu wysuwane */
+  
+#hamburger:hover {
+    transform: scale(1.1);
+}
+  
 #sideMenu {
     position: fixed;
     top: 0;
     right: -250px;
     width: 250px;
     height: 100%;
-    background-color: #171616;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #171616 0%, #2A2525 100%);
     color: white;
     transition: right 0.3s ease-in-out;
     z-index: 1000;
-    padding: 50px 20px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
 }
-
+  
 #sideMenu.show {
     right: 0;
 }
-
+  
+#closeMenu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+  
+#closeMenu:hover {
+    transform: rotate(90deg);
+}
+  
 #sideMenu ul {
     list-style: none;
     padding: 0;
+    margin-top: 40px;
 }
-
+  
 #sideMenu ul li {
     margin: 20px 0;
 }
-
+  
 #sideMenu ul li a {
     color: white;
-    text-decoration: none;
     font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+  
+#sideMenu ul li a:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+  
+.submenu-parent {
+    position: relative !important;
+    margin-bottom: 5px !important;
+}
+  
+/* Symbol +/- */
+.toggle-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 35px;
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    cursor: pointer;
+}
+  
+/* Podmenu */
+.submenu-parent {
+    position: relative;
+}
+  
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    margin: 0;
+    padding: 0;
+    display: none;
+    opacity: 0;
+}
+  
+.submenu.show {
+    max-height: 100%;
+    display: block;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 8px 8px !important;
+    border-radius: 10px;
+    margin-top: 0px !important;
+}
+  
+.submenu li {
+    margin: 8px 0 !important;
+}
+  
+.submenu li:first-child {
+    margin-top: 0 !important;
+}
+  
+.submenu li:last-child {
+    margin-bottom: 0 !important;
+}
+  
+.submenu li a {
+    font-size: 16px !important;
+    font-family: 'Roboto', sans-serif;
+    background: rgba(255, 255, 255, 0.05) !important;
+    padding: 8px 12px !important;
+    padding-left: 12px;
+    border-radius: 10px;
+    width: 100%;
+    display: block;
+}
+  
+.submenu li a:hover {
+    transform: translateX(5px);
 }
 
-/* przepisy */
-
+/* --------------------------------------- */
+/* Filtry */
 #filters {
     background-color: #171616;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     color: white;
     padding: 20px;
     border-radius: 15px;
     font-size: 18px;
+    font-family: 'Roboto', sans-serif;
     width: 100%;
     max-width: 800px;
     display: flex;
@@ -202,7 +338,7 @@ nav ul li a {
 }
 
 #filters label {
-    font-weight: bold;
+    font-weight: 500;
     margin-top: 10px;
 }
 
@@ -215,6 +351,8 @@ nav ul li a {
     color: white;
 }
 
+/* --------------------------------------- */
+/* Przepisy */
 .recipe-container {
     width: 100%;
     max-width: 1400px;
@@ -225,6 +363,7 @@ nav ul li a {
 
 .recipe-card {
     background-color: #171616;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     padding: 20px;
     border-radius: 10px;
     color: white;
@@ -234,107 +373,32 @@ nav ul li a {
 }
 
 .recipe-card h3 {
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 24px;
     margin-bottom: 5px;
 }
 
 .recipe-card p {
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
-}
-
-.page-button {
-    padding: 8px 16px;
-    border: none;
-    background-color: #312A2A;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-
-.page-button.active {
-    background-color: #ff9800;
-}
-
-.page-button:hover {
-    background-color: #555;
 }
 
 .przepis {
-    background-color: #171616;
+    background-color: #1c1c1c;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     width: 100%;
     max-width: 1400px;
-    padding: 40px;
+    padding: 15px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 15px;
     color: white;
     margin: 20px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-/* stylizacja przyciskow nawigacji */
-
-#pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.pagination-button {
-    background-color: #960303;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    padding: 8px 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.pagination-button:hover {
-    background-color: #960303;
-    border-color: #690303;
-    color: #000;
-    transform: scale(1.05);
-}
-
-.pagination-button.active {
-    background-color: #690303;
-    color: white;
-    border-color: #420303;
-}
-
-
-/* Bloki przepisow */
-
-
-/*
-.przepis {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1c1c1c;
-    border-radius: 15px;
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-    transition: box-shadow 0.3s;
-    color: #fff;
-}
-*/
-
-
-.przepis {
-    background-color: #1c1c1c;
-    border-radius: 15px;
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-    transition: box-shadow 0.3s;
-    color: #fff;
+.przepis:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    transform: scale(1.01);
 }
 
 .blok1 {
@@ -342,6 +406,14 @@ nav ul li a {
     justify-content: space-between;
     align-items: center;
     padding: 15px;
+}
+
+.blok1 h3 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.blok1 p {
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 .przepis-tresc {
@@ -358,55 +430,30 @@ nav ul li a {
     height: auto;
     border-radius: 10px;
     object-fit: cover;
-    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.6); /* Dodany cień wokół obrazka */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
 }
 
 .details-button {
-    background-color: #333;
+    background: linear-gradient(135deg, #960303 0%, #690303 100%);
     color: #fff;
     border: none;
     padding: 8px 12px;
-    border-radius: 5px;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
-    transition: background-color 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .details-button:hover {
-    background-color: #555;
+    box-shadow: 0 0px 20px rgba(150, 3, 3, 0.5);
+    transform: scale(1.01);
 }
-
-/* Szczegóły przepisu */
-
-/*
-.blok2 .recipe-details {
-    display: none;
-    padding: 10px;
-    background: #312A2A;
-    color: #fff;
-    border-radius: 20px;
-    margin: 0;
-    width: 100%;
-    box-sizing: border-box;
-    clear: both;
-
-
-    max-height: 0;
-            opacity: 0;
-            overflow: hidden;
-    transition: max-height 0.4s ease-out, opacity 0.4s ease-out, padding 0.4s ease-out;
-}
-
-.blok2 .recipe-details.visible {
-    max-height: 600px; 
-    opacity: 1;
-    padding: 10px;
-}
-*/
 
 .blok2 .recipe-details {
     padding: 0 10px;
-    background: #312A2A;
+    background: linear-gradient(135deg, #312A2A 0%, #1c1c1c 100%);
     color: #fff;
     border-radius: 20px;
     margin: 0;
@@ -419,9 +466,16 @@ nav ul li a {
 }
 
 .blok2 .recipe-details.visible {
-    max-height: 600px; /* Zwiększona wartość dla bezpieczeństwa */
+    height: auto;
+    max-height: none;
+    min-height: 100px;
     opacity: 1;
-    padding: 10px 10px;
+    padding: 15px;
+    transform: translateY(0);
+}
+
+.blok2 .recipe-details:not(.visible) {
+    transform: translateY(20px);
 }
 
 .details-container {
@@ -433,128 +487,115 @@ nav ul li a {
     width: 48%;
 }
 
-.skladniki h4, .przygotowanie h4 {
+.skladniki h4,
+.przygotowanie h4 {
+    color: #ff4d4d;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
     margin-top: 0;
+    position: relative;
     text-align: left;
 }
 
+.skladniki h4::after,
+.przygotowanie h4::after {
+    background: linear-gradient(to right, #ff4d4d, transparent);
+    bottom: -4px;
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 30px;
+}
+
 .skladniki ul, .przygotowanie ol {
+    font-family: 'Roboto', sans-serif;
     margin: 10px 0;
     padding-left: 20px;
     text-align: left;
 }
 
+/* --------------------------------------- */
+/* Paginacja */
 
+#pagination {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 25px;
+}
 
-/* Suwak */
+.pagination-button {
+    background: linear-gradient(135deg, #960303 0%, #690303 100%);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pagination-button:hover {
+    box-shadow: 0 6px 15px rgba(150, 3, 3, 0.5);
+    transform: scale(1.1);
+}
+
+.pagination-button.active {
+    background: linear-gradient(135deg, #ff4d4d 0%, #960303 100%);
+    box-shadow: 0 4px 10px rgba(150, 3, 3, 0.5);
+}
+
+.page-button {
+    background: linear-gradient(135deg, #312A2A 0%, #1c1c designated1c 100%);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page-button.active {
+    background: linear-gradient(135deg, #ff4d4d 0%, #960303 100%);
+    box-shadow: 0 4px 10px rgba(150, 3, 3, 0.5);
+}
+
+.page-button:hover {
+    box-shadow: 0 6px 15px rgba(150, 3, 3, 0.5);
+    transform: scale(1.1);
+}
+
+/* --------------------------------------- */
+/* Suwak przewijania */
 ::-webkit-scrollbar {
     width: 10px;
-  }
+}
   
-  ::-webkit-scrollbar-track {
-    background: #000000; /* tło paska */
-  }
+::-webkit-scrollbar-track {
+    background: #000000;
+}
   
-  ::-webkit-scrollbar-thumb {
-    background: #960303; /* kolor samego "uchwytu" */
-  }
+::-webkit-scrollbar-thumb {
+    background: #960303;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #b30303; /* Jaśniejszy odcień czerwonego */
+}
 
 /* ------------------------- */
 /* 📱 MOBILE (≤ 767px) */
 @media (max-width: 767px) {
-
-    #baner {
-        height: 10vh; /* Zwiększona wysokość banera */
-        padding: 0 5px;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    #logo_sb {
-        display: flex;
-        align-items: center; /* Wyśrodkowanie pionowe logo */
-        margin-left: 5px;
-        margin-right: auto;
-        text-align: left;
-        list-style: none;
-        text-decoration: none;
-        color: inherit;
-        outline: none;
-    }
-
-    #logo_sb img {
-        width: 30vw; /* Nieco większe skalowanie dla większego banera */
-        max-width: 60px; /* Maksymalna szerokość dostosowana do iPhone XS */
-        min-width: 40px; /* Minimalna szerokość dla czytelności */
-        height: auto;
-        border-radius: 20px;
-    }
-
-    nav ul {
-        display: none;
-    }
-
-    #hamburger {
-        display: block;
-        font-size: 30px;
-        color: white;
-        cursor: pointer;
-        margin-right: 5px;
-    }
-
-    #main {
-        flex-direction: column;
-        gap: 30px;
-        padding: 40px 20px;
-        flex-grow: 1;
-        height: auto; /* Zmiana wysokości na auto, aby dostosować do treści */
-        overflow-y: auto; /* Umożliwienie przewijania, jeśli treść jest zbyt długa */
-    }
-
-    #container {
-        width: 100%;
-        padding: 20px;
-    }
-
-    #sortowanie {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
-
-    .recipe-container {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .przepis {
-        overflow: hidden;
-    }
-
-    /* responsywnosc bloku */
-    .przepis-obraz img {
-        width: 70%;
-        height: auto;
-        margin: 10px 0;
-    }
-
-    .blok1 {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .przepis-obraz {
-        margin-left: 0;
-        width: 100%;
-    }
-
-    .przepis-tresc {
-        width: 100%;
-        font-size: 1.1rem;
-        line-height: 1.3;
-    }
-
-    /* Ustawienie stopki na dole strony */
     body {
         display: flex;
         flex-direction: column;
@@ -565,32 +606,148 @@ nav ul li a {
         position: relative;
     }
 
+    #baner {
+        height: 10vh;
+        padding: 0 5px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #hamburger {
+        display: block;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        margin-right: 5px;
+    }
+
+    #logo_sb {
+        display: flex;
+        align-items: center;
+        margin-left: 5px;
+        margin-right: auto;
+        text-align: left;
+        list-style: none;
+        text-decoration: none;
+        color: inherit;
+        outline: none;
+    }
+
+    #logo_sb img {
+        width: 30vw;
+        max-width: 60px;
+        min-width: 40px;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    #main {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 20px;
+        flex-grow: 1;
+        height: auto;
+        overflow-y: auto;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    #sortowanie {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    
     #stopka {
         margin-top: auto;
+    }
+    
+    .blok1 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .przepis {
+        overflow: hidden;
+    }
+
+    .przepis-obraz {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .przepis-obraz img {
+        width: 70%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .przepis-tresc {
+        width: 100%;
+        font-size: 1.1rem;
+        line-height: 1.3;
+    }
+
+    .recipe-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    } 
+
+    /*Układ Składników i Przygotowań w pionie*/
+    .details-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .skladniki,
+    .przygotowanie {
+        width: 100%;
+    }
+
+    .skladniki h4,
+    .przygotowanie h4 {
+        font-size: 20px;
+    }
+
+    .skladniki ul,
+    .przygotowanie ol {
+        font-size: 15px;
+        line-height: 1.7;
+        padding-left: 20px;
     }
 }
 
 /* ------------------------- */
 /* 📲 TABLET (768px – 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
-
     #baner {
-        height: 10vh; /* Zwiększona wysokość banera */
+        height: 10vh;
         padding: 0 10px;
         justify-content: space-between;
         align-items: center;
     }
 
-    #main {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 40px;
-        padding: 60px 40px;
+    #container {
+        width: 100%;
+        padding: 30px;
+    }
+
+    #hamburger {
+        display: block;
+        font-size: 40px;
+        margin-right: 10px;
     }
 
     #logo_sb {
         display: flex;
-        align-items: center; /* Wyśrodkowanie pionowe logo */
+        align-items: center;
         margin-left: 10px;
         margin-right: auto;
         text-align: left;
@@ -601,44 +758,33 @@ nav ul li a {
     }
 
     #logo_sb img {
-        width: 22vw; /* Nieco większe skalowanie dla większego banera */
-        max-width: 90px; /* Maksymalna szerokość dla tabletów */
-        min-width: 50px; /* Minimalna szerokość dla czytelności */
+        width: 22vw;
+        max-width: 90px;
+        min-width: 50px;
         height: auto;
         border-radius: 20px;
+    }
+
+    #main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 40px;
+        padding: 60px 40px;
     }
 
     nav ul {
         display: none;
     }
 
-    #hamburger {
-        display: block;
-        font-size: 40px;
-        margin-right: 10px;
-    }
-
-    #container {
-        width: 100%;
-        padding: 30px;
-    }
-
     #sortowanie {
         font-size: 17px;
         padding: 12px 25px;
-    }
-
-    .recipe-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
+    }  
 
     .przepis {
         overflow: hidden;
     }
 
-    /* responsywnosc bloku */
     .przepis-obraz {
         flex-shrink: 0;
         margin-left: 20px;
@@ -658,25 +804,34 @@ nav ul li a {
         line-height: 1.4;
     }
 
+    .recipe-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
 }
 
 /* ------------------------- */
 /* 💻 DESKTOP (≥ 1024px) */
 @media (min-width: 1024px) {
-
     #baner {
-        min-height: 100px; /* Minimalna wysokość banera */
+        min-height: 100px;
+        font-family: 'Roboto', sans-serif;
     }
 
     #hamburger {
         display: none;
     }
 
+    #logo_sb {
+        display: none;
+    }
+
     nav ul {
         display: flex;
-        justify-content: space-around; /* Równomierne rozstawienie elementów */
+        justify-content: space-around;
         padding: 0;
-        gap: 5vw; /* Przerwy między elementami */
+        gap: 5vw;
     }
 
     nav ul li {
@@ -689,49 +844,10 @@ nav ul li a {
         font-size: 30px;
     }
 
-    .recipe-container {
-        display: table;
-        width: 100%;
-        border-collapse: collapse;
-    }
-
-    .recipe-card {
-        display: table-row;
-        background-color: transparent;
-        padding: 0;
-        border-radius: 0;
-    }
-
-    .recipe-card > * {
-        display: table-cell;
-        padding: 15px;
-        background-color: #171616;
-        border: 1px solid #312A2A;
-    }
-
-    .recipe-header {
-        display: table-row;
-        font-weight: bold;
-        background-color: #312A2A;
-        color: white;
-    }
-
-    .recipe-header > * {
-        display: table-cell;
-        padding: 15px;
-        border: 1px solid #312A2A;
-    }
-
-    #logo_sb {
-        display: none;
-    }
-
     .przepis {
         overflow: hidden;
     }
 
-
-    /* responsywnosc bloku */
     .przepis-obraz {
         flex-shrink: 0;
         margin-left: 20px;
@@ -750,4 +866,37 @@ nav ul li a {
         font-size: 1.7rem;
         line-height: 1.4;
     }
+
+    .recipe-card {
+        display: table-row;
+        background-color: transparent;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .recipe-card > * {
+        display: table-cell;
+        padding: 15px;
+        background-color: #171616;
+        border: 1px solid #312A2A;
+    }
+
+    .recipe-container {
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .recipe-header {
+        display: table-row;
+        font-weight: bold;
+        background-color: #312A2A;
+        color: white;
+    }
+
+    .recipe-header > * {
+        display: table-cell;
+        padding: 15px;
+        border: 1px solid #312A2A;
+    }    
 }
