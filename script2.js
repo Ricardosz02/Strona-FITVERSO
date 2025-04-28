@@ -38,11 +38,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // Wysuwane menu
     const hamburger = document.getElementById("hamburger");
     const sideMenu = document.getElementById("sideMenu");
+    const closeMenu = document.getElementById("closeMenu");
 
     if (hamburger && sideMenu) {
         hamburger.addEventListener("click", function (event) {
             sideMenu.classList.toggle("show");
-            event.stopPropagation(); // Zapobiega zamknięciu menu, gdy klikniesz hamburger
+            event.stopPropagation();
+        });
+
+        closeMenu.addEventListener("click", function () {
+            sideMenu.classList.remove("show");
         });
     }
 
@@ -53,6 +58,52 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    // Dynamiczne generowanie podmenu dla "Ćwiczenia" z symbolem +/-
+    const submenuToggle = document.querySelector(".submenu-toggle");
+    const toggleIcon = document.querySelector(".toggle-icon");
+    const submenuParent = document.querySelector(".submenu-parent");
+
+    if (submenuToggle && toggleIcon && submenuParent) {
+        // Tworzenie podmenu dynamicznie
+        const submenu = document.createElement("ul");
+        submenu.classList.add("submenu");
+
+        // Dane dla podmenu
+        const submenuItems = [
+            { text: "TRENING SIŁOWY", href: "trening-silowy.html" },
+            { text: "CARDIO", href: "cardio.html" },
+            { text: "STRETCHING", href: "stretching.html" }
+        ];
+
+        // Generowanie elementów podmenu
+        submenuItems.forEach(item => {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = item.href;
+            a.textContent = item.text;
+            li.appendChild(a);
+            submenu.appendChild(li);
+        });
+
+        // Dodanie podmenu do DOM
+        submenuParent.appendChild(submenu);
+
+        // Obsługa kliknięcia w symbol "+"/"−"
+        toggleIcon.addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            submenu.classList.toggle("show");
+            // Zmiana symbolu +/-
+            toggleIcon.textContent = submenu.classList.contains("show") ? "−" : "+";
+        });
+
+        // Kliknięcie w "Ćwiczenia" przenosi na podstronę (brak event.preventDefault)
+        submenuToggle.addEventListener("click", function (event) {
+            // Domyślne zachowanie linku (przejście na cwiczenia.html)
+        });
+    }
+
 
     // Trenerzy personalni
 
@@ -61,8 +112,8 @@ document.addEventListener("DOMContentLoaded", function () {
           imie: "Miłosz",
           nazwisko: "Hamkało",
           staz: "5 lat",
-          specjalizacja: "trening funkcjonalny, mobilność",
-          podopieczni: "osoby po kontuzjach i sportowcy amatorzy",
+          specjalizacja: "Trening funkcjonalny, mobilność",
+          podopieczni: "Osoby po kontuzjach i sportowcy amatorzy",
           osiagniecia: [
             "Fizjoterapeuta reprezentacji juniorów",
             "Certyfikat FMS (Functional Movement Screen)"
@@ -77,8 +128,8 @@ document.addEventListener("DOMContentLoaded", function () {
           imie: "Piotr",
           nazwisko: "Hajduk",
           staz: "10 lat",
-          specjalizacja: "kulturystyka, sylwetka",
-          podopieczni: "zawodnicy fitness i kulturyści",
+          specjalizacja: "Kulturystyka, sylwetka",
+          podopieczni: "Zawodnicy fitness i kulturyści",
           osiagniecia: [
             "Trener Mistrzów Polski IFBB",
             "Wykładowca akademicki AWF"
@@ -93,8 +144,8 @@ document.addEventListener("DOMContentLoaded", function () {
           imie: "Szymon",
           nazwisko: "Moszny",
           staz: "4 lata",
-          specjalizacja: "trening cardio, redukcja tkanki tłuszczowej",
-          podopieczni: "osoby początkujące",
+          specjalizacja: "Trening cardio, redukcja tkanki tłuszczowej",
+          podopieczni: "Osoby początkujące",
           osiagniecia: [
             "Autor ebooka o spalaniu tłuszczu",
             "Certyfikat ISSA (Certified Trainer)"
@@ -109,8 +160,8 @@ document.addEventListener("DOMContentLoaded", function () {
           imie: "Marek",
           nazwisko: "Prawdzik",
           staz: "7 lat",
-          specjalizacja: "crossfit, siła dynamiczna",
-          podopieczni: "pasjonaci crossfitu, wojskowi",
+          specjalizacja: "Crossfit, siła dynamiczna",
+          podopieczni: "Pasjonaci crossfitu, wojskowi",
           osiagniecia: [
             "3 miejsce w CrossFit Open Polska",
             "Współpracuje z jednostkami specjalnymi"
@@ -124,8 +175,8 @@ document.addEventListener("DOMContentLoaded", function () {
           imie: "Michał",
           nazwisko: "Radomski",
           staz: "6 lat",
-          specjalizacja: "kalistenika, street workout",
-          podopieczni: "młodzież i miłośnicy treningu z masą ciała",
+          specjalizacja: "Kalistenika, street workout",
+          podopieczni: "Młodzież i miłośnicy treningu z masą ciała",
           osiagniecia: [
             "Twórca aplikacji mobilnej do treningu kalistenicznego",
             "Prowadzi kanał TikTok (100k+ followersów)"
@@ -138,8 +189,8 @@ document.addEventListener("DOMContentLoaded", function () {
           imie: "Sebastian",
           nazwisko: "Suder",
           staz: "9 lat",
-          specjalizacja: "siła, trójbój siłowy",
-          podopieczni: "zawodnicy przygotowujący się do zawodów",
+          specjalizacja: "Siła, trójbój siłowy",
+          podopieczni: "Zawodnicy przygotowujący się do zawodów",
           osiagniecia: [
             "Rekordzista Polski w martwym ciągu (kategoria open)",
             "Uczestnik seminariów z Edem Coanem"
@@ -152,18 +203,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       ];
       
-      // Dodanie funkcji rozwijania i zwijania z animacją
+    // Dodanie funkcji rozwijania i zwijania z animacją
     document.querySelectorAll('.czytaj').forEach(p => {
-      p.addEventListener('click', () => {
-          const blok = p.closest('.blok'); // Znajdź rodzica blok
-          const infoDiv = blok.querySelector('.info');
-          const id = blok.getAttribute('data-id');
-          const trener = trenerzy[id];
+        p.addEventListener('click', () => {
+            const blok = p.closest('.blok');
+            const infoDiv = blok.querySelector('.info');
+            const id = blok.getAttribute('data-id');
+            const trener = trenerzy[id];
 
-          // Zmieniamy stan na przeciwny (jeśli rozwinięte to zwijamy i odwrotnie)
-          if (infoDiv.style.height === '0px' || infoDiv.style.height === '') {
-
-            let socialHTML = '';
+            // Zmieniamy stan na przeciwny
+            if (infoDiv.style.height === '0px' || infoDiv.style.height === '') {
+                let socialHTML = '';
                 if (trener.social) {
                     socialHTML += '<strong>Media społecznościowe:</strong><div class="social-media">';
                     if (trener.social.instagram)
@@ -175,44 +225,44 @@ document.addEventListener("DOMContentLoaded", function () {
                     socialHTML += '</div>';
                 }
 
-              // Rozwinięcie
-              infoDiv.innerHTML = `
-                  <strong>Staż:</strong> ${trener.staz}<br>
-                  <strong>Specjalizacja:</strong> ${trener.specjalizacja}<br>
-                  <strong>Podopieczni:</strong> ${trener.podopieczni}<br>
-                  <strong>Osiągnięcia:</strong>
-                  <ul>
-                      ${trener.osiagniecia.map(item => `<li>${item}</li>`).join('')}
-                  </ul>
-                  ${socialHTML}
-              `;
+                // Rozwinięcie
+                infoDiv.innerHTML = `
+                    <strong>Staż:</strong> ${trener.staz}<br>
+                    <strong>Specjalizacja:</strong> ${trener.specjalizacja}<br>
+                    <strong>Podopieczni:</strong> ${trener.podopieczni}<br>
+                    <strong>Osiągnięcia:</strong>
+                    <ul>
+                        ${trener.osiagniecia.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                    ${socialHTML}
+                `;
 
-              
+                infoDiv.style.transition = 'height 0.5s ease, opacity 0.5s ease';
+                infoDiv.style.height = '0';
+                infoDiv.style.opacity = '0';
 
-              infoDiv.style.transition = 'height 0.5s ease, opacity 0.5s ease'; // Ustawienie animacji
-              infoDiv.style.height = `0`; // Wysokość na podstawie zawartości
-              infoDiv.style.opacity = '0';  // Ustawiamy pełną przezroczystość
-              
+                // Ustawienia po załadowaniu zawartości
+                setTimeout(() => {
+                    infoDiv.style.height = `${infoDiv.scrollHeight}px`;
+                    infoDiv.style.opacity = '1';
+                    p.textContent = 'Zwiń dane';
+                    blok.classList.add('enlarged');
+                }, 10);
 
-              // Ustawienia na po załadowaniu zawartości
-              setTimeout(() => {
-                infoDiv.style.height = `${infoDiv.scrollHeight}px`; // Ustawienie odpowiedniej wysokości
-                infoDiv.style.opacity = '1';  // Ustawienie pełnej przezroczystości
-            }, 10); // Krótkie opóźnienie na rozruch animacji
-
-              // Zmieniamy rozmiar ikon
-              const socialIcons = infoDiv.querySelectorAll('.social-icon');
-              socialIcons.forEach(icon => {
-              icon.style.width = '40px';  // Ustawienie szerokości ikony
-              icon.style.height = '40px'; // Ustawienie wysokości ikony
-          });
-          } else {
-              // Zwinięcie
-              infoDiv.style.transition = 'height 0.5s ease, opacity 0.5s ease'; // Ustawienie animacji
-              infoDiv.style.height = '0'; // Zmniejszenie wysokości
-              infoDiv.style.opacity = '0';  // Ustawienie przezroczystości na 0
-          }
-      });
-  });
-    
+                // Zmieniamy rozmiar ikon
+                const socialIcons = infoDiv.querySelectorAll('.social-icon');
+                socialIcons.forEach(icon => {
+                    icon.style.width = '40px';
+                    icon.style.height = '40px';
+                });
+            } else {
+                // Zwinięcie
+                infoDiv.style.transition = 'height 0.5s ease, opacity 0.5s ease';
+                infoDiv.style.height = '0';
+                infoDiv.style.opacity = '0';
+                p.textContent = 'Czytaj więcej';
+                blok.classList.remove('enlarged');
+            }
+        });
+    });
 });
