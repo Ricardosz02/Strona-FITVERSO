@@ -1,3 +1,5 @@
+/* ----------------------------------------- */
+/* Reset i podstawowe style */
 * {
     margin: 0;
     padding: 0;
@@ -5,112 +7,139 @@
 }
 
 html, body {
-    height: 100%; /* Zajmuje pełną wysokość */
+    height: 100%;
     display: flex;
-    flex-direction: column; /* Ustawiamy flexbox w pionie */
+    flex-direction: column;
 }
 
+/* ----------------------------------------- */
+/* Baner */
 #baner {
-    background-color: #171616;
     width: 100%;
     height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 20px;
-    text-align: center;
+    background: #171616;
     color: white;
     font-size: 30px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
     margin-bottom: 0;
     flex-shrink: 0;
 }
 
+/* ----------------------------------------- */
+/* Nawigacja */
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: space-between;
-    gap: 1vw;   /* Relatywny odstęp skalujący się z szerokością okna */
     gap: 20px;
     align-items: center;
 }
-
+  
 nav ul li {
     display: flex;
     justify-content: center;
 }
-
+  
 nav ul li a {
-    position: relative;
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
-
+  
 .nav-button {
-    background-color: #312A2A;
-    color: white;
-    border-radius: 20px;
-    font-size: 1vw;
+    width: 10vw;
+    min-width: 150px;
     padding: 15px 30px;
-    display: inline-block;
+    background: rgba(49, 42, 42, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 1vw;
     text-align: center;
+    border-radius: 20px;
+    display: inline-block;
     transition: box-shadow 0.3s ease-in-out;
-    width: 10vw; /* Szerokość przycisków skalująca się z szerokością okna */
-    min-width: 150px; /* Minimalna szerokość dla czytelności */
 }
-
+  
 .nav-button:hover {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    background: rgba(49, 42, 42, 0.9);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
 }
 
+/* ----------------------------------------- */
+/* Logo (desktop) */
 #logo {
-    background-color: #312A2A;
     width: 200px;
     height: 100px;
-    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#logo img {
-    width: 110%; /* Dostosowanie rozmiaru obrazka do szerokości kontenera */
-    max-width: 200px; /* Ustalenie maksymalnej szerokości obrazka */
-    height: auto; /* Zachowanie proporcji obrazka */
-    width: auto; /* Zachowanie proporcji obrazka */
+    background-color: #312A2A;
     border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+  
+#logo img {
+      max-width: 110%;
+      max-width: 200px;
+      height: auto;
+      width: auto;
+      border-radius: 20px;
+}
+  
 .nav-button-logo {
     transition: box-shadow 0.3s ease-in-out;
 }
-
+  
 .nav-button-logo:hover {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
-
+  
+#logo:hover {
+    transform: scale(1.05); /* Lekkie powiększenie */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Subtelny cień */
+}
+  
+/* Logo (mobilne i tabletowe) */
 #logo_sb {
     display: none;
-    text-align: left;  /* Wyrównuje tekst do lewej */
-    margin-right: auto;   /* Ustawia logo na lewo */
-    margin-left: 10px;    /* Opcjonalnie, dodaj odstęp z lewej strony */
+    margin-left: 10px;
+    margin-right: auto;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+  
 #logo_sb img {
-    max-width: 100%; /* Zapewnia skalowanie obrazka */
+    max-width: 100%;
     height: auto;
     border-radius: 20px;
 }
+  
+#logo_sb:hover {
+    transform: scale(1.05); /* Lekkie powiększenie */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Subtelny cień */
+}
 
+/* ----------------------------------------- */
+/* Główna zawartość */
 #main {
-    flex-grow: 1;  /* To wypełnia przestrzeń dostępnego miejsca */
+    flex-grow: 1;
     background-color: #292727;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     width: 100%;
-    height: auto;  /* Zmieniamy na auto, aby dopasować do zawartości */
+    height: auto;
     gap: 20px;
     padding: 140px;
 }
@@ -119,8 +148,8 @@ nav ul li a {
     background-color: #171616;
     color: white;
     font-size: 25px;
-    height: 100%;   /* <-- zachowujemy */
-    width: 100%;    /* <-- dopasowanie szerokości */
+    height: 100%;
+    width: 100%;
     margin: auto;
     border-radius: 10px;
     display: flex;
@@ -131,84 +160,31 @@ nav ul li a {
     text-align: center;
 }
 
-#stopka {
-    background-color: #171616;
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    font-size: 30px;
-    margin-top: auto;  /* To przykleja stopkę do dołu */
-    flex-shrink: 0;
-}
-
-#hamburger {
-    display: none;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-}
-
-#sideMenu {
-    position: fixed;
-    top: 0;
-    right: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: #171616;
-    color: white;
-    transition: right 0.3s ease-in-out;
-    z-index: 1000;
-    padding: 50px 20px;
-}
-
-#sideMenu.show {
-    right: 0;
-}
-
-#sideMenu ul {
-    list-style: none;
-    padding: 0;
-}
-
-#sideMenu ul li {
-    margin: 20px 0;
-}
-
-#sideMenu ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-/* Opcjonalnie półprzezroczyste tło dla tekstu */
-
-
-
-
-
 .blok .blok-content {
     display: flex;
-    flex-direction: column; /* Ustawienie elementów jeden pod drugim */
-    align-items: center; /* Wyrównanie do środka */
-    background-color: rgba(0, 0, 0, 0.4); /* Przezroczyste tło */
-    padding: 15px; /* Wewnętrzne marginesy */
-    border-radius: 20px; /* Zaokrąglone rogi */
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.blok-content:hover {
+    transform: scale(1.1);
 }
 
 .blok h1 {
-    margin: 0; /* Usuwa domyślne marginesy */
+    font-family: 'Bebas Neue', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
 }
 
 .blok a {
-    text-decoration: none;      /* usuwa podkreślenie */
-    color: inherit;             /* dziedziczy kolor z rodzica */
-    display: block;             /* żeby <a> zajmowało cały obszar bloku */
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
-
 
 /* Styl dla konkretnego bloku z data-id */
 .blok[data-id="0"] {
@@ -265,23 +241,199 @@ nav ul li a {
     background-position: center;
 }
 
+/* ----------------------------------------- */
+/* Stopka */
+#stopka {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #171616;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0;
+    flex-shrink: 0;
+}
 
-/* Responsywność */
+/* ----------------------------------------- */
+/* Menu boczne (hamburger) */
+#hamburger {
+    display: none;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+  
+#hamburger:hover {
+    transform: scale(1.1);
+}
+  
+#sideMenu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #171616 0%, #2A2525 100%);
+    color: white;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+}
+  
+#sideMenu.show {
+    right: 0;
+}
+  
+#closeMenu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+  
+#closeMenu:hover {
+    transform: rotate(90deg);
+}
+  
+#sideMenu ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+}
+  
+#sideMenu ul li {
+    margin: 20px 0;
+}
+  
+#sideMenu ul li a {
+    color: white;
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+  
+#sideMenu ul li a:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+  
+.submenu-parent {
+    position: relative !important;
+    margin-bottom: 5px !important;
+}
+  
+/* Symbol +/- */
+.toggle-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 35px;
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    cursor: pointer;
+}
+  
+/* Podmenu */
+.submenu-parent {
+    position: relative;
+}
+  
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    margin: 0;
+    padding: 0;
+    display: none;
+    opacity: 0;
+}
+  
+.submenu.show {
+    max-height: 100%;
+    display: block;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 8px 8px !important;
+    border-radius: 10px;
+    margin-top: 0px !important;
+}
+  
+.submenu li {
+    margin: 8px 0 !important;
+}
+  
+.submenu li:first-child {
+    margin-top: 0 !important;
+}
+  
+.submenu li:last-child {
+    margin-bottom: 0 !important;
+}
+  
+.submenu li a {
+    font-size: 16px !important;
+    font-family: 'Roboto', sans-serif;
+    background: rgba(255, 255, 255, 0.05) !important;
+    padding: 8px 12px !important;
+    padding-left: 12px;
+    border-radius: 10px;
+    width: 100%;
+    display: block;
+}
+  
+.submenu li a:hover {
+    transform: translateX(5px);
+}
+
+/* ----------------------------------------- */
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #960303;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #b30303;
+}
 
 /* ------------------------- */
 /* 📱 MOBILE (≤ 767px) */
 @media (max-width: 767px) {
-
     #baner {
-        height: 10vh; /* Zwiększona wysokość banera */
+        height: 10vh;
         padding: 0 5px;
         justify-content: space-between;
         align-items: center;
+        font-family: 'Bebas Neue', sans-serif;
     }
 
     #logo_sb {
         display: flex;
-        align-items: center; /* Wyśrodkowanie pionowe logo */
+        align-items: center;
         margin-left: 5px;
         margin-right: auto;
         text-align: left;
@@ -292,9 +444,9 @@ nav ul li a {
     }
 
     #logo_sb img {
-        width: 30vw; /* Nieco większe skalowanie dla większego banera */
-        max-width: 60px; /* Maksymalna szerokość dostosowana do iPhone XS */
-        min-width: 40px; /* Minimalna szerokość dla czytelności */
+        width: 30vw;
+        max-width: 60px;
+        min-width: 40px;
         height: auto;
         border-radius: 20px;
     }
@@ -311,56 +463,47 @@ nav ul li a {
         margin-right: 5px;
     }
 
-    #stopka {
-        font-size: 16px;
-        height: 8vh;
+    #sideMenu.show {
+        right: 0;
     }
 
     #main {
-        grid-template-columns: 1fr; /* 1 kolumna dla małych ekranów */
+        grid-template-columns: 1fr;
         gap: 30px;
         padding: 40px;
+    }
+
+    .blok {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 15px 0;
+        border-radius: 8px;
     }
 
     .blok h1 {
         font-size: 30px;
     }
 
-
-
-    #sideMenu.show {
-        right: 0;
+    #stopka {
+        font-size: 16px;
+        height: 8vh;
     }
-
-    /* info o trenerach */
-    .blok {
-        border: 1px solid #ccc;
-        padding: 10px;
-        margin: 15px 0;
-        border-radius: 8px;
-      }
-      
-
-      
-
-    
-
 }
 
 /* ------------------------- */
 /* 📱📲 TABLET (768px – 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
-
     #baner {
-        height: 10vh; /* Zwiększona wysokość banera */
+        height: 10vh;
         padding: 0 10px;
         justify-content: space-between;
         align-items: center;
+        font-family: 'Bebas Neue', sans-serif;
     }
 
     #logo_sb {
         display: flex;
-        align-items: center; /* Wyśrodkowanie pionowe logo */
+        align-items: center;
         margin-left: 10px;
         margin-right: auto;
         text-align: left;
@@ -371,43 +514,31 @@ nav ul li a {
     }
 
     #logo_sb img {
-        width: 22vw; /* Nieco większe skalowanie dla większego banera */
-        max-width: 90px; /* Maksymalna szerokość dla tabletów */
-        min-width: 50px; /* Minimalna szerokość dla czytelności */
+        width: 22vw;
+        max-width: 90px;
+        min-width: 50px;
         height: auto;
         border-radius: 20px;
     }
 
-    #main {
-        grid-template-columns: repeat(2, 1fr); /* 2 kolumny dla tabletów */
-        gap: 40px;
-        padding: 80px;
-    }
-
-    .blok h1 {
-        font-size: 30px;
-    }
-
-
-    /* Ukrywamy standardowe menu */
     nav ul {
         display: none;
     }
 
-    /* Pokazujemy hamburgera */
     #hamburger {
         display: block;
         font-size: 40px;
         margin-right: 10px;
     }
 
-    #stopka {
-        font-size: 18px;
-        height: 8vh;
-    }
-
     #sideMenu.show {
         right: 0;
+    }
+
+    #main {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        padding: 80px;
     }
 
     .blok {
@@ -415,30 +546,24 @@ nav ul li a {
         padding: 10px;
         margin: 15px 0;
         border-radius: 8px;
-      }
+    }
 
+    .blok h1 {
+        font-size: 30px;
+    }
+
+    #stopka {
+        font-size: 18px;
+        height: 8vh;
+    }
 }
 
 /* ------------------------- */
 /* 📱📲 DESKTOP (≥ 1024px) */
 @media (min-width: 1024px) {
-
-    #main {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Dokładnie 3 kolumny */
-        gap: 50px;
-        padding: 80px 100px;
-        margin: 0 auto;
-        align-items: stretch; /* ← dodaj to */
-    }
-
-    .blok h1 {
-        font-size: 60px;
-    }
-    
-
     #baner {
-        min-height: 100px; /* Minimalna wysokość banera */
+        min-height: 100px;
+        font-family: 'Roboto', sans-serif;
     }
 
     #logo_sb {
@@ -447,9 +572,9 @@ nav ul li a {
 
     nav ul {
         display: flex;
-        justify-content: space-around; /* Równomierne rozstawienie elementów */
+        justify-content: space-around;
         padding: 0;
-        gap: 5vw; /* Przerwy między elementami */
+        gap: 5vw;
     }
 
     nav ul li {
@@ -466,6 +591,15 @@ nav ul li a {
         display: none;
     }
 
+    #main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        padding: 80px 100px;
+        margin: 0 auto;
+        align-items: stretch;
+    }
+
     .blok {
         border: 1px solid #ccc;
         padding: 10px;
@@ -473,4 +607,7 @@ nav ul li a {
         border-radius: 8px;
       }
 
+    .blok h1 {
+        font-size: 60px;
+    }
 }
