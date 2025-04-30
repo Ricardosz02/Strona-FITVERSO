@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="Pictures/LogoSq.png" type="image/png">
     <link rel="stylesheet" href="style4.2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="script4.2.js"></script>
     <title>ĆWICZENIA - CARDIO</title>
 </head>
 <body>
     <div id="baner">
-        <div id="hamburger">☰</div> <!-- Tylko przycisk -->
+        <div id="hamburger">☰</div>
         <nav>
             <ul>
                 <li><a href="trenerzy.html" class="nav-button">TRENERZY</a></li>
@@ -23,152 +24,152 @@
     </div>
 
     <div id="sideMenu">
+        <span id="closeMenu">×</span>
         <ul>
             <li><a href="trenerzy.html">TRENERZY</a></li>
             <li><a href="przepisy.html">PRZEPISY</a></li>
-            <li><a href="cwiczenia.html">ĆWICZENIA</a></li>
+            <li class="submenu-parent">
+                <a href="cwiczenia.html" class="submenu-toggle">ĆWICZENIA <span class="toggle-icon">+</span></a>
+            </li>
             <li><a href="kalkulator.html">KALKULATOR</a></li>
         </ul>
     </div>
 
     <div id="main">
-
-        <!-- Blok 1 -->
         <div class="blok" id="blok1">
             <div class="blok-inner">
                 <div class="blok-text">
-                    <h2>TRENING CARDIO – co to jest?</h2>
-                    <br><br>
-                    <p>Trening cardio, znany również jako trening aerobowy, to rodzaj aktywności fizycznej mającej na celu zwiększenie wydolności układu sercowo-naczyniowego. Polega na długotrwałym wykonywaniu ćwiczeń o umiarkowanej lub wysokiej intensywności, które powodują przyspieszenie tętna i oddechu.</p>
-                    <br>
-                    <p>Cardio jest kluczowym elementem zdrowego stylu życia, ponieważ poprawia funkcjonowanie serca, płuc, pomaga w kontroli wagi, zwiększa poziom energii i redukuje stres. Regularny trening cardio zmniejsza ryzyko chorób serca, cukrzycy typu 2 oraz nadciśnienia.</p>
+                    <h2>Cardio – Twoja Droga do Zdrowia!</h2>
+                    <p><strong>Cardio</strong> to dynamiczne ćwiczenia, które wzmacniają serce, poprawiają wydolność płuc i budują kondycję. To fundament zdrowego stylu życia!</p>
+                    <p>Regularne treningi cardio spalają kalorie, redukują stres i obniżają ryzyko chorób serca o nawet <strong>30%</strong> (wg badań American Heart Association). Od biegania po taniec – każda aktywność się liczy!</p>
+                    <p><strong>Porada:</strong> Zacznij od 10-minutowego spaceru w szybkim tempie i stopniowo zwiększaj intensywność. <strong>Gotowy na zmianę?</strong></p>
                 </div>
-                <img src="Pictures/cardio1.jpg" class="blok-image" alt="cardio1">
+                <img src="Pictures/cardio1.jpg" class="blok-image" alt="cardio1" loading="lazy">
             </div>
         </div>
-    
-        <!-- Blok 2 -->
+
         <div class="blok reverse" id="blok2">
             <div class="blok-inner">
-                <img src="Pictures/cardio2.jpg" class="blok-image" alt="cardio2">
+                <img src="Pictures/cardio2.jpg" class="blok-image" alt="cardio2" loading="lazy">
                 <div class="blok-text">
-                    <h2>Na czym polega trening CARDIO?</h2>
-                    <br><br>
-                    <p>Trening cardio polega na utrzymywaniu tętna na podwyższonym poziomie przez dłuższy czas. W jego trakcie angażowane są duże grupy mięśniowe, a ciało pracuje w sposób rytmiczny i dynamiczny. Kluczowe jest utrzymanie odpowiedniego tempa, które zapewni efektywne spalanie kalorii i poprawę kondycji.</p>
-                    <br>
-                    <p>Najczęściej trening cardio opiera się na ćwiczeniach takich jak bieganie, jazda na rowerze, pływanie, szybki marsz, skakanka czy aerobik. Może być wykonywany zarówno na siłowni, jak i w domu lub na świeżym powietrzu. Istnieje wiele odmian treningu cardio – od klasycznego aerobowego po intensywny trening interwałowy (HIIT).</p>
+                    <h2>Jak Działa Cardio?</h2>
+                    <p>Cardio to rytmiczne ćwiczenia, które podkręcają tętno i angażują duże grupy mięśniowe. Klucz? Utrzymanie tempa, które przyspiesza oddech i spala kalorie.</p>
+                    <p>Od spokojnego joggingu po intensywny trening interwałowy (HIIT) – możesz trenować w domu, na siłowni lub w parku. Popularne formy to rower, skakanka, pływanie czy aerobik. <strong>Ciekawostka:</strong> 30 minut cardio dziennie poprawia nastrój dzięki uwalnianiu endorfin!</p>
+                    <p><strong>Zdrowe odżywianie wspiera cardio!</strong> Jedz węglowodany złożone (np. owsianka, bataty) 2–3h przed treningiem dla energii i białko (np. kurczak, jogurt) po treningu dla regeneracji. Pij 2–3 litry wody dziennie, by utrzymać nawodnienie. <strong>Ciekawostka:</strong> Odpowiednia dieta może zwiększyć wydolność cardio o nawet 20%!</p>
+                    <p><strong>Porada:</strong> Ustal strefę tętna (60–80% tętna maksymalnego) za pomocą pulsometru i zjedz banana 30 min przed treningiem dla szybkiego zastrzyku energii. <strong>Zacznij teraz!</strong></p>
+                    <a href="przepisy.html" class="cta-button">Spróbuj przepisów na dietę</a>
                 </div>
             </div>
         </div>
-    
-        <!-- Blok 3 -->
+
         <div class="blok" id="blok3">
             <div class="blok-inner">
                 <div class="blok-text">
-                    <h2>Ćwiczenia CARDIO</h2>
-                    <br><br>
-                    <p>Do najpopularniejszych ćwiczeń cardio należą:</p>
+                    <h2>Top Ćwiczenia Cardio</h2>
+                    <p>Gotowy, by ruszyć? Oto najskuteczniejsze ćwiczenia cardio:</p>
                     <ul>
-                        <li>Bieganie (na zewnątrz lub na bieżni)</li>
-                        <li>Jazda na rowerze lub rowerku stacjonarnym</li>
-                        <li>Skakanka</li>
-                        <li>Burpees (padnij-powstań)</li>
-                        <li>Pajacyki (jumping jacks)</li>
-                        <li>Zumba i inne formy tańca fitness</li>
-                        <li>Stepper lub orbitrek</li>
+                        <li><strong>Bieganie</strong> – na bieżni lub w terenie, idealne dla kondycji</li>
+                        <li><strong>Skakanka</strong> – do 1000 kcal/h, trenuje całe ciało</li>
+                        <li><strong>Burpees</strong> – eksplozja mocy i wytrzymałości</li>
+                        <li><strong>Zumba</strong> – taniec, który łączy fitness z zabawą</li>
+                        <li><strong>Orbitrek</strong> – łagodny dla stawów, świetny dla początkujących</li>
+                        <li><strong>Pajacyki</strong> – proste, a dają wycisk!</li>
                     </ul>
-                    <br>
-                    <p>Ćwiczenia cardio można łatwo modyfikować – dodać do nich muzykę, ustalić różne poziomy trudności lub połączyć z ćwiczeniami siłowymi, tworząc tzw. trening funkcjonalny.</p>
+                    <p><strong>Porada:</strong> Dodaj ulubioną muzykę, by trening był frajdą. Połącz cardio z ćwiczeniami siłowymi, by stworzyć trening funkcjonalny. <strong>Gotowy?</strong></p>
+                    <a href="trenerzy.html" class="cta-button">Zacznij trening z trenerem</a>
                 </div>
-                <img src="Pictures/cardio3.jpg" class="blok-image" alt="cardio3">
+                <img src="Pictures/cardio3.jpg" class="blok-image" alt="cardio3" loading="lazy">
             </div>
         </div>
-    
-        <!-- Blok 4 -->
+
         <div class="blok reverse" id="blok4">
             <div class="blok-inner">
-                <img src="Pictures/cardio4.jpg" class="blok-image" alt="cardio4">
+                <img src="Pictures/cardio4.jpg" class="blok-image" alt="cardio4" loading="lazy">
                 <div class="blok-text">
-                    <h2>Trening CARDIO – przykłady</h2>
-                    <br><br>
-                    <p>Przykładowe formy treningu cardio:</p>
+                    <h2>Przykłady Treningów Cardio</h2>
+                    <p>Nie wiesz, jak zacząć? Oto gotowe plany cardio – w tym na siłowni:</p>
                     <ul>
-                        <li><strong>30-minutowy bieg</strong> w umiarkowanym tempie</li>
-                        <li><strong>45 minut jazdy na rowerze</strong> po zróżnicowanym terenie</li>
-                        <li><strong>Trening HIIT</strong> (np. 30 sek. sprintu + 30 sek. odpoczynku, powtórz 10 razy)</li>
-                        <li><strong>30 minut zumby</strong> – taneczny trening spalający setki kalorii</li>
-                        <li><strong>Tabata</strong> – intensywny trening interwałowy (20 sek. ćwiczenia / 10 sek. przerwy)</li>
+                        <li><strong>30-min bieg</strong> – umiarkowane tempo, idealne dla początkujących</li>
+                        <li><strong>HIIT</strong> – 10 x (30 sek. sprintu + 30 sek. odpoczynku), spala tłuszcz w rekordowym czasie</li>
+                        <li><strong>Zumba</strong> – 45 min tanecznego cardio, które podkręca nastrój</li>
+                        <li><strong>Tabata</strong> – 4 min (8 x 20 sek. ćwiczenia + 10 sek. przerwy), np. pajacyki i burpees</li>
+                        <li><strong>Rower</strong> – 45 min po zróżnicowanym terenie lub na rowerku stacjonarnym</li>
+                        <li><strong>Siłownia Cardio</strong> – 40 min: 10 min bieżnia (interwały: 1 min sprint, 1 min marsz), 15 min rowerek stacjonarny (średni opór), 15 min orbitrek (nachylenie 5–10)</li>
                     </ul>
-                    <br>
-                    <p>Możesz również łączyć kilka aktywności w jednym treningu – np. 10 minut skakania na skakance, 15 minut rowerka i 10 minut pajacyków.</p>
+                    <p><strong>Porada:</strong> Na siłowni ustaw nachylenie bieżni na 1–3% dla większego wyzwania i monitoruj tętno na urządzeniach. Połącz różne aktywności, np. 10 min skakanki + 15 min roweru + 10 min pajacyków. <strong>Ciekawostka:</strong> Sprzęty na siłowni pozwalają precyzyjnie kontrolować tętno i kalorie, co ułatwia śledzenie postępów. <strong>Ruszamy?</strong></p>
+                    <a href="trenerzy.html" class="cta-button">Zapytaj trenera o plan</a>
                 </div>
             </div>
         </div>
-    
-        <!-- Blok 5 -->
+
         <div class="blok" id="blok5">
             <div class="blok-inner">
                 <div class="blok-text">
-                    <h2>Ile spala kcal trening cardio i ile powinien trwać?</h2>
-                    <br><br>
-                    <p>Kaloryczność spalania zależy od intensywności treningu, masy ciała i czasu trwania:</p>
+                    <h2>Ile Spala Cardio?</h2>
+                    <p>Chcesz wiedzieć, ile kalorii spalisz? Oto przykłady (dla osoby 70 kg):</p>
                     <ul>
-                        <li>Bieganie (8 km/h): ok. 600–800 kcal/h</li>
-                        <li>Skakanka: ok. 700–1000 kcal/h</li>
-                        <li>HIIT: do 500 kcal w 30 minut + efekt spalania po treningu</li>
-                        <li>Zumba: ok. 400–600 kcal/h</li>
+                        <li><strong>Bieganie (8 km/h)</strong>: 600–800 kcal/h</li>
+                        <li><strong>Skakanka</strong>: 700–1000 kcal/h, rekordzista wśród cardio!</li>
+                        <li><strong>HIIT</strong>: do 500 kcal w 30 min + efekt spalania po treningu (afterburn)</li>
+                        <li><strong>Zumba</strong>: 400–600 kcal/h, zabawa i fitness w jednym</li>
+                        <li><strong>Pływanie</strong>: 500–700 kcal/h, łagodne dla stawów</li>
                     </ul>
-                    <br>
-                    <p>Zalecany czas trwania treningu cardio to 30–60 minut, 3–5 razy w tygodniu. Osoby początkujące mogą zaczynać od 15–20 minut i stopniowo zwiększać długość sesji.</p>
+                    <p><strong>Zalecenia:</strong> Trenuj 30–60 min, 3–5 razy w tygodniu. Początkujący? Zacznij od 15–20 min i zwiększaj stopniowo. <strong>Ciekawostka:</strong> HIIT może zwiększyć metabolizm na nawet 24h po treningu! <strong>Do dzieła!</strong></p>
+                    <a href="kalkulator.html" class="cta-button">Oblicz swoje spalanie</a>
                 </div>
-                <img src="Pictures/cardio5.jpg" class="blok-image" alt="cardio5">
+                <img src="Pictures/cardio5.jpg" class="blok-image" alt="cardio5" loading="lazy">
             </div>
         </div>
-    
-        <!-- Blok 6 -->
+
         <div class="blok reverse" id="blok6">
             <div class="blok-inner">
-                <img src="Pictures/cardio6.jpg" class="blok-image" alt="cardio6">
+                <img src="Pictures/cardio6.jpg" class="blok-image" alt="cardio6" loading="lazy">
                 <div class="blok-text">
-                    <h2>Kiedy robić trening cardio i jego efekty</h2>
-                    <br><br>
-                    <p>Trening cardio możesz wykonywać o różnych porach dnia:</p>
+                    <h2>Kiedy Trenujesz Cardio?</h2>
+                    <p>Cardio pasuje do każdego momentu dnia. Wybierz, co Ci odpowiada:</p>
                     <ul>
-                        <li><strong>Rano:</strong> pobudza, poprawia metabolizm, daje energię</li>
-                        <li><strong>Po południu:</strong> ciało jest rozgrzane, mniejsze ryzyko kontuzji</li>
-                        <li><strong>Wieczorem:</strong> może pomóc rozładować stres i poprawić sen</li>
+                        <li><strong>Rano</strong> – przyspiesza metabolizm, daje energię na cały dzień</li>
+                        <li><strong>Po południu</strong> – mięśnie są rozgrzane, mniejsze ryzyko kontuzji</li>
+                        <li><strong>Wieczorem</strong> – rozładowuje stres, poprawia jakość snu</li>
                     </ul>
-                    <br>
-                    <p>Regularny trening cardio przynosi wiele korzyści: poprawa wytrzymałości, redukcja tkanki tłuszczowej, lepsze samopoczucie, mniejsze ryzyko chorób układu krążenia i lepsza jakość snu.</p>
+                    <p><strong>Efekty?</strong> Lepsza kondycja, redukcja tkanki tłuszczowej, poprawa nastroju i niższe ryzyko chorób serca. <strong>Ciekawostka:</strong> Regularne cardio może wydłużyć życie nawet o 3–5 lat (wg badań). <strong>Zacznij dziś!</strong></p>
+                    <p><strong>Porada:</strong> Zawsze rób 5–10 min rozgrzewki przed treningiem, by uniknąć urazów.</p>
+                    <a href="trenerzy.html" class="cta-button">Zapalnuj trening z trenerem</a>
                 </div>
             </div>
         </div>
-    
-        <!-- Blok 7 -->
+
         <div class="blok" id="blok7">
             <div class="blok-inner">
                 <div class="blok-text">
-                    <h2>Dla kogo jest trening CARDIO?</h2>
-                    <br><br>
-                    <p>Trening cardio jest odpowiedni praktycznie dla każdego:</p>
+                    <h2>Cardio dla Każdego!</h2>
+                    <p>Cardio to trening dla wszystkich – bez względu na wiek czy poziom sprawności:</p>
                     <ul>
-                        <li><strong>Dla początkujących</strong> – lekkie formy cardio poprawiają kondycję bez przeciążenia organizmu</li>
-                        <li><strong>Dla osób odchudzających się</strong> – spalanie kalorii wspomaga redukcję tkanki tłuszczowej</li>
-                        <li><strong>Dla sportowców</strong> – element budujący wydolność i wytrzymałość</li>
-                        <li><strong>Dla seniorów</strong> – spacery, pływanie, jazda na rowerze wspomagają zdrowie i ruchomość stawów</li>
+                        <li><strong>Początkujący</strong> – szybkie spacery, rower lub lekkie aerobiki</li>
+                        <li><strong>Odchudzanie</strong> – intensywne HIIT lub skakanka dla maksymalnego spalania</li>
+                        <li><strong>Sportowcy</strong> – biegi i interwały dla lepszej wydolności</li>
+                        <li><strong>Seniorzy</strong> – pływanie lub nordic walking dla zdrowia stawów i serca</li>
+                        <li><strong>Siłownia</strong> – bieżnia, orbitrek lub ćwiczenia z wolnymi ciężarami (np. martwy ciąg, przysiady z hantlami) dla spalania 300–600 kcal/h</li>
                     </ul>
-                    <br>
-                    <p>Trening cardio można dopasować do wieku, poziomu sprawności, a także stanu zdrowia – wystarczy dobrać odpowiednią intensywność i rodzaj ćwiczeń.</p>
+                    <p><strong>Siłownia to świetny sposób na cardio!</strong> Maszyny jak bieżnia, rowerek czy orbitrek pozwalają spalać setki kalorii, a ćwiczenia z wolnymi ciężarami (np. kettlebell swing) łączą cardio z budową mięśni. <strong>Ciekawostka:</strong> Trening z ciężarami podnosi metabolizm nawet na 24h po ćwiczeniach!</p>
+                    <p><strong>Porada:</strong> Skonsultuj się z lekarzem przed intensywnym cardio, jeśli masz problemy zdrowotne. Na siłowni łącz maszyny cardio z ćwiczeniami siłowymi dla najlepszych efektów. Nawet 150 min umiarkowanego cardio tygodniowo spełnia wytyczne WHO dla zdrowia. <strong>Rusz w drogę!</strong></p>
+                    <a href="trening-silowy.html" class="cta-button">Znajdź przykładowe ćwiczenia na siłownie</a>
                 </div>
-                <img src="Pictures/cardio7.jpg" class="blok-image" alt="cardio7">
+                <img src="Pictures/cardio7.jpg" class="blok-image" alt="cardio7" loading="lazy">
             </div>
         </div>
-    
     </div>
-    
 
     <div id="stopka">
-        <footer>&copy; 2025 Strona. Wszystkie prawa zastrzeżone.</footer>
+        <footer>
+            <p>© 2025 FITVERSO. Wszystkie prawa zastrzeżone.
+              <a href="https://github.com/Ricardosz02/Strona-Fitness" target="_blank" rel="noopener noreferrer" style="margin-left: 8px; vertical-align: middle;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="black">
+                  <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.41 7.84 10.94.57.11.78-.25.78-.56v-2.1c-3.19.69-3.87-1.54-3.87-1.54-.52-1.32-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.73-1.52-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.91 10.91 0 012.87-.39c.97.01 1.94.13 2.87.39 2.18-1.48 3.14-1.17 3.14-1.17.63 1.58.24 2.75.12 3.04.74.8 1.18 1.82 1.18 3.07 0 4.41-2.68 5.39-5.24 5.67.41.35.78 1.05.78 2.12v3.14c0 .31.21.68.79.56A10.51 10.51 0 0023.5 12c0-6.27-5.23-11.5-11.5-11.5z"/>
+                </svg>
+              </a>
+            </p>
+        </footer>          
     </div>
 </body>
 </html>
