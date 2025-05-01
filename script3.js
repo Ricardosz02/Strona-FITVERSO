@@ -457,7 +457,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="skladniki">
                     <h4>Składniki:</h4>
                     <ul>
-                        ${przepis.skladniki.map(skladnik => `<li>${skladnik}</li>`).join('')}
+                        ${przepis.skladniki.map((skladnik) => {
+                            // Dodaj klasę .special-ingredient dla określonych składników w wybranych przepisach
+                            const isSpecial = 
+                                (przepis.nazwa === "Biała fit pizza z patelni" && 
+                                 (skladnik === "Dodatki:" || skladnik === "Sos:" || skladnik === "Ciasto:")) ||
+                                (przepis.nazwa === "Cebulaki" && 
+                                 (skladnik === "Ciasto:" || skladnik === "Dodatki:"));
+                            return `<li ${isSpecial ? 'class="special-ingredient"' : ''}>${skladnik}</li>`;
+                        }).join('')}
                     </ul>
                 </div>
                 <div class="przygotowanie">
