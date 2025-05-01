@@ -7,17 +7,21 @@
 }
 
 html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
     height: 100%;
-    overflow-y: auto;
+    min-height: 100vh;
+    overflow-y: overlay;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 
 /* ----------------------------------------- */
 /* Baner */
 #baner {
-    width: 100%;
+    width: 100vw;
     height: 10vh;
     position: sticky;
     top: 0;
@@ -241,14 +245,15 @@ nav ul li a {
 /* ----------------------------------------- */
 /* Stopka */
 #stopka {
-    width: 100%;
-    height: 10vh;
+    width: 100vw;
+    height: 12vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #171616;
     color: white;
-    font-size: 30px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     margin-top: 0;
     flex-shrink: 0;
@@ -441,10 +446,11 @@ nav ul li a {
     }
 
     #logo_sb img {
-        width: 30vw;
+        width: auto;
         max-width: 60px;
         min-width: 40px;
         height: auto;
+        max-height: 8vh;
         border-radius: 20px;
     }
 
@@ -454,26 +460,36 @@ nav ul li a {
 
     #hamburger {
         display: block;
-        font-size: 30px;
-        color: white;
-        cursor: pointer;
-        margin-right: 5px;
+        font-size: 40px;
+        margin-right: 10px;
+    }
+
+    #main {
+        padding: 20px 0;
     }
 
     .blok {
-        font-size: 20px;
         width: 90%;
         padding: 20px;
-        height: auto;
-        min-height: 50vh;
+        font-size: clamp(18px, 4.5vw, 20px);
+        margin: 20px;
     }
-
-    .blok-inner {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        padding: 20px;
+    
+    .blok h2 {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: clamp(22px, 6.5vw, 26px);
+    }
+    
+    .blok-text {
+        font-size: clamp(14px, 3.8vw, 16px);
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        max-width: 100%;
+        padding: 15px;
+        border-radius: 20px;
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6);
     }
 
     .blok-text ul li {
@@ -483,18 +499,6 @@ nav ul li a {
 
     .blok-text ul li::before {
         font-size: 0.9rem;
-    }
-
-    .blok-text {
-        text-align: center;
-        font-size: 18px;
-        background-color: rgba(0, 0, 0, 0.8);
-        padding: 20px;
-        border-radius: 20px;
-        background-color: rgba(0, 0, 0, 0.8);
-        box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.6);
-        z-index: 1;
-        width: 100%;
     }
 
     #blok1 {
@@ -547,8 +551,14 @@ nav ul li a {
     }
 
     #stopka {
-        font-size: 16px;
-        height: 8vh;
+        height: 16vh;
+        min-height: 14vh;
+        font-size: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
 
@@ -557,7 +567,7 @@ nav ul li a {
 @media (min-width: 768px) and (max-width: 1023px) {
     #baner {
         height: 10vh;
-        padding: 0 10px;
+        padding: 0 5px;
         justify-content: space-between;
         align-items: center;
         font-family: 'Bebas Neue', sans-serif;
@@ -576,10 +586,11 @@ nav ul li a {
     }
 
     #logo_sb img {
-        width: 22vw;
+        width: auto;
         max-width: 90px;
         min-width: 50px;
         height: auto;
+        max-height: 8vh;
         border-radius: 20px;
     }
 
@@ -593,31 +604,31 @@ nav ul li a {
         margin-right: 10px;
     }
 
+    #main {
+        padding: 20px 0;
+    }
+
     .blok {
-        font-size: 25px;
         width: 85%;
-        padding: 30px;
-        height: auto;
-        min-height: 60vh;
+        padding: 60px;
+        font-size: clamp(22px, 3.5vw, 24px);
+        margin: 20px;
     }
-
-    .blok-inner {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-        padding: 30px;
+    
+    .blok h2 {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: clamp(28px, 5.5vw, 32px);
     }
-
+    
     .blok-text {
+        font-size: clamp(18px, 2.8vw, 20px);
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
         text-align: center;
-        font-size: 22px;
         background-color: rgba(0, 0, 0, 0.7);
-        padding: 30px;
+        padding: 20px;
         border-radius: 20px;
-        box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.6);
-        z-index: 1;
-        width: 100%;
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6);
     }
 
     .blok-text ul li {
@@ -678,17 +689,23 @@ nav ul li a {
     background-repeat: no-repeat;
    }
 
-    #stopka {
-        font-size: 18px;
-        height: 8vh;
-    }
+   #stopka {
+    height: 16vh;
+    min-height: 14vh;
+    font-size: 16px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+   }
 }
 
 /* ------------------------- */
 /* 📱📲 DESKTOP (≥ 1024px) */
 @media (min-width: 1024px) {
     #baner {
-        min-height: 100px;
+        min-height: 130px;
         font-family: 'Roboto', sans-serif;
     }
 
@@ -698,15 +715,10 @@ nav ul li a {
         padding: 0;
         gap: 5vw;
     }
-
-    nav ul li {
-        display: flex;
-        justify-content: center;
-    }
-
+    
     nav ul li a {
         padding: 15px 30px;
-        font-size: 30px;
+        font-size: clamp(30px, 3vw, 34px);
     }
 
     #logo_sb {
@@ -714,20 +726,25 @@ nav ul li a {
     }
 
     .blok {
+        height: auto;
+        padding: 120px;
+        min-width: 1150px;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         display: flex;
-        height: auto;
-        padding: 120px;
+        font-size: clamp(26px, 2.6vw, 28px);
     }
-
+    
     .blok h2 {
-        font-size: 2vw;
+        font-size: clamp(42px, 4.5vw, 46px);
+        font-family: 'Bebas Neue', sans-serif;
     }
-
-    .blok p{
-        font-size: 1vw;
+    
+    .blok p {
+        font-size: clamp(24px, 2vw, 26px);
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
     }
 
     .blok-image {
