@@ -149,7 +149,8 @@ nav ul li a {
 
 .blok {
     width: 75%;
-    height: 75vh;
+    min-height: fit-content;
+    height: auto;
     margin: 50px;
     padding: 300px;
     display: flex;
@@ -178,7 +179,7 @@ nav ul li a {
     align-items: center;
     gap: 150px;
     width: 100%;
-    height: 100%;
+    height: auto;
     justify-content: center;
 }
 
