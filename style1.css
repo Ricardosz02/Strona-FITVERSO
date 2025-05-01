@@ -473,6 +473,7 @@ nav ul li a {
 
   #stopka {
     height: 16vh;
+    min-height: 14vh;
     font-size: 10px;
     padding: 10px;
     display: flex;
@@ -549,10 +550,15 @@ nav ul li a {
     border-radius: 20px;
   }
 
+  #main {
+    padding: 20px 0;
+  }
+
   .blok {
     width: 85%;
     padding: 60px;
     font-size: 25px;
+    margin: 20px;
   }
 
   .blok h2 {
@@ -582,6 +588,7 @@ nav ul li a {
 
   #stopka {
     height: 16vh;
+    min-height: 14vh;
     font-size: 16px;
     padding: 10px;
     display: flex;
