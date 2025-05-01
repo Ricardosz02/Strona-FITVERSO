@@ -231,17 +231,37 @@ document.addEventListener("DOMContentLoaded", function () {
         let activityFactor;
         switch (activityLevel) {
             case "sedentary":
-                activityFactor = 1.2; // Brak aktywności
+                activityFactor = 1.2; // Bardzo niska lub niska aktywność fizyczna, praca siedząca, brak treningów, <3000 kroków na dobę
                 break;
             case "light":
-                activityFactor = 1.375; // Lekka aktywność
+                activityFactor = 1.3; // Niska aktywność fizyczna, praca siedząca, brak treningów, ok. 5000 kroków na dobę
                 break;
             case "moderate":
-                activityFactor = 1.55; // Średnia aktywność
+                activityFactor = 1.4; // Średnia lub umiarkowana aktywność fizyczna, praca siedząca lub w ruchu, lekki trening 1-2 razy w tygodniu, ok. 7000 kroków na dobę
                 break;
-            case "intense":
-                activityFactor = 1.725; // Intensywna aktywność
+            case "active_moderate":
+                activityFactor = 1.5; // Umiarkowana aktywność fizyczna, praca siedząca lub w ruchu, lekki trening 2-3 razy w tygodniu, ok. 8000 kroków na dobę
                 break;
+            case "active":
+                activityFactor = 1.7; // Wysoka aktywność fizyczna, praca fizyczna lub 3-4 treningi w tygodniu, ok. 10 000 kroków na dobę (średnia z zakresu 1.6–1.8)
+                break;
+            case "very_active":
+                activityFactor = 1.95; // Bardzo wysoka aktywność fizyczna, intensywna praca fizyczna lub 4-5 treningów w tygodniu, ok. 12 000–14 000 kroków na dobę (średnia z zakresu 1.9–2.0)
+                break;
+            case "athlete":
+                activityFactor = 2.25; // Zawodowo sportowy, bardzo intensywna aktywność, średnia z zakresu 2.1–2.4
+                break;
+            case "-- Wybierz aktywność --":
+                activityFactor = null; // Brak wartości dla domyślnego wyboru
+                break;
+            default:
+                activityFactor = null; // Domyślnie brak wartości dla nieznanego poziomu aktywności
+        }
+
+        // Sprawdzanie, czy wybrano poziom aktywności
+        if (activityFactor === null) {
+            calorieResultElement.textContent = "Proszę wybrać poziom aktywności!";
+            return;
         }
 
         const maintenanceCalories = bmr * activityFactor;
@@ -266,6 +286,15 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         `;
         calorieResultElement.classList.add("fade-in");
+    });
+
+    document.getElementById("togglePal").addEventListener("click", function () {
+        const info = document.getElementById("palInfo");
+        if (info.style.display === "none") {
+          info.style.display = "block";
+        } else {
+          info.style.display = "none";
+        }
     });
 
 });
