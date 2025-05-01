@@ -451,16 +451,17 @@ nav ul li a {
   .blok {
     width: 90%;
     padding: 20px;
-    font-size: 16px;
+    font-size: clamp(18px, 4.5vw, 20px);
     margin: 20px;
   }
 
   .blok h2 {
     font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(22px, 6.5vw, 26px);
   }
 
   .blok-text {
-    font-size: 14px;
+    font-size: clamp(14px, 3.8vw, 16px);
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     text-align: center;
@@ -557,16 +558,17 @@ nav ul li a {
   .blok {
     width: 85%;
     padding: 60px;
-    font-size: 25px;
+    font-size: clamp(22px, 3.5vw, 24px);
     margin: 20px;
   }
 
   .blok h2 {
     font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(28px, 5.5vw, 32px);
   }
 
   .blok-text {
-    font-size: 25px;
+    font-size: clamp(18px, 2.8vw, 20px);
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     text-align: center;
@@ -644,19 +646,21 @@ nav ul li a {
   .blok {
     height: auto;
     padding: 120px;
+    min-width: 1150px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     display: flex;
+    font-size: clamp(26px, 2.6vw, 28px);
   }
 
   .blok h2 {
-    font-size: 2vw;
+    font-size: clamp(42px, 4.5vw, 46px);
     font-family: 'Bebas Neue', sans-serif;
   }
 
   .blok p {
-    font-size: 1vw;
+    font-size: clamp(24px, 2vw, 26px);
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
   }
@@ -678,7 +682,7 @@ nav ul li a {
 
   nav ul li a {
     padding: 15px 30px;
-    font-size: 30px;
+    font-size: clamp(30px, 3vw, 34px);
   }
 
   #logo_sb {
