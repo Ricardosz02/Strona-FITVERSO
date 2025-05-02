@@ -6,10 +6,22 @@
     box-sizing: border-box;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100%;
+    min-height: 100vh;
+    overflow-y: overlay;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
 /* ----------------------------------------- */
 /* Baner */
 #baner {
-    width: 100%;
+    width: 100vw;
     height: 10vh;
     position: sticky;
     top: 0;
@@ -132,10 +144,9 @@ nav ul li a {
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    min-height: 80vh;
     padding: 50px 20%;
     gap: 40px;
-    overflow-y: auto;
+    flex-grow: 1;
 }
 
 /* Ćwiczenia */
@@ -234,6 +245,7 @@ nav ul li a {
     padding: 50px 20px;
     gap: 20px;
     width: 80%;
+    flex-grow: 1;
 }
 
 .details-container {
@@ -314,14 +326,15 @@ nav ul li a {
 /* ----------------------------------------- */
 /* Stopka */
 #stopka {
-    width: 100%;
-    height: 10vh;
+    width: 100vw;
+    height: 12vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #171616;
     color: white;
-    font-size: 30px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     margin-top: 0;
     flex-shrink: 0;
@@ -520,10 +533,11 @@ nav ul li a {
     }
 
     #logo_sb img {
-        width: 30vw;
+        width: auto;
         max-width: 60px;
         min-width: 40px;
         height: auto;
+        max-height: 8vh;
         border-radius: 20px;
     }
 
@@ -533,10 +547,8 @@ nav ul li a {
 
     #hamburger {
         display: block;
-        font-size: 30px;
-        color: white;
-        cursor: pointer;
-        margin-right: 5px;
+        font-size: 40px;
+        margin-right: 10px;
     }
 
     #main {
@@ -544,13 +556,12 @@ nav ul li a {
         gap: 30px;
         padding: 40px 20px;
         flex-grow: 1;
-        height: auto;
-        overflow-y: auto;
     }
 
     #container {
         width: 100%;
         padding: 20px;
+        flex-grow: 1;
     }
 
     .exercise-container {
@@ -583,9 +594,14 @@ nav ul li a {
     }
 
     #stopka {
-        font-size: 16px;
-        height: 8vh;
-        margin-top: auto;
+        height: 16vh;
+        min-height: 14vh;
+        font-size: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
 
@@ -594,7 +610,7 @@ nav ul li a {
 @media (min-width: 768px) and (max-width: 1023px) {
     #baner {
         height: 10vh;
-        padding: 0 10px;
+        padding: 0 5px;
         justify-content: space-between;
         align-items: center;
         font-family: 'Bebas Neue', sans-serif;
@@ -613,10 +629,11 @@ nav ul li a {
     }
 
     #logo_sb img {
-        width: 22vw;
+        width: auto;
         max-width: 90px;
         min-width: 50px;
         height: auto;
+        max-height: 8vh;
         border-radius: 20px;
     }
 
@@ -635,11 +652,13 @@ nav ul li a {
         flex-wrap: wrap;
         gap: 40px;
         padding: 60px 40px;
+        flex-grow: 1;
     }
 
     #container {
         width: 100%;
         padding: 30px;
+        flex-grow: 1;
     }
 
     .exercise-container {
@@ -667,8 +686,14 @@ nav ul li a {
     }
 
     #stopka {
-        font-size: 18px;
-        height: 8vh;
+        height: 16vh;
+        min-height: 14vh;
+        font-size: 16px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
 
@@ -676,12 +701,8 @@ nav ul li a {
 /* 💻 DESKTOP (≥ 1024px) */
 @media (min-width: 1024px) {
     #baner {
-        min-height: 100px;
+        min-height: 130px;
         font-family: 'Roboto', sans-serif;
-    }
-
-    #hamburger {
-        display: none;
     }
 
     nav ul {
@@ -690,15 +711,10 @@ nav ul li a {
         padding: 0;
         gap: 5vw;
     }
-
-    nav ul li {
-        display: flex;
-        justify-content: center;
-    }
-
+    
     nav ul li a {
         padding: 15px 30px;
-        font-size: 30px;
+        font-size: clamp(30px, 3vw, 34px);
     }
 
     #logo_sb {
