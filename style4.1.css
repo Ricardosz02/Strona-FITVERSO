@@ -7,7 +7,13 @@
 }
 
 html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
     height: 100%;
+    min-height: 100vh;
+    overflow-y: overlay;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
 }
@@ -15,7 +21,7 @@ html, body {
 /* ----------------------------------------- */
 /* Baner */
 #baner {
-    width: 100%;
+    width: 100vw;
     height: 10vh;
     position: sticky;
     top: 0;
@@ -106,8 +112,8 @@ nav ul li a {
 }
   
 #logo:hover {
-    transform: scale(1.05); /* Lekkie powiększenie */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Subtelny cień */
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
   
 /* Logo (mobilne i tabletowe) */
@@ -126,8 +132,8 @@ nav ul li a {
 }
   
 #logo_sb:hover {
-    transform: scale(1.05); /* Lekkie powiększenie */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Subtelny cień */
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 /* ----------------------------------------- */
@@ -141,7 +147,7 @@ nav ul li a {
     width: 100%;
     height: auto;
     gap: 20px;
-    padding: 140px;
+    padding: 80px 100px;
 }
 
 .blok {
@@ -150,7 +156,7 @@ nav ul li a {
     font-size: 25px;
     height: 100%;
     width: 100%;
-    margin: auto;
+    margin: 0;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -171,7 +177,7 @@ nav ul li a {
 }
 
 .blok-content:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .blok h1 {
@@ -244,14 +250,15 @@ nav ul li a {
 /* ----------------------------------------- */
 /* Stopka */
 #stopka {
-    width: 100%;
-    height: 10vh;
+    width: 100vw;
+    height: 12vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #171616;
     color: white;
-    font-size: 30px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     margin-top: 0;
     flex-shrink: 0;
@@ -434,7 +441,7 @@ nav ul li a {
     #logo_sb {
         display: flex;
         align-items: center;
-        margin-left: 5px;
+        margin-left: 10px;
         margin-right: auto;
         text-align: left;
         list-style: none;
@@ -444,10 +451,11 @@ nav ul li a {
     }
 
     #logo_sb img {
-        width: 30vw;
+        width: auto;
         max-width: 60px;
         min-width: 40px;
         height: auto;
+        max-height: 8vh;
         border-radius: 20px;
     }
 
@@ -457,10 +465,8 @@ nav ul li a {
 
     #hamburger {
         display: block;
-        font-size: 30px;
-        color: white;
-        cursor: pointer;
-        margin-right: 5px;
+        font-size: 40px;
+        margin-right: 10px;
     }
 
     #sideMenu.show {
@@ -481,12 +487,18 @@ nav ul li a {
     }
 
     .blok h1 {
-        font-size: 30px;
+        font-size: clamp(22px, 4.5vw, 26px);
     }
 
     #stopka {
-        font-size: 16px;
-        height: 8vh;
+        height: 16vh;
+        min-height: 14vh;
+        font-size: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
 
@@ -495,7 +507,7 @@ nav ul li a {
 @media (min-width: 768px) and (max-width: 1023px) {
     #baner {
         height: 10vh;
-        padding: 0 10px;
+        padding: 0 5px;
         justify-content: space-between;
         align-items: center;
         font-family: 'Bebas Neue', sans-serif;
@@ -514,10 +526,11 @@ nav ul li a {
     }
 
     #logo_sb img {
-        width: 22vw;
+        width: auto;
         max-width: 90px;
         min-width: 50px;
         height: auto;
+        max-height: 8vh;
         border-radius: 20px;
     }
 
@@ -549,12 +562,18 @@ nav ul li a {
     }
 
     .blok h1 {
-        font-size: 30px;
+        font-size: clamp(26px, 4vw, 30px);
     }
 
     #stopka {
-        font-size: 18px;
-        height: 8vh;
+        height: 16vh;
+        min-height: 14vh;
+        font-size: 16px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
 
@@ -562,7 +581,7 @@ nav ul li a {
 /* 📱📲 DESKTOP (≥ 1024px) */
 @media (min-width: 1024px) {
     #baner {
-        min-height: 100px;
+        min-height: 130px;
         font-family: 'Roboto', sans-serif;
     }
 
@@ -576,19 +595,10 @@ nav ul li a {
         padding: 0;
         gap: 5vw;
     }
-
-    nav ul li {
-        display: flex;
-        justify-content: center;
-    }
-
+    
     nav ul li a {
         padding: 15px 30px;
-        font-size: 30px;
-    }
-
-    #hamburger {
-        display: none;
+        font-size: clamp(30px, 3vw, 34px);
     }
 
     #main {
@@ -608,6 +618,6 @@ nav ul li a {
       }
 
     .blok h1 {
-        font-size: 60px;
+        font-size: clamp(46px, 5vw, 50px);
     }
 }
