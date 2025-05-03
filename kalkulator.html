@@ -10,118 +10,123 @@
     <title>KALKULATOR</title>
 </head>
 <body>
-    <div id="baner">
-        <div id="hamburger">☰</div>
-        <nav>
-            <ul>
-                <li><a href="trenerzy.html" class="nav-button">TRENERZY</a></li>
-                <li><a href="przepisy.html" class="nav-button">PRZEPISY</a></li>
-                <li><a href="index.html" id="logo" class="nav-button-logo"><img src="Pictures/Logo.png" alt="Logo"></a></li>
-                <li><a href="cwiczenia.html" class="nav-button">ĆWICZENIA</a></li>
-                <li><a href="kalkulator.html" class="nav-button">KALKULATOR</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <div id="sideMenu">
-        <span id="closeMenu">×</span>
-        <ul>
-            <li><a href="trenerzy.html">TRENERZY</a></li>
-            <li><a href="przepisy.html">PRZEPISY</a></li>
-            <li class="submenu-parent">
-                <a href="cwiczenia.html" class="submenu-toggle">ĆWICZENIA <span class="toggle-icon">+</span></a>
-            </li>
-            <li><a href="kalkulator.html">KALKULATOR</a></li>
-        </ul>
-    </div>
 
     <div id="main">
-        <div class="blok1">
-            <h2>Kalkulator BMI</h2>
-            <br>
-            <div class="form-box">
-                <label for="weight">Waga (kg):</label>
-                <input type="number" id="weight" placeholder="Waga w kg">
-                <label for="height">Wzrost (cm):</label>
-                <input type="number" id="height" placeholder="Wzrost w cm">
-                <button id="calculateBMI">Oblicz BMI</button>
-            </div>
-            <br>
-            <p id="bmiResult"></p> <!-- To tu pojawi się wynik -->
-            <div id="bmiBarContainer">
-                <div id="bmiBar">
-                    <div class="bmiSegment starving"></div>
-                    <div class="bmiSegment emaciation"></div>
-                    <div class="bmiSegment underweight"></div>
-                    <div class="bmiSegment normal"></div>
-                    <div class="bmiSegment overweight"></div>
-                    <div class="bmiSegment obese"></div>
-                    <div class="bmiSegment obese2"></div>
-                    <div class="bmiSegment obese3"></div>
-                </div>
-                <div id="bmiPointer">▼</div>
-            </div>
-            <div id="bmiInfo"></div>
-        </div>        
 
-        <div class="blok2">
-            <h2>Kalkulator Kaloryczności</h2>
-            <br>
-            <div class="form-box">
-                <label for="age">Wiek:</label>
-                <input type="number" id="age" placeholder="Wiek">
-                <label for="weightK">Waga (kg):</label>
-                <input type="number" id="weightK" placeholder="Waga w kg">
-                <label for="heightK">Wzrost (cm):</label>
-                <input type="number" id="heightK" placeholder="Wzrost w cm">
-                <label for="gender">Płeć:</label>
-                <select id="gender">
-                    <option value="male">Mężczyzna</option>
-                    <option value="female">Kobieta</option>
-                </select>
-                <label for="activityLevel">Poziom aktywności
-                    <button id="togglePal" class="text-button">PAL</button>:
-                </label>
-                <select id="activityLevel">
-                    <option value="-- Wybierz aktywność --">-- Wybierz aktywność --</option>
-                    <option value="sedentary">Siedzący tryb życia</option>
-                    <option value="light">Niska aktywność fizyczna</option>
-                    <option value="moderate">Aktywność fizyczna kilka razy w tygodniu</option>
-                    <option value="active_moderate">Codzienna aktywność fizyczna</option>
-                    <option value="active">Wysoka aktywność fizyczna</option>
-                    <option value="very_active">Bardzo wysoka aktywność fizyczna</option>
-                    <option value="athlete">Zawodowi sportowcy</option>
-                </select>
-                <button id="calculateCalories">Oblicz Kalorie</button>
-            </div>
-            <br>
-            <p id="calorieResult"></p> <!-- To tu pojawią się wyniki -->
-            <div id="palInfo" class="pal-block" style="display: none;">
-                <strong>PAL (Physical Activity Level) to wskaźnik aktywności fizycznej, używany do obliczania dziennego zapotrzebowania kalorycznego. Im więcej ruchu, tym wyższy PAL i większe zapotrzebowanie na energię. Oto różne poziomy aktywności, które można wybrać:</strong>
+        <div id="baner">
+            <div id="hamburger">☰</div>
+            <nav>
                 <ul>
-                    <li>Siedzący tryb życia – brak aktywności, praca siedząca, poniżej 3000 kroków/dzień.</li>
-                    <li>Niska aktywność fizyczna – mała aktywność, ok. 5000 kroków/dzień.</li>
-                    <li>Aktywność fizyczna kilka razy w tygodniu – umiarkowana aktywność, 1-2 treningi/tydz., 7000 kroków/dzień.</li>
-                    <li>Codzienna aktywność fizyczna – więcej aktywności, 2-3 treningi/tydz., 8000 kroków/dzień.</li>
-                    <li>Wysoka aktywność fizyczna – wysoka aktywność, 3-4 treningi/tydz., 10 000 kroków/dzień.</li>
-                    <li>Bardzo wysoka aktywność fizyczna – bardzo wysoka aktywność, 4-5 treningów/tydz., 12 000-14 000 kroków/dzień.</li>
-                    <li>Zawodowi sportowcy – intensywne treningi zawodowego sportowca.</li>
+                    <li><a href="trenerzy.html" class="nav-button">TRENERZY</a></li>
+                    <li><a href="przepisy.html" class="nav-button">PRZEPISY</a></li>
+                    <li><a href="index.html" id="logo" class="nav-button-logo"><img src="Pictures/Logo.png" alt="Logo"></a></li>
+                    <li><a href="cwiczenia.html" class="nav-button">ĆWICZENIA</a></li>
+                    <li><a href="kalkulator.html" class="nav-button">KALKULATOR</a></li>
                 </ul>
+            </nav>
+        </div>
+    
+        <div id="sideMenu">
+            <span id="closeMenu">×</span>
+            <ul>
+                <li><a href="trenerzy.html">TRENERZY</a></li>
+                <li><a href="przepisy.html">PRZEPISY</a></li>
+                <li class="submenu-parent">
+                    <a href="cwiczenia.html" class="submenu-toggle">ĆWICZENIA <span class="toggle-icon">+</span></a>
+                </li>
+                <li><a href="kalkulator.html">KALKULATOR</a></li>
+            </ul>
+        </div>
+
+        <div class="blok-container">
+            <div class="blok1">
+                <h2>Kalkulator BMI</h2>
+                <br>
+                <div class="form-box">
+                    <label for="weight">Waga (kg):</label>
+                    <input type="number" id="weight" placeholder="Waga w kg">
+                    <label for="height">Wzrost (cm):</label>
+                    <input type="number" id="height" placeholder="Wzrost w cm">
+                    <button id="calculateBMI">Oblicz BMI</button>
+                </div>
+                <br>
+                <p id="bmiResult"></p> <!-- To tu pojawi się wynik -->
+                <div id="bmiBarContainer">
+                    <div id="bmiBar">
+                        <div class="bmiSegment starving"></div>
+                        <div class="bmiSegment emaciation"></div>
+                        <div class="bmiSegment underweight"></div>
+                        <div class="bmiSegment normal"></div>
+                        <div class="bmiSegment overweight"></div>
+                        <div class="bmiSegment obese"></div>
+                        <div class="bmiSegment obese2"></div>
+                        <div class="bmiSegment obese3"></div>
+                    </div>
+                    <div id="bmiPointer">▼</div>
+                </div>
+                <div id="bmiInfo"></div>
+            </div>        
+
+            <div class="blok2">
+                <h2>Kalkulator Kaloryczności</h2>
+                <br>
+                <div class="form-box">
+                    <label for="age">Wiek:</label>
+                    <input type="number" id="age" placeholder="Wiek">
+                    <label for="weightK">Waga (kg):</label>
+                    <input type="number" id="weightK" placeholder="Waga w kg">
+                    <label for="heightK">Wzrost (cm):</label>
+                    <input type="number" id="heightK" placeholder="Wzrost w cm">
+                    <label for="gender">Płeć:</label>
+                    <select id="gender">
+                        <option value="male">Mężczyzna</option>
+                        <option value="female">Kobieta</option>
+                    </select>
+                    <label for="activityLevel">Poziom aktywności
+                        <button id="togglePal" class="text-button">PAL</button>:
+                    </label>
+                    <select id="activityLevel">
+                        <option value="-- Wybierz aktywność --">-- Wybierz aktywność --</option>
+                        <option value="sedentary">Siedzący tryb życia</option>
+                        <option value="light">Niska aktywność fizyczna</option>
+                        <option value="moderate">Aktywność fizyczna kilka razy w tygodniu</option>
+                        <option value="active_moderate">Codzienna aktywność fizyczna</option>
+                        <option value="active">Wysoka aktywność fizyczna</option>
+                        <option value="very_active">Bardzo wysoka aktywność fizyczna</option>
+                        <option value="athlete">Zawodowi sportowcy</option>
+                    </select>
+                    <button id="calculateCalories">Oblicz Kalorie</button>
+                </div>
+                <br>
+                <p id="calorieResult"></p> <!-- To tu pojawią się wyniki -->
+                <div id="palInfo" class="pal-block" style="display: none;">
+                    <strong>PAL (Physical Activity Level) to wskaźnik aktywności fizycznej, używany do obliczania dziennego zapotrzebowania kalorycznego. Im więcej ruchu, tym wyższy PAL i większe zapotrzebowanie na energię. Oto różne poziomy aktywności, które można wybrać:</strong>
+                    <ul>
+                        <li>Siedzący tryb życia – brak aktywności, praca siedząca, poniżej 3000 kroków/dzień.</li>
+                        <li>Niska aktywność fizyczna – mała aktywność, ok. 5000 kroków/dzień.</li>
+                        <li>Aktywność fizyczna kilka razy w tygodniu – umiarkowana aktywność, 1-2 treningi/tydz., 7000 kroków/dzień.</li>
+                        <li>Codzienna aktywność fizyczna – więcej aktywności, 2-3 treningi/tydz., 8000 kroków/dzień.</li>
+                        <li>Wysoka aktywność fizyczna – wysoka aktywność, 3-4 treningi/tydz., 10 000 kroków/dzień.</li>
+                        <li>Bardzo wysoka aktywność fizyczna – bardzo wysoka aktywność, 4-5 treningów/tydz., 12 000-14 000 kroków/dzień.</li>
+                        <li>Zawodowi sportowcy – intensywne treningi zawodowego sportowca.</li>
+                    </ul>
+                </div>
             </div>
+        </div>
+
+        <div id="stopka">
+            <footer>
+                <p>&copy; 2025 FITVERSO. Treści użyte wyłącznie w celach naukowych.<br><br>
+                  <a href="https://github.com/Ricardosz02/Strona-Fitness" target="_blank" rel="noopener noreferrer" style="margin-left: 8px; vertical-align: middle;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="white">
+                      <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.41 7.84 10.94.57.11.78-.25.78-.56v-2.1c-3.19.69-3.87-1.54-3.87-1.54-.52-1.32-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.73-1.52-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.91 10.91 0 012.87-.39c.97.01 1.94.13 2.87.39 2.18-1.48 3.14-1.17 3.14-1.17.63 1.58.24 2.75.12 3.04.74.8 1.18 1.82 1.18 3.07 0 4.41-2.68 5.39-5.24 5.67.41.35.78 1.05.78 2.12v3.14c0 .31.21.68.79.56A10.51 10.51 0 0023.5 12c0-6.27-5.23-11.5-11.5-11.5z"/>
+                    </svg>
+                  </a>
+                </p>
+            </footer>          
         </div>
         
     </div>
 
-    <div id="stopka">
-        <footer>
-            <p>&copy; 2025 FITVERSO. Treści użyte wyłącznie w celach naukowych.<br><br>
-              <a href="https://github.com/Ricardosz02/Strona-Fitness" target="_blank" rel="noopener noreferrer" style="margin-left: 8px; vertical-align: middle;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="white">
-                  <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.41 7.84 10.94.57.11.78-.25.78-.56v-2.1c-3.19.69-3.87-1.54-3.87-1.54-.52-1.32-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.24 3.32.95.1-.74.4-1.24.73-1.52-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.91 10.91 0 012.87-.39c.97.01 1.94.13 2.87.39 2.18-1.48 3.14-1.17 3.14-1.17.63 1.58.24 2.75.12 3.04.74.8 1.18 1.82 1.18 3.07 0 4.41-2.68 5.39-5.24 5.67.41.35.78 1.05.78 2.12v3.14c0 .31.21.68.79.56A10.51 10.51 0 0023.5 12c0-6.27-5.23-11.5-11.5-11.5z"/>
-                </svg>
-              </a>
-            </p>
-        </footer>          
-    </div>
 </body>
 </html>
