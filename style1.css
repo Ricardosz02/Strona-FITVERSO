@@ -402,18 +402,11 @@ nav ul li a {
   background: #b30303;
 }
 
-/* Poprawka dla scrollbara */
-html {
-  height: 100%; /* dodane 4 */
-  scroll-padding-top: 10dvh; /* Przewijanie do górnej krawędzi banera */
-  scroll-padding-bottom: calc(16dvh + 20px); /* Przewijanie do dolnej krawędzi stopki zmiana 2 */
-}
-
 /* ----------------------------------------- */
 /* 📱 MOBILE (≤ 767px) */
 @media (max-width: 767px) {
   #baner {
-    height: 10dvh; /* zmiana z 10vh */
+    height: 10vh;
     padding: 0 5px;
     justify-content: space-between;
     align-items: center;
@@ -453,7 +446,7 @@ html {
   }
 
   #main {
-    padding-bottom: calc(16dvh + 20px); /* Dodano padding-bottom dla stopki */
+    padding: 20px 0;
   }
 
   .blok {
@@ -481,7 +474,7 @@ html {
   }
 
   #stopka {
-    height: 16dvh; /* zmiana z 16vh */
+    height: 16vh;
     min-height: 14vh;
     font-size: 10px;
     padding: 10px;
@@ -489,8 +482,6 @@ html {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    flex-shrink: 0; /* zmiana 2 */
-    position: static;
   }
 
   #blok1 {
@@ -533,7 +524,7 @@ html {
 /* 📱 TABLET (768px – 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
   #baner {
-    height: 10dvh; /* zmiana z 10vh */
+    height: 10vh;
     padding: 0 5px;
     justify-content: space-between;
     align-items: center;
@@ -563,7 +554,7 @@ html {
   }
 
   #main {
-    padding-bottom: calc(16dvh + 20px); /* Dodano padding-bottom dla stopki */
+    padding: 20px 0;
   }
 
   .blok {
@@ -600,7 +591,7 @@ html {
   }
 
   #stopka {
-    height: 16dvh; /* zmiana z 16vh */
+    height: 16vh;
     min-height: 14vh;
     font-size: 16px;
     padding: 10px;
@@ -608,8 +599,6 @@ html {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    flex-shrink: 0; 
-    position: static;
   }
 
   #blok1 {
