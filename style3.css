@@ -10,22 +10,20 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100vw;
-    height: 100%;
     min-height: 100vh;
-    overflow-y: overlay;
+    overflow-y: auto;
     overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
+    background-color: #171616;
 }
 
 /* --------------------------------------- */
 /* Baner */
 #baner {
-    width: 100vw;
-    height: 10vh;
     position: sticky !important;
     top: 0;
     z-index: 100;
+    width: 100vw;
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -138,8 +136,18 @@ nav ul li a {
 
 /* --------------------------------------- */
 /* Kontener główny */
+#main {
+    display: flex;
+    flex-direction: column;
+    background-color: #292727;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 40px;
+}
+
 #container {
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,22 +157,11 @@ nav ul li a {
     flex-grow: 1;
 }
 
-#main {
-    background-color: #292727;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    padding: 50px 20%;
-    gap: 40px;
-    flex-grow: 1;
-}
-
 /* --------------------------------------- */
 /* Stopka */
 #stopka {
     width: 100vw;
-    height: 12vh;
+    min-height: 12vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -173,7 +170,7 @@ nav ul li a {
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    margin-top: 0;
+    margin-top: auto;
     flex-shrink: 0;
 }
 
@@ -630,17 +627,9 @@ nav ul li a {
         font-family: 'Bebas Neue', sans-serif;
     }
 
-    #baner {
-        height: 10vh;
-        padding: 0 5px;
-        justify-content: space-between;
-        align-items: center;
-    }
-
     #container {
         width: 100%;
         padding: 20px;
-        flex-grow: 1;
     }
 
     #hamburger {
@@ -673,8 +662,6 @@ nav ul li a {
     #main {
         flex-direction: column;
         gap: 30px;
-        padding: 40px 20px;
-        flex-grow: 1;
     }
 
     nav ul {
@@ -687,7 +674,7 @@ nav ul li a {
     }
     
     #stopka {
-        height: 16vh;
+        height: auto;
         min-height: 14vh;
         font-size: 10px;
         padding: 10px;
@@ -767,7 +754,6 @@ nav ul li a {
     #container {
         width: 100%;
         padding: 30px;
-        flex-grow: 1;
     }
 
     #hamburger {
@@ -801,8 +787,6 @@ nav ul li a {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 40px;
-        padding: 60px 40px;
-        flex-grow: 1;
     }
 
     nav ul {
@@ -844,7 +828,7 @@ nav ul li a {
     }
 
     #stopka {
-        height: 16vh;
+        height: auto;
         min-height: 14vh;
         font-size: 16px;
         padding: 10px;
