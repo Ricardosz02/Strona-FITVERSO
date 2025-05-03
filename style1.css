@@ -488,6 +488,7 @@ html {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    position: static; /* Stopka w przepływie strony */
   }
 
   #blok1 {
@@ -605,6 +606,7 @@ html {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    position: static; /* Stopka w przepływie strony */
   }
 
   #blok1 {
