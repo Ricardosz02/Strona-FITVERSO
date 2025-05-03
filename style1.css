@@ -11,7 +11,7 @@ html, body {
   padding: 0;
   width: 100vw;
   height: 100%;
-  min-height: 100vh;
+  min-height: 200vh; /* test  100vh */
   overflow-y: overlay;
   overflow-x: hidden;
   display: flex;
@@ -444,6 +444,7 @@ nav ul li a {
   }
 
   .blok {
+    height: auto; /* Zmieniamy na auto, aby bloki dostosowały się do zawartości */
     width: 90%;
     padding: 20px;
     font-size: clamp(18px, 4.5vw, 20px);
@@ -468,7 +469,7 @@ nav ul li a {
   }
 
   #stopka {
-    height: 16vh;
+    height: auto; /* test 16vh */
     min-height: 14vh;
     font-size: 10px;
     padding: 10px;
@@ -547,6 +548,7 @@ nav ul li a {
   }
 
   .blok {
+    height: auto; /* Zmieniamy na auto, aby bloki dostosowały się do zawartości */
     width: 85%;
     padding: 60px;
     font-size: clamp(22px, 3.5vw, 24px);
@@ -580,7 +582,7 @@ nav ul li a {
   }
 
   #stopka {
-    height: 16vh;
+    height: auto; /* test 16vh */
     min-height: 14vh;
     font-size: 16px;
     padding: 10px;
