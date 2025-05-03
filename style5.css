@@ -519,7 +519,7 @@ nav ul li a {
     #logo_sb {
         display: flex;
         align-items: center;
-        margin-left: 5px;
+        margin-left: 10px;
         margin-right: auto;
         text-align: left;
         list-style: none;
