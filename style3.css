@@ -630,6 +630,7 @@ nav ul li a {
     #container {
         width: 100%;
         padding: 20px;
+        flex-grow: 1;
     }
 
     #hamburger {
@@ -662,6 +663,7 @@ nav ul li a {
     #main {
         flex-direction: column;
         gap: 30px;
+        flex-grow: 1;
     }
 
     nav ul {
@@ -754,6 +756,7 @@ nav ul li a {
     #container {
         width: 100%;
         padding: 30px;
+        flex-grow: 1;
     }
 
     #hamburger {
@@ -787,6 +790,7 @@ nav ul li a {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 40px;
+        flex-grow: 1;
     }
 
     nav ul {
