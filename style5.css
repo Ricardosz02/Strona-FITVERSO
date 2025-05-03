@@ -551,6 +551,7 @@ nav ul li a {
         display: flex !important;
         flex-direction: column !important;
         gap: 20px !important;
+        flex: 1 !important;
         flex-wrap: nowrap !important;
     }
 
@@ -558,6 +559,7 @@ nav ul li a {
         display: flex !important;
         flex-direction: column !important;
         gap: 20px !important;
+        flex: 1 !important;
         flex-wrap: nowrap !important;
         padding: 20px;
     }
@@ -635,6 +637,7 @@ nav ul li a {
         display: flex !important;
         flex-direction: column !important;
         gap: 20px !important;
+        flex: 1 !important;
         flex-wrap: nowrap !important;
     }
 
@@ -642,6 +645,7 @@ nav ul li a {
         display: flex !important;
         flex-direction: column !important;
         gap: 20px !important;
+        flex: 1 !important;
         flex-wrap: nowrap !important;
         padding: 20px;
     }
