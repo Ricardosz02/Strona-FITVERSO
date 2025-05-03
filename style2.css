@@ -142,12 +142,12 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     background-color: #292727;
-    min-height: 100vh;
     flex-grow: 1;
 }
 
 .blok-container {
     flex-grow: 1;
+    background-color: #292727;
     display: grid;
     grid-template-columns: repeat(3, minmax(300px, 1fr));
     grid-template-rows: auto;
