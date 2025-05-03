@@ -12,7 +12,7 @@ html, body {
   width: 100vw;
   height: 100%;
   min-height: 100vh;
-  overflow-y: auto; /* zmiana z overlay */
+  overflow-y: overlay;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
@@ -143,7 +143,6 @@ nav ul li a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 50px 0;
   background-color: #292727;
 }
 
@@ -411,7 +410,6 @@ nav ul li a {
     justify-content: space-between;
     align-items: center;
     font-family: 'Bebas Neue', sans-serif;
-    position: static; /* Baner w przepływie strony */
   }
 
   #logo_sb {
@@ -445,10 +443,6 @@ nav ul li a {
     margin-right: 10px;
   }
 
-  #main {
-    padding: 20px 0;
-  }
-
   .blok {
     width: 90%;
     padding: 20px;
@@ -474,7 +468,7 @@ nav ul li a {
   }
 
   #stopka {
-    height: auto;
+    height: 16vh;
     min-height: 14vh;
     font-size: 10px;
     padding: 10px;
@@ -529,7 +523,6 @@ nav ul li a {
     justify-content: space-between;
     align-items: center;
     font-family: 'Bebas Neue', sans-serif;
-    position: static; /* Baner w przepływie strony */
   }
 
   #logo_sb {
@@ -551,10 +544,6 @@ nav ul li a {
     height: auto;
     max-height: 8vh;
     border-radius: 20px;
-  }
-
-  #main {
-    padding: 20px 0;
   }
 
   .blok {
@@ -591,7 +580,7 @@ nav ul li a {
   }
 
   #stopka {
-    height: auto;
+    height: 16vh;
     min-height: 14vh;
     font-size: 16px;
     padding: 10px;
