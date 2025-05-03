@@ -405,7 +405,7 @@ nav ul li a {
 /* Poprawka dla scrollbara */
 html {
   scroll-padding-top: 10dvh; /* Przewijanie do górnej krawędzi banera */
-  scroll-padding-bottom: 16dvh; /* Przewijanie do dolnej krawędzi stopki */
+  scroll-padding-bottom: calc(16dvh + 20px); /* Przewijanie do dolnej krawędzi stopki zmiana 2 */
 }
 
 /* ----------------------------------------- */
@@ -452,7 +452,7 @@ html {
   }
 
   #main {
-    padding: 20px 0;
+    padding-bottom: calc(16dvh + 20px); /* Dodano padding-bottom dla stopki */
   }
 
   .blok {
@@ -488,7 +488,7 @@ html {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    position: static; /* Stopka w przepływie strony */
+    flex-shrink: 0; /* zmiana 2 */
   }
 
   #blok1 {
@@ -561,7 +561,7 @@ html {
   }
 
   #main {
-    padding: 20px 0;
+    padding-bottom: calc(16dvh + 20px); /* Dodano padding-bottom dla stopki */
   }
 
   .blok {
@@ -606,7 +606,7 @@ html {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    position: static; /* Stopka w przepływie strony */
+    flex-shrink: 0; /* zmiana 2 */
   }
 
   #blok1 {
