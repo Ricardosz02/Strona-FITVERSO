@@ -10,12 +10,10 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100vw;
-    height: 100%;
     min-height: 100vh;
-    overflow-y: overlay;
+    overflow-y: auto;
     overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
+    background-color: #171616;
 }
 
 /* ----------------------------------------- */
@@ -139,18 +137,16 @@ nav ul li a {
 /* ----------------------------------------- */
 /* Główna zawartość */
 #main {
-    flex-grow: 1;
-    background-color: #292727;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 50px 0;
+    flex-direction: column;
+    align-items: center;
+    background-color: #292727;
+    min-height: 100vh;
 }
 
 .blok {
     width: 75%;
-    min-height: fit-content;
-    height: auto;
+    height: 75vh;
     margin: 50px;
     padding: 300px;
     display: flex;
@@ -256,7 +252,7 @@ nav ul li a {
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    margin-top: 0;
+    margin-top: auto;
     flex-shrink: 0;
 }
 
@@ -437,7 +433,7 @@ nav ul li a {
     #logo_sb {
         display: flex;
         align-items: center;
-        margin-left: 5px;
+        margin-left: 10px;
         margin-right: auto;
         text-align: left;
         list-style: none;
@@ -465,12 +461,9 @@ nav ul li a {
         margin-right: 10px;
     }
 
-    #main {
-        padding: 20px 0;
-    }
-
     .blok {
         width: 90%;
+        height: auto;
         padding: 20px;
         font-size: clamp(18px, 4.5vw, 20px);
         margin: 20px;
@@ -552,7 +545,7 @@ nav ul li a {
     }
 
     #stopka {
-        height: 16vh;
+        height: auto;
         min-height: 14vh;
         font-size: 10px;
         padding: 10px;
@@ -605,12 +598,9 @@ nav ul li a {
         margin-right: 10px;
     }
 
-    #main {
-        padding: 20px 0;
-    }
-
     .blok {
         width: 85%;
+        height: auto;
         padding: 60px;
         font-size: clamp(22px, 3.5vw, 24px);
         margin: 20px;
@@ -691,7 +681,7 @@ nav ul li a {
    }
 
    #stopka {
-    height: 16vh;
+    height: auto;
     min-height: 14vh;
     font-size: 16px;
     padding: 10px;
