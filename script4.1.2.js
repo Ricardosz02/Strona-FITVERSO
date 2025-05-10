@@ -6,20 +6,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Tworzenie elementu img i przypisanie mu ścieżki do obrazka
     const logoImg = document.createElement('img');
-    logoImg.src = 'Pictures/Logo.png'; // Ścieżka do obrazka
-    logoImg.alt = 'Logo'; // Alternatywny tekst
+    logoImg.src = 'Pictures/Logo.png';
+    logoImg.alt = 'Logo';
 
     // Ustawienia rozmiaru obrazka
-    logoImg.style.height = 'auto'; // Automatyczna wysokość, zachowująca proporcje obrazu
-    logoImg.style.maxWidth = '100%'; // Zapewnienie, że obrazek nie wyjdzie poza kontener
-    logoImg.style.borderRadius = '10px'; // Zaokrąglone rogi obrazka
+    logoImg.style.height = 'auto';
+    logoImg.style.maxWidth = '100%';
+    logoImg.style.borderRadius = '10px';
 
     // Dodanie obrazka do linku logo
     logoSb.appendChild(logoImg);
 
     // Dodanie logo do kontenera
     const baner = document.getElementById('baner');
-    baner.insertBefore(logoSb, baner.firstChild); // Wstawienie logo na początek kontenera
+    baner.insertBefore(logoSb, baner.firstChild);
 
     // Efekt podświetlenia bloków
     const bloki = document.querySelectorAll(".blok");
@@ -109,132 +109,151 @@ document.addEventListener("DOMContentLoaded", function () {
     // ---------------------
     const cwiczenia = [
         {
-            nazwa: "Wiosłowanie sztangą trzymaną nachwytem do klatki w opadzie tułowia",
-            obraz: "Pictures/cwiczenie-plecy1.jpg",
+            nazwa: "Wyciskanie sztangi na ławce płaskiej",
+            obraz: "Pictures/cwiczenie-klata1.jpg",
             miesnie: {
                 glowne: [
-                    "m. najszerszy grzbietu",
-                    "m. naramienny tylny",
-                    "m. czworoboczny",
-                    "m. dwugłowy ramienia"
+                    "m. piersiowy większy",
+                    "m. trójgłowy ramienia",
+                    "m. naramienny przedni"
                 ],
+                pomocnicze: [
+                    "m. zębaty przedni",
+                    "m. kruczo-ramienny"
+                ]
             },
             pozycja_wyjsciowa: [
-                "Trzymając sztangę nachwytem (palce skierowane w dół), nieco szerzej niż na szerokość barków, ugnij lekko nogi w kolanach i wykonaj opad tułowia w przód.",
-                "Ramiona wyprostowane, ustawione prostopadle do podłoża."
+                "Połóż się na ławce płaskiej.",
+                "Stopy ustaw w lekkim rozkroku i mocno zaprzyj o podłoże.",
+                "Chwyć sztangę nachwytem (palce wskazują przód, kciuki skierowane do środka) na taką szerokość, aby w połowie wykonywania ruchu kąt między ramieniem a przedramieniem wynosił 90 stopni.",
+                "Łopatki ściągnięte, barki opuszczone i mocno dociśnięte do ławeczki.",
+                "Zachowaj naturalne ustawienie kręgosłupa – odcinek lędźwiowy lekko uniesiony, pośladki na ławeczce."
             ],
             ruch: [
-                "Utrzymując prawidłową pozycję ciała, wykonaj wdech, a następnie przyciągnij sztangę pionowo w górę, kieruj ją w stronę mostka, jednocześnie maksymalnie zbliżając łopatki do kręgosłupa.",
-                "Zatrzymaj ruch na ułamek sekundy w momencie, kiedy sztanga znajduje się blisko tułowia.",
-                "Wykonując wydech powietrza, powoli obniż sztangę do pozycji wyjściowej.",
+                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i powolnym ruchem opuść sztangę do środkowej części klatki piersiowej, uginając ramiona w łokciach.",
+                "Po przytrzymaniu sztangi w okolicach klatki przez ułamek sekundy zacznij unosić sztangę z powrotem do pozycji wyjściowej, wykonując wydech powietrza. Skup się, aby wyciskanie następowało z mięśnia piersiowego.",
+                "W momencie wyprostowania ramion ze sztangą (unikaj przeprostu w łokciach) mocno dopnij mięsień piersiowy, po czym ponownie zacznij opuszczać sztangę.",
                 "Wykonaj wyznaczoną liczbę powtórzeń."
             ]
         },
         {
-            nazwa: "Ściąganie drążka wyciągu górnego do klatki nachwytem szeroko",
-            obraz: "Pictures/cwiczenie-plecy2.jpg",
+            nazwa: "Wyciskanie sztangielek chwytem neutralnym na ławce ze skosem dodatnim",
+            obraz: "Pictures/cwiczenie-klata2.jpg",
             miesnie: {
                 glowne: [
-                    "m. najszerszy grzbietu",
-                    "m. czworoboczny",
-                    "m. równoległoboczny",
-                    "m. dwugłowy ramienia"
+                    "m. piersiowy większy",
+                    "m. trójgłowy ramienia",
+                    "m. naramienny przedni"
                 ],
+                pomocnicze: [
+                    "m. zębaty przedni",
+                    "m. kruczo-ramienny"
+                ]
             },
             pozycja_wyjsciowa: [
-                "Pozycja siedząca, przodem do wyciągu. Kolana zablokowane o wałki.",
-                "Drążek trzymany znacznie szerzej niż szerokość barków. Ramiona wyprostowane w górze."
+                "Połóż się na ławce ze skosem dodatnim (kąt pochylenia 30-45 stopni).",
+                "Unieś sztangielki. Ramiona ustaw na szerokość barków, prostopadle do podłogi.",
+                "Odwróć nadgarstki tak, aby palce były skierowane ku sobie."
             ],
             ruch: [
-                "Weź wdech. Odchyl się nieznacznie do tyłu i wypinając klatkę piersiową, zainicjuj ruch poprzez ściągnięcie łopatek w dół i do siebie, przyciągnij drążek w stronę górnej części klatki piersiowej, opuszczając łokcie wzdłuż tułowia w kierunku bioder.",
-                "W momencie największego napięcia zatrzymaj ruch na ułamek sekundy.",
-                "Rozpocznij opuszczanie ciężaru wraz z płynnym wydechem.",
-                "Wykonaj zadaną liczbę powtórzeń."
-            ]
-        },
-        {
-            nazwa: "Wiosłowanie hantlami w oparciu o ławkę skośną",
-            obraz: "Pictures/cwiczenie-plecy3.jpg",
-            miesnie: {
-                glowne: [
-                    "m. najszerszy grzbietu",
-                    "m. obły większy",
-                    "m. naramienny tylny",
-                    "m. czworoboczny",
-                    "m. dwugłowy ramienia"
-                ],
-            },
-            pozycja_wyjsciowa: [
-                "Sztangielki trzymane chwytem neutralnym (palce skierowane do tułowia). Klatka piersiowa oparta o ławeczkę skośną dodatnią (kąt 45-60 stopni).",
-                "Stopy pozostają zaparte o ziemię.",
-                "Głowa w jednej linii z plecami, ramiona wyprostowane, prostopadle do podłoża."
-            ],
-            ruch: [
-                "Utrzymując prawidłową pozycję ciała, wykonaj wdech, a następnie przyciągnij sztangielki pionowo w górę, kieruj je w stronę bioder, jednocześnie maksymalnie zbliżając łopatki do kręgosłupa i w dół.",
-                "Kontynuuj ruch do momentu, w którym sztangielki będą znajdować się na wysokości bioder.",
-                "Utrzymaj napięcie przez ułamek sekundy.",
-                "Ruch opuszczania wykonaj zdecydowanie wolniej niż podnoszenia, zrób wydech."
-            ]
-        },
-        {
-            nazwa: "Ściąganie chwytem neutralnym z wyciągu górnego",
-            obraz: "Pictures/cwiczenie-plecy4.jpg",
-            miesnie: {
-                glowne: [
-                    "m. najszerszy grzbietu",
-                    "m. czworoboczny",
-                    "m. równoległoboczny",
-                    "m. dwugłowy ramienia"
-                ],
-            },
-            pozycja_wyjsciowa: [
-                "Pozycja siedząca, przodem do wyciągu. Kolana zablokowane o wałki.",
-                "Drążek trzymany chwytem neutralnym. Ramiona wyprostowane w górze."
-            ],
-            ruch: [
-                "Weź wdech, odchyl się nieznacznie, ruch przyciągania drążka rozpocznij od maksymalnego opuszczenia barków oraz ściągnięcia łopatek do siebie.",
-                "Intencją ruchu jest przyciągnięcie łokci do bioder, ściąganie kontynuuj, aż drążek znajdzie się w okolicy górnej części klatki piersiowej.",
-                "Zatrzymaj ruch na ułamek sekundy, a następnie wraz z wydechem spokojnym ruchem rozpocznij opuszczanie ciężaru do maksymalnego rozciągnięcia."
-            ]
-        },
-        {
-            nazwa: "Szrugsy z hantlami",
-            obraz: "Pictures/cwiczenie-plecy5.jpg",
-            miesnie: {
-                glowne: [
-                    "m. czworoboczny część zstępująca (kaptur)"
-                ],
-            },
-            pozycja_wyjsciowa: [
-                "Pozycja stojąca, ramiona wyprostowane (lekko odblokowane w łokciu), ustawione wzdłuż tułowia, w dłoniach hantle."
-            ],
-            ruch: [
-                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i unieś barki w górę.",
-                "Ruch jest bardzo krótki, zatrzymaj na ułamek sekundy barki w górze, następnie wypuść powietrze i powoli opuść barki.",
+                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i powolnym ruchem opuść sztangielki w okolicę środkowej części klatki piersiowej.",
+                "Po przytrzymaniu sztangielek przez ułamek sekundy zacznij unosić sztangielki z powrotem do pozycji wyjściowej, wykonując wydech. Skup się, by wyciskanie następowało z mięśnia piersiowego.",
+                "W momencie wyprostowania ramion ze sztangielkami (unikaj przeprostu w łokciach) mocno dopnij mięsień piersiowy, po czym weź wdech i ponownie zacznij opuszczać ramiona.",
                 "Wykonaj wyznaczoną liczbę powtórzeń."
             ]
         },
         {
-            nazwa: "Przyciąganie linki wyciągu dolnego jednorącz",
-            obraz: "Pictures/cwiczenie-plecy6.jpg",
+            nazwa: "Rozpiętki na maszynie butterfly",
+            obraz: "Pictures/cwiczenie-klata3.jpg",
             miesnie: {
                 glowne: [
-                    "m. najszerszy grzbietu",
-                    "m. czworoboczny",
-                    "m. równoległoboczny",
-                    "m. dwugłowy ramienia"
+                    "m. piersiowy większy",
+                    "m. naramienny przedni"
                 ],
+                pomocnicze: []
             },
             pozycja_wyjsciowa: [
-                "Pozycja siedząca w rozkroku, naprzeciw wyciągu dolnego, z założonym wcześniej pojedynczym uchwytem.",
-                "Chwyt jednorącz za uchwyt. Ramię wyprostowane, wyciągnięte w przód.",
-                "Druga ręka oparta na podłodze lub na kolanie.",
-                "Plecy proste, ustawione niemal prostopadle do podłoża."
+                "Pozycja siedząca na maszynie. Plecy mocno dociśnięte do oparcia.",
+                "Stopy w lekkim rozkroku mocno zaparte o podłoże.",
+                "Ramiona spoczywają na uchwytach przyrządu ustawione równolegle do podłogi. Łokcie zgięte. Przedramiona rozluźnione."
             ],
             ruch: [
-                "Weź wdech i zainicjuj ruch, ściągając łopatkę w dół i do kręgosłupa. Przyciągając uchwyt w stronę biodra, wykonaj lekką rotację w nadgarstku.",
-                "Ramię prowadź blisko tułowia.",
-                "Zatrzymaj ruch na ułamek sekundy. Następnie powoli wróć do pozycji wyjściowej, wykonując wydech."
+                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i przyciągnij do siebie ramiona, mocno napinając mięśnie piersiowe. Utrzymaj maksymalne napięcie mięśniowe przez ułamek sekundy, po czym wykonaj wydech.",
+                "Weź wdech i powróć do pozycji wyjściowej.",
+                "Wykonaj wyznaczoną liczbę powtórzeń."
+            ]
+        },
+        {
+            nazwa: "Wyciskanie na maszynie hammer",
+            obraz: "Pictures/cwiczenie-klata4.jpg",
+            miesnie: {
+                glowne: [
+                    "m. piersiowy większy",
+                    "m. trójgłowy ramienia",
+                    "m. naramienny przedni"
+                ],
+                pomocnicze: [
+                    "m. zębaty przedni",
+                    "m. kruczo-ramienny"
+                ]
+            },
+            pozycja_wyjsciowa: [
+                "Pozycja siedząca na maszynie hammer.",
+                "Stopy w lekkim rozkroku, mocno zaparte o podłoże.",
+                "Siedzisko ustawione tak, aby uchwyty znajdowały się na wysokości środkowej bądź dolnej części klatki piersiowej.",
+                "Plecy i głowa dociśnięte do oparcia. Łopatki ściągnięte."
+            ],
+            ruch: [
+                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i odepchnij uchwyty od siebie, prostując ramiona w łokciach.",
+                "Kiedy ramiona są wyprostowane (unikaj przeprostu w łokciach), mocno dopnij mięsień piersiowy.",
+                "Wykonaj wydech, po czym zacznij uginać ramiona w łokciach, przyciągając uchwyty do klatki, jednocześnie wykonując płynny wdech.",
+                "Wykonaj wyznaczoną liczbę powtórzeń."
+            ]
+        },
+        {
+            nazwa: "Wyciskanie na suwnicy Smitha leżąc na ławce skośnej głową w dół",
+            obraz: "Pictures/cwiczenie-klata5.jpg",
+            miesnie: {
+                glowne: [
+                    "m. piersiowy większy",
+                    "m. trójgłowy ramienia",
+                    "m. naramienny przedni"
+                ],
+                pomocnicze: []
+            },
+            pozycja_wyjsciowa: [
+                "Połóż się na ławce ze skosem ujemnym.",
+                "Chwyć sztangę nachwytem (palce wskazują przód, kciuki skierowane do środka) na taką szerokość, by w połowie wykonywania ruchu kąt między ramieniem a przedramieniem wynosił 90 stopni.",
+                "Łopatki mocno ściągnięte, mięśnie brzucha i pośladków napięte."
+            ],
+            ruch: [
+                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i powolnym ruchem opuść sztangę w okolicę dolnej części klatki piersiowej.",
+                "Po przytrzymaniu sztangi przez ułamek sekundy zacznij unosić sztangę z powrotem do pozycji wyjściowej, wydychając powietrze w końcowej fazie ruchu.",
+                "W momencie wyprostowania ramion ze sztangą (unikaj przeprostu w łokciach), mocno dopnij mięsień piersiowy, po czym ponownie zacznij opuszczać sztangę.",
+                "Wykonaj ruch zadaną liczbę powtórzeń."
+            ]
+        },
+        {
+            nazwa: "Wyciskanie na suwnicy Smitha leżąc na ławce płaskiej",
+            obraz: "Pictures/cwiczenie-klata6.jpg",
+            miesnie: {
+                glowne: [
+                    "m. piersiowy większy, część środkowa",
+                    "m. trójgłowy ramienia",
+                    "m. naramienny przedni"
+                ],
+                pomocnicze: []
+            },
+            pozycja_wyjsciowa: [
+                "Połóż się na ławce płaskiej.",
+                "Chwyć sztangę nachwytem (palce wskazują przód, kciuki skierowane do środka) na taką szerokość, aby w połowie wykonywania ruchu kąt między ramieniem a przedramieniem wynosił 90 stopni.",
+                "Pośladki oraz plecy mocno dociśnij do ławeczki. Ściągnij łopatki."
+            ],
+            ruch: [
+                "Utrzymując prawidłową pozycję wyjściową, weź wdech i powolnym ruchem opuść sztangę w okolicę środkowej części klatki piersiowej.",
+                "Zatrzymaj ruch na ułamek sekundy, następnie zacznij unosić sztangę z powrotem do pozycji wyjściowej, wykonując w końcowej fazie ruchu wydech. Skup się, by wyciskanie następowało z mięśnia piersiowego.",
+                "Kiedy ramiona będą proste (unikaj przeprostu w łokciach), mocno dopnij mięsień piersiowy, po czym ponownie zacznij opuszczać sztangę wraz z wdechem.",
+                "Wykonaj wyznaczoną liczbę powtórzeń."
             ]
         }
     ];
@@ -289,6 +308,12 @@ function toggleExerciseDetails(cwiczenieDiv, cwiczenie, button) {
                 <ul>
                     ${cwiczenie.miesnie.glowne.map(miesien => `<li>${miesien}</li>`).join('')}
                 </ul>
+                ${cwiczenie.miesnie.pomocnicze.length > 0 ? `
+                    <p><strong>Pomocnicze:</strong></p>
+                    <ul>
+                        ${cwiczenie.miesnie.pomocnicze.map(miesien => `<li>${miesien}</li>`).join('')}
+                    </ul>
+                ` : ''}
             </div>
             <div class="pozycja_wyjsciowa">
                 <h4>Pozycja wyjściowa:</h4>
@@ -365,6 +390,5 @@ function renderPagination(totalPages) {
 }
 
 renderExercises();
-
 
 });

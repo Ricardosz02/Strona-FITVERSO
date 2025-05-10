@@ -214,8 +214,8 @@ nav ul li a {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     cursor: pointer;
-    margin: 10px auto; /* Zmiana: wyśrodkowanie przycisku */
-    display: block; /* Zmiana: zapewnienie wyśrodkowania */
+    margin: 10px auto;
+    display: block;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 

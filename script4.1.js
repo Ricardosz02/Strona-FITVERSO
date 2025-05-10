@@ -6,20 +6,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Tworzenie elementu img i przypisanie mu ścieżki do obrazka
     const logoImg = document.createElement('img');
-    logoImg.src = 'Pictures/Logo.png'; // Ścieżka do obrazka
-    logoImg.alt = 'Logo'; // Alternatywny tekst
+    logoImg.src = 'Pictures/Logo.png';
+    logoImg.alt = 'Logo';
 
     // Ustawienia rozmiaru obrazka
-    logoImg.style.height = 'auto'; // Automatyczna wysokość, zachowująca proporcje obrazu
-    logoImg.style.maxWidth = '100%'; // Zapewnienie, że obrazek nie wyjdzie poza kontener
-    logoImg.style.borderRadius = '10px'; // Zaokrąglone rogi obrazka
+    logoImg.style.height = 'auto';
+    logoImg.style.maxWidth = '100%';
+    logoImg.style.borderRadius = '10px';
 
     // Dodanie obrazka do linku logo
     logoSb.appendChild(logoImg);
 
     // Dodanie logo do kontenera
     const baner = document.getElementById('baner');
-    baner.insertBefore(logoSb, baner.firstChild); // Wstawienie logo na początek kontenera
+    baner.insertBefore(logoSb, baner.firstChild);
 
     // Efekt podświetlenia bloków
     const bloki = document.querySelectorAll(".blok");

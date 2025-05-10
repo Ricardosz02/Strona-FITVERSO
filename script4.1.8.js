@@ -6,20 +6,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Tworzenie elementu img i przypisanie mu ścieżki do obrazka
     const logoImg = document.createElement('img');
-    logoImg.src = 'Pictures/Logo.png'; // Ścieżka do obrazka
-    logoImg.alt = 'Logo'; // Alternatywny tekst
+    logoImg.src = 'Pictures/Logo.png';
+    logoImg.alt = 'Logo';
 
     // Ustawienia rozmiaru obrazka
-    logoImg.style.height = 'auto'; // Automatyczna wysokość, zachowująca proporcje obrazu
-    logoImg.style.maxWidth = '100%'; // Zapewnienie, że obrazek nie wyjdzie poza kontener
-    logoImg.style.borderRadius = '10px'; // Zaokrąglone rogi obrazka
+    logoImg.style.height = 'auto';
+    logoImg.style.maxWidth = '100%';
+    logoImg.style.borderRadius = '10px';
 
     // Dodanie obrazka do linku logo
     logoSb.appendChild(logoImg);
 
     // Dodanie logo do kontenera
     const baner = document.getElementById('baner');
-    baner.insertBefore(logoSb, baner.firstChild); // Wstawienie logo na początek kontenera
+    baner.insertBefore(logoSb, baner.firstChild);
 
     // Efekt podświetlenia bloków
     const bloki = document.querySelectorAll(".blok");
@@ -109,123 +109,151 @@ document.addEventListener("DOMContentLoaded", function () {
     // ---------------------
     const cwiczenia = [
         {
-            nazwa: "Prostowanie ramion z linkami wyciągu górnego",
-            obraz: "Pictures/cwiczenie-triceps1.jpg",
+            nazwa: "Wyciskanie sztangi na ławce płaskiej",
+            obraz: "Pictures/cwiczenie-klata1.jpg",
             miesnie: {
                 glowne: [
-                    "m. trójgłowy ramienia"
-                ],
-                pomocnicze: []
-            },
-            pozycja_wyjsciowa: [
-                "Stań przodem do wyciągu. Chwyć za linki.",
-                "Sylwetka wyprostowana, nieznacznie pochylona.",
-                "Łokcie znajdują się blisko tułowia."
-            ],
-            ruch: [
-                "Utrzymując prawidłową pozycję wyjściową, weź wdech i rozpocznij prostowanie ramion w stawach łokciowych.",
-                "Podczas ruchu utrzymuj ciało nieruchomo, łopatki mocno ściągnięte, kontynuuj ruch do pełnego wyprostu w stawie łokciowym.",
-                "W momencie maksymalnego napięcia zatrzymaj ruch na ułamek sekundy, a następnie rozpocznij odkładanie ciężaru, wydychając powietrze."
-            ]
-        },
-        {
-            nazwa: "Wyciskanie francuskie z przenoszeniem ramion za głowę",
-            obraz: "Pictures/cwiczenie-triceps2.jpg",
-            miesnie: {
-                glowne: [
-                    "m. trójgłowy ramienia"
-                ],
-                pomocnicze: []
-            },
-            pozycja_wyjsciowa: [
-                "Leżąc na ławce, chwyć sztangę łamaną wąskim chwytem. Dłonie nieco węziej niż szerokość barków, kciuki skierowane do siebie.",
-                "Ściągnij sztangę z uchwytu i unieś ją nad klatkę piersiową, ramiona powinny znajdować się prostopadle do podłoża."
-            ],
-            ruch: [
-                "Inicjując wdech, opuść sztangę do czoła, trzymając ramiona nieruchomo. Przedramiona wykonują półkolisty ruch.",
-                "Utrzymując stałe zgięcie w łokciu, przenieś sztangę za głowę.",
-                "Następnie przenieś sztangę z powrotem nad czoło i wykonaj wyprost w łokciach, wracając do pozycji początkowej."
-            ]
-        },
-        {
-            nazwa: "Wyciskanie francuskie hantlami",
-            obraz: "Pictures/cwiczenie-triceps3.jpg",
-            miesnie: {
-                glowne: [
-                    "m. trójgłowy ramienia"
-                ],
-                pomocnicze: []
-            },
-            pozycja_wyjsciowa: [
-                "Pozycja leżąca na ławce płaskiej.",
-                "Hantle w dłoniach, ramiona wyprostowane nad klatką piersiową. Kciuki skierowane w tył."
-            ],
-            ruch: [
-                "Inicjując wdech, opuść hantle do czoła, trzymając ramiona nieruchomo. Przedramiona wykonują półkolisty ruch.",
-                "W momencie gdy hantle znajdą się blisko czoła, wróć do pozycji wyjściowej, prostując łokcie i wykonując wydech.",
-                "Wykonaj zadaną liczbę powtórzeń."
-            ]
-        },
-        {
-            nazwa: "Prostowanie przedramion z liną z wyciągu dolnego stojąc",
-            obraz: "Pictures/cwiczenie-triceps4.jpg",
-            miesnie: {
-                glowne: [
-                    "m. trójgłowy ramienia"
-                ],
-                pomocnicze: []
-            },
-            pozycja_wyjsciowa: [
-                "Stań tyłem do wyciągu dolnego. Złap linę oburącz i unieś ramiona nad głowę.",
-                "Ramiona ugięte w łokciach powinny wskazywać sufit. Kciuki do wewnątrz.",
-                "Plecy proste, brzuch i pośladki mocno napięte w celu dodatkowej stabilizacji tułowia."
-            ],
-            ruch: [
-                "Weź wdech, utrzymując prawidłową pozycję wyjściową; ramiona utrzymuj nieruchomo, łokcie blisko głowy, wykonaj mocny wyprost ramion w łokciach, unosząc linę nad głowę.",
-                "W końcowej fazie ruchu wykonaj wydech i mocny wyprost ramion, zatrzymaj ruch na ułamek sekundy.",
-                "Następnie kontrolowanym ruchem opuść linę poprzez uginanie ramion, wróć do pozycji wyjściowej."
-            ]
-        },
-        {
-            nazwa: "Prostowanie ramienia z wykorzystaniem wyciągu górnego",
-            obraz: "Pictures/cwiczenie-triceps5.jpg",
-            miesnie: {
-                glowne: [
+                    "m. piersiowy większy",
                     "m. trójgłowy ramienia",
-                    "m. łokciowy"
+                    "m. naramienny przedni"
                 ],
-                pomocnicze: []
+                pomocnicze: [
+                    "m. zębaty przedni",
+                    "m. kruczo-ramienny"
+                ]
             },
             pozycja_wyjsciowa: [
-                "Stań przodem do wyciągu. Jedną ręką złap uchwyt tak, aby kciuk był skierowany na zewnątrz (podchwyt).",
-                "Ramię niezaangażowane w ćwiczenie oprzyj o talię bądź, jeśli jest taka możliwość, o ramę wyciągu.",
-                "Łokieć znajduje się blisko tułowia."
+                "Połóż się na ławce płaskiej.",
+                "Stopy ustaw w lekkim rozkroku i mocno zaprzyj o podłoże.",
+                "Chwyć sztangę nachwytem (palce wskazują przód, kciuki skierowane do środka) na taką szerokość, aby w połowie wykonywania ruchu kąt między ramieniem a przedramieniem wynosił 90 stopni.",
+                "Łopatki ściągnięte, barki opuszczone i mocno dociśnięte do ławeczki.",
+                "Zachowaj naturalne ustawienie kręgosłupa – odcinek lędźwiowy lekko uniesiony, pośladki na ławeczce."
             ],
             ruch: [
-                "Weź wdech, utrzymując prawidłową pozycję wyjściową; ramię utrzymuj nieruchomo, łokieć blisko tułowia, prostuj ramię, ściągając uchwyt wyciągu w dół i mocno napinając triceps.",
-                "W końcowej fazie ruchu wykonaj wydech, zatrzymaj ruch, gdy łokieć będzie w pełnym wyproście.",
-                "Następnie poprzez spokojne i kontrolowane uginanie wróć do pozycji początkowej."
+                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i powolnym ruchem opuść sztangę do środkowej części klatki piersiowej, uginając ramiona w łokciach.",
+                "Po przytrzymaniu sztangi w okolicach klatki przez ułamek sekundy zacznij unosić sztangę z powrotem do pozycji wyjściowej, wykonując wydech powietrza. Skup się, aby wyciskanie następowało z mięśnia piersiowego.",
+                "W momencie wyprostowania ramion ze sztangą (unikaj przeprostu w łokciach) mocno dopnij mięsień piersiowy, po czym ponownie zacznij opuszczać sztangę.",
+                "Wykonaj wyznaczoną liczbę powtórzeń."
             ]
         },
         {
-            nazwa: "Prostowanie przedramion z gryfem prostym trzymanym nachwytem z wyciągu górnego",
-            obraz: "Pictures/cwiczenie-triceps6.jpg",
+            nazwa: "Wyciskanie sztangielek chwytem neutralnym na ławce ze skosem dodatnim",
+            obraz: "Pictures/cwiczenie-klata2.jpg",
             miesnie: {
                 glowne: [
+                    "m. piersiowy większy",
                     "m. trójgłowy ramienia",
-                    "m. łokciowy"
+                    "m. naramienny przedni"
+                ],
+                pomocnicze: [
+                    "m. zębaty przedni",
+                    "m. kruczo-ramienny"
+                ]
+            },
+            pozycja_wyjsciowa: [
+                "Połóż się na ławce ze skosem dodatnim (kąt pochylenia 30-45 stopni).",
+                "Unieś sztangielki. Ramiona ustaw na szerokość barków, prostopadle do podłogi.",
+                "Odwróć nadgarstki tak, aby palce były skierowane ku sobie."
+            ],
+            ruch: [
+                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i powolnym ruchem opuść sztangielki w okolicę środkowej części klatki piersiowej.",
+                "Po przytrzymaniu sztangielek przez ułamek sekundy zacznij unosić sztangielki z powrotem do pozycji wyjściowej, wykonując wydech. Skup się, by wyciskanie następowało z mięśnia piersiowego.",
+                "W momencie wyprostowania ramion ze sztangielkami (unikaj przeprostu w łokciach) mocno dopnij mięsień piersiowy, po czym weź wdech i ponownie zacznij opuszczać ramiona.",
+                "Wykonaj wyznaczoną liczbę powtórzeń."
+            ]
+        },
+        {
+            nazwa: "Rozpiętki na maszynie butterfly",
+            obraz: "Pictures/cwiczenie-klata3.jpg",
+            miesnie: {
+                glowne: [
+                    "m. piersiowy większy",
+                    "m. naramienny przedni"
                 ],
                 pomocnicze: []
             },
             pozycja_wyjsciowa: [
-                "Stań przodem do wyciągu. Chwyć oburącz za gryf nachwytem (kciuki skierowane do wewnątrz).",
-                "Sylwetka wyprostowana. Plecy proste, brzuch i pośladki napięte.",
-                "Łokcie znajdują się blisko tułowia. Ramiona prostopadle do ziemi."
+                "Pozycja siedząca na maszynie. Plecy mocno dociśnięte do oparcia.",
+                "Stopy w lekkim rozkroku mocno zaparte o podłoże.",
+                "Ramiona spoczywają na uchwytach przyrządu ustawione równolegle do podłogi. Łokcie zgięte. Przedramiona rozluźnione."
             ],
             ruch: [
-                "Weź wdech, utrzymując prawidłową pozycję wyjściową; ramiona utrzymuj nieruchomo, łokcie blisko tułowia; prostuj ramiona, ściągnij uchwyt wyciągu w dół i mocno napnij triceps aż do pełnego wyprostu ramion, w końcowej fazie ruchu wykonaj wydech.",
-                "W momencie maksymalnego napięcia, zatrzymaj ruch na ułamek sekundy.",
-                "Następnie powolnym i kontrolowanym ruchem zacznij uginać ramię; rozciągając triceps, wróć do pozycji wyjściowej."
+                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i przyciągnij do siebie ramiona, mocno napinając mięśnie piersiowe. Utrzymaj maksymalne napięcie mięśniowe przez ułamek sekundy, po czym wykonaj wydech.",
+                "Weź wdech i powróć do pozycji wyjściowej.",
+                "Wykonaj wyznaczoną liczbę powtórzeń."
+            ]
+        },
+        {
+            nazwa: "Wyciskanie na maszynie hammer",
+            obraz: "Pictures/cwiczenie-klata4.jpg",
+            miesnie: {
+                glowne: [
+                    "m. piersiowy większy",
+                    "m. trójgłowy ramienia",
+                    "m. naramienny przedni"
+                ],
+                pomocnicze: [
+                    "m. zębaty przedni",
+                    "m. kruczo-ramienny"
+                ]
+            },
+            pozycja_wyjsciowa: [
+                "Pozycja siedząca na maszynie hammer.",
+                "Stopy w lekkim rozkroku, mocno zaparte o podłoże.",
+                "Siedzisko ustawione tak, aby uchwyty znajdowały się na wysokości środkowej bądź dolnej części klatki piersiowej.",
+                "Plecy i głowa dociśnięte do oparcia. Łopatki ściągnięte."
+            ],
+            ruch: [
+                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i odepchnij uchwyty od siebie, prostując ramiona w łokciach.",
+                "Kiedy ramiona są wyprostowane (unikaj przeprostu w łokciach), mocno dopnij mięsień piersiowy.",
+                "Wykonaj wydech, po czym zacznij uginać ramiona w łokciach, przyciągając uchwyty do klatki, jednocześnie wykonując płynny wdech.",
+                "Wykonaj wyznaczoną liczbę powtórzeń."
+            ]
+        },
+        {
+            nazwa: "Wyciskanie na suwnicy Smitha leżąc na ławce skośnej głową w dół",
+            obraz: "Pictures/cwiczenie-klata5.jpg",
+            miesnie: {
+                glowne: [
+                    "m. piersiowy większy",
+                    "m. trójgłowy ramienia",
+                    "m. naramienny przedni"
+                ],
+                pomocnicze: []
+            },
+            pozycja_wyjsciowa: [
+                "Połóż się na ławce ze skosem ujemnym.",
+                "Chwyć sztangę nachwytem (palce wskazują przód, kciuki skierowane do środka) na taką szerokość, by w połowie wykonywania ruchu kąt między ramieniem a przedramieniem wynosił 90 stopni.",
+                "Łopatki mocno ściągnięte, mięśnie brzucha i pośladków napięte."
+            ],
+            ruch: [
+                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i powolnym ruchem opuść sztangę w okolicę dolnej części klatki piersiowej.",
+                "Po przytrzymaniu sztangi przez ułamek sekundy zacznij unosić sztangę z powrotem do pozycji wyjściowej, wydychając powietrze w końcowej fazie ruchu.",
+                "W momencie wyprostowania ramion ze sztangą (unikaj przeprostu w łokciach), mocno dopnij mięsień piersiowy, po czym ponownie zacznij opuszczać sztangę.",
+                "Wykonaj ruch zadaną liczbę powtórzeń."
+            ]
+        },
+        {
+            nazwa: "Wyciskanie na suwnicy Smitha leżąc na ławce płaskiej",
+            obraz: "Pictures/cwiczenie-klata6.jpg",
+            miesnie: {
+                glowne: [
+                    "m. piersiowy większy, część środkowa",
+                    "m. trójgłowy ramienia",
+                    "m. naramienny przedni"
+                ],
+                pomocnicze: []
+            },
+            pozycja_wyjsciowa: [
+                "Połóż się na ławce płaskiej.",
+                "Chwyć sztangę nachwytem (palce wskazują przód, kciuki skierowane do środka) na taką szerokość, aby w połowie wykonywania ruchu kąt między ramieniem a przedramieniem wynosił 90 stopni.",
+                "Pośladki oraz plecy mocno dociśnij do ławeczki. Ściągnij łopatki."
+            ],
+            ruch: [
+                "Utrzymując prawidłową pozycję wyjściową, weź wdech i powolnym ruchem opuść sztangę w okolicę środkowej części klatki piersiowej.",
+                "Zatrzymaj ruch na ułamek sekundy, następnie zacznij unosić sztangę z powrotem do pozycji wyjściowej, wykonując w końcowej fazie ruchu wydech. Skup się, by wyciskanie następowało z mięśnia piersiowego.",
+                "Kiedy ramiona będą proste (unikaj przeprostu w łokciach), mocno dopnij mięsień piersiowy, po czym ponownie zacznij opuszczać sztangę wraz z wdechem.",
+                "Wykonaj wyznaczoną liczbę powtórzeń."
             ]
         }
     ];
@@ -362,6 +390,5 @@ function renderPagination(totalPages) {
 }
 
 renderExercises();
-
 
 });

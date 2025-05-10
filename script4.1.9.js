@@ -6,20 +6,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Tworzenie elementu img i przypisanie mu ścieżki do obrazka
     const logoImg = document.createElement('img');
-    logoImg.src = 'Pictures/Logo.png'; // Ścieżka do obrazka
-    logoImg.alt = 'Logo'; // Alternatywny tekst
+    logoImg.src = 'Pictures/Logo.png';
+    logoImg.alt = 'Logo';
 
     // Ustawienia rozmiaru obrazka
-    logoImg.style.height = 'auto'; // Automatyczna wysokość, zachowująca proporcje obrazu
-    logoImg.style.maxWidth = '100%'; // Zapewnienie, że obrazek nie wyjdzie poza kontener
-    logoImg.style.borderRadius = '10px'; // Zaokrąglone rogi obrazka
+    logoImg.style.height = 'auto';
+    logoImg.style.maxWidth = '100%';
+    logoImg.style.borderRadius = '10px';
 
     // Dodanie obrazka do linku logo
     logoSb.appendChild(logoImg);
 
     // Dodanie logo do kontenera
     const baner = document.getElementById('baner');
-    baner.insertBefore(logoSb, baner.firstChild); // Wstawienie logo na początek kontenera
+    baner.insertBefore(logoSb, baner.firstChild);
 
     // Efekt podświetlenia bloków
     const bloki = document.querySelectorAll(".blok");
@@ -109,131 +109,151 @@ document.addEventListener("DOMContentLoaded", function () {
     // ---------------------
     const cwiczenia = [
         {
-            nazwa: "Unoszenie prostych nóg na stojaku",
-            obraz: "Pictures/cwiczenie-brzuch1.jpg",
+            nazwa: "Wyciskanie sztangi na ławce płaskiej",
+            obraz: "Pictures/cwiczenie-klata1.jpg",
             miesnie: {
                 glowne: [
-                    "m. prosty brzucha",
-                    "m. biodrowo-lędźwiowy",
-                    "m. prosty uda"
+                    "m. piersiowy większy",
+                    "m. trójgłowy ramienia",
+                    "m. naramienny przedni"
                 ],
-                pomocnicze: []
+                pomocnicze: [
+                    "m. zębaty przedni",
+                    "m. kruczo-ramienny"
+                ]
             },
             pozycja_wyjsciowa: [
-                "Podpór na przedramionach na stojaku, plecy dociśnięte do oparcia.",
-                "Tułów w jednej linii z wyprostowanymi nogami, miednica ustawiona neutralnie."
+                "Połóż się na ławce płaskiej.",
+                "Stopy ustaw w lekkim rozkroku i mocno zaprzyj o podłoże.",
+                "Chwyć sztangę nachwytem (palce wskazują przód, kciuki skierowane do środka) na taką szerokość, aby w połowie wykonywania ruchu kąt między ramieniem a przedramieniem wynosił 90 stopni.",
+                "Łopatki ściągnięte, barki opuszczone i mocno dociśnięte do ławeczki.",
+                "Zachowaj naturalne ustawienie kręgosłupa – odcinek lędźwiowy lekko uniesiony, pośladki na ławeczce."
             ],
             ruch: [
-                "Napinając mocno mięśnie brzucha, unieś proste nogi.",
-                "Kontynuuj ruch, aż miednica uniesie się w górę. Jest to warunek odpowiedniej pracy mięśni brzucha.",
-                "W najwyższym punkcie postaraj się zatrzymać ruch na ułamek sekundy i wykonaj wydech.",
-                "Następnie spokojnym, kontrolowanym ruchem opuść nogi do pozycji wyjściowej.",
+                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i powolnym ruchem opuść sztangę do środkowej części klatki piersiowej, uginając ramiona w łokciach.",
+                "Po przytrzymaniu sztangi w okolicach klatki przez ułamek sekundy zacznij unosić sztangę z powrotem do pozycji wyjściowej, wykonując wydech powietrza. Skup się, aby wyciskanie następowało z mięśnia piersiowego.",
+                "W momencie wyprostowania ramion ze sztangą (unikaj przeprostu w łokciach) mocno dopnij mięsień piersiowy, po czym ponownie zacznij opuszczać sztangę.",
                 "Wykonaj wyznaczoną liczbę powtórzeń."
             ]
         },
         {
-            nazwa: "Spięcia brzucha z linkami wyciągu górnego",
-            obraz: "Pictures/cwiczenie-brzuch2.jpg",
+            nazwa: "Wyciskanie sztangielek chwytem neutralnym na ławce ze skosem dodatnim",
+            obraz: "Pictures/cwiczenie-klata2.jpg",
             miesnie: {
                 glowne: [
-                    "m. prosty brzucha",
-                    "m. napinacz powięzi szerokiej"
+                    "m. piersiowy większy",
+                    "m. trójgłowy ramienia",
+                    "m. naramienny przedni"
                 ],
-                pomocnicze: []
+                pomocnicze: [
+                    "m. zębaty przedni",
+                    "m. kruczo-ramienny"
+                ]
             },
             pozycja_wyjsciowa: [
-                "Klęk z lekkim opadem przed bramą/wyciągiem górnym.",
-                "Dłonie dociśnięte do głowy trzymają linę wyciągu górnego."
+                "Połóż się na ławce ze skosem dodatnim (kąt pochylenia 30-45 stopni).",
+                "Unieś sztangielki. Ramiona ustaw na szerokość barków, prostopadle do podłogi.",
+                "Odwróć nadgarstki tak, aby palce były skierowane ku sobie."
             ],
             ruch: [
-                "Weź wdech, a następnie zegnij tułów do przodu, napinając jednocześnie mocno mięśnie brzucha i kierując łokcie do bioder.",
-                "Postaraj się wykonać ten ruch bez wykonywania zgięcia w biodrach, a jedynie poprzez „skulenie się”. Zatrzymaj ruch w momencie maksymalnego napięcia mięśni brzucha przez ułamek sekundy.",
-                "Wykonaj wydech i wróć do pozycji wyjściowej, wykonując płynny wdech."
-            ]
-        },
-        {
-            nazwa: "Spacer farmera",
-            obraz: "Pictures/cwiczenie-brzuch3.jpg",
-            miesnie: {
-                glowne: [
-                    "m. stabilizujące"
-                ],
-                pomocnicze: []
-            },
-            pozycja_wyjsciowa: [
-                "Pozycja stojąca, ramiona trzymają ciężar.",
-                "Łopatki ściągnięte, brzuch oraz pośladki mocno napięte, wzrok skierowany przed siebie."
-            ],
-            ruch: [
-                "Utrzymując mocno napiętą sylwetkę rozpocznij marsz. Stawiaj niewielkie kroki, pilnuj, aby utrzymać stałe, spokojne tempo. Nie doprowadzaj do zgięcia bocznego ciała, nie pochylaj się i nie odchylaj w trakcie ruchu."
-            ]
-        },
-        {
-            nazwa: "Landmine twist",
-            obraz: "Pictures/cwiczenie-brzuch4.jpg",
-            miesnie: {
-                glowne: [
-                    "m. prosty brzucha",
-                    "mięśnie skośne brzucha"
-                ],
-                pomocnicze: []
-            },
-            pozycja_wyjsciowa: [
-                "Pozycja stojąca, plecy proste.",
-                "Koniec sztangi trzymany w wyprostowanych ramionach nad głową.",
-                "Klatka piersiowa wypchnięta, łopatki ściągnięte, mięśnie brzucha i mięśnie pośladkowe napięte."
-            ],
-            ruch: [
-                "Utrzymując prawidłową pozycję wyjściową, weź wdech i wykonaj powolną rotację ciała, równocześnie opuszczaj sztangę w kierunku biodra.",
-                "Podczas ruchu utrzymuj mocno napięte mięśnie, ruch opuszczania wykonuj powoli, z dużą kontrolą.",
-                "Następnie energicznie unieś sztangę do pozycji początkowej, jednocześnie wykonaj wydech."
-            ]
-        },
-        {
-            nazwa: "Unoszenie prostych nóg do drążka",
-            obraz: "Pictures/cwiczenie-brzuch5.jpg",
-            miesnie: {
-                glowne: [
-                    "m. prosty brzucha",
-                    "m. biodrowo-lędźwiowy",
-                    "m. prosty uda"
-                ],
-                pomocnicze: []
-            },
-            pozycja_wyjsciowa: [
-                "Złap drążek nachwytem (kciuki na zewnątrz) na szerokość barków.",
-                "Tułów w jednej linii, kończyny dolne wyprostowane, miednica ustawiona neutralnie."
-            ],
-            ruch: [
-                "Napinając mocno mięśnie brzucha, zacznij unosić wyprostowane nogi w kierunku drążka.",
-                "Kontynuuj ruch, aż miednica uniesie się w górę. Jest to warunek odpowiedniej pracy mięśni brzucha.",
-                "W najwyższym punkcie zatrzymaj ruch na ułamek sekundy i wykonaj wydech.",
-                "Następnie spokojnym, kontrolowanym ruchem opuść nogi do pozycji początkowej.",
+                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i powolnym ruchem opuść sztangielki w okolicę środkowej części klatki piersiowej.",
+                "Po przytrzymaniu sztangielek przez ułamek sekundy zacznij unosić sztangielki z powrotem do pozycji wyjściowej, wykonując wydech. Skup się, by wyciskanie następowało z mięśnia piersiowego.",
+                "W momencie wyprostowania ramion ze sztangielkami (unikaj przeprostu w łokciach) mocno dopnij mięsień piersiowy, po czym weź wdech i ponownie zacznij opuszczać ramiona.",
                 "Wykonaj wyznaczoną liczbę powtórzeń."
             ]
         },
         {
-            nazwa: "Izometryczny skurcz mięśni brzucha w podporze przodem (Deska/Ścianka/Plank)",
-            obraz: "Pictures/cwiczenie-brzuch6.jpg",
+            nazwa: "Rozpiętki na maszynie butterfly",
+            obraz: "Pictures/cwiczenie-klata3.jpg",
             miesnie: {
                 glowne: [
-                    "m. prosty brzucha",
-                    "m. skośne brzucha",
-                    "m. core",
-                    "m. ramion",
-                    "m. grzbietu",
-                    "m. pośladkowe",
-                    "m. czworogłowe uda"
+                    "m. piersiowy większy",
+                    "m. naramienny przedni"
                 ],
                 pomocnicze: []
             },
             pozycja_wyjsciowa: [
-                "Podpór przodem na przedramionach, łokcie pod barkami, nogi złączone, wyprostowane, ustawione w jednej linii z tułowiem – równolegle do podłoża.",
-                "Zbliż łopatki do siebie i ściągnij je. Wciągnij brzuch, pępek zbliż do kręgosłupa, napnij mięśnie brzucha i pośladki. Wzrok skieruj w przód."
+                "Pozycja siedząca na maszynie. Plecy mocno dociśnięte do oparcia.",
+                "Stopy w lekkim rozkroku mocno zaparte o podłoże.",
+                "Ramiona spoczywają na uchwytach przyrządu ustawione równolegle do podłogi. Łokcie zgięte. Przedramiona rozluźnione."
             ],
             ruch: [
-                "Utrzymuj prawidłową pozycję wyjściową, napięcie mięśni brzucha, nóg i pośladków.",
-                "Oddychaj spokojnie, nie wstrzymuj powietrza. Postaraj się wytrzymać jak najdłużej."
+                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i przyciągnij do siebie ramiona, mocno napinając mięśnie piersiowe. Utrzymaj maksymalne napięcie mięśniowe przez ułamek sekundy, po czym wykonaj wydech.",
+                "Weź wdech i powróć do pozycji wyjściowej.",
+                "Wykonaj wyznaczoną liczbę powtórzeń."
+            ]
+        },
+        {
+            nazwa: "Wyciskanie na maszynie hammer",
+            obraz: "Pictures/cwiczenie-klata4.jpg",
+            miesnie: {
+                glowne: [
+                    "m. piersiowy większy",
+                    "m. trójgłowy ramienia",
+                    "m. naramienny przedni"
+                ],
+                pomocnicze: [
+                    "m. zębaty przedni",
+                    "m. kruczo-ramienny"
+                ]
+            },
+            pozycja_wyjsciowa: [
+                "Pozycja siedząca na maszynie hammer.",
+                "Stopy w lekkim rozkroku, mocno zaparte o podłoże.",
+                "Siedzisko ustawione tak, aby uchwyty znajdowały się na wysokości środkowej bądź dolnej części klatki piersiowej.",
+                "Plecy i głowa dociśnięte do oparcia. Łopatki ściągnięte."
+            ],
+            ruch: [
+                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i odepchnij uchwyty od siebie, prostując ramiona w łokciach.",
+                "Kiedy ramiona są wyprostowane (unikaj przeprostu w łokciach), mocno dopnij mięsień piersiowy.",
+                "Wykonaj wydech, po czym zacznij uginać ramiona w łokciach, przyciągając uchwyty do klatki, jednocześnie wykonując płynny wdech.",
+                "Wykonaj wyznaczoną liczbę powtórzeń."
+            ]
+        },
+        {
+            nazwa: "Wyciskanie na suwnicy Smitha leżąc na ławce skośnej głową w dół",
+            obraz: "Pictures/cwiczenie-klata5.jpg",
+            miesnie: {
+                glowne: [
+                    "m. piersiowy większy",
+                    "m. trójgłowy ramienia",
+                    "m. naramienny przedni"
+                ],
+                pomocnicze: []
+            },
+            pozycja_wyjsciowa: [
+                "Połóż się na ławce ze skosem ujemnym.",
+                "Chwyć sztangę nachwytem (palce wskazują przód, kciuki skierowane do środka) na taką szerokość, by w połowie wykonywania ruchu kąt między ramieniem a przedramieniem wynosił 90 stopni.",
+                "Łopatki mocno ściągnięte, mięśnie brzucha i pośladków napięte."
+            ],
+            ruch: [
+                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i powolnym ruchem opuść sztangę w okolicę dolnej części klatki piersiowej.",
+                "Po przytrzymaniu sztangi przez ułamek sekundy zacznij unosić sztangę z powrotem do pozycji wyjściowej, wydychając powietrze w końcowej fazie ruchu.",
+                "W momencie wyprostowania ramion ze sztangą (unikaj przeprostu w łokciach), mocno dopnij mięsień piersiowy, po czym ponownie zacznij opuszczać sztangę.",
+                "Wykonaj ruch zadaną liczbę powtórzeń."
+            ]
+        },
+        {
+            nazwa: "Wyciskanie na suwnicy Smitha leżąc na ławce płaskiej",
+            obraz: "Pictures/cwiczenie-klata6.jpg",
+            miesnie: {
+                glowne: [
+                    "m. piersiowy większy, część środkowa",
+                    "m. trójgłowy ramienia",
+                    "m. naramienny przedni"
+                ],
+                pomocnicze: []
+            },
+            pozycja_wyjsciowa: [
+                "Połóż się na ławce płaskiej.",
+                "Chwyć sztangę nachwytem (palce wskazują przód, kciuki skierowane do środka) na taką szerokość, aby w połowie wykonywania ruchu kąt między ramieniem a przedramieniem wynosił 90 stopni.",
+                "Pośladki oraz plecy mocno dociśnij do ławeczki. Ściągnij łopatki."
+            ],
+            ruch: [
+                "Utrzymując prawidłową pozycję wyjściową, weź wdech i powolnym ruchem opuść sztangę w okolicę środkowej części klatki piersiowej.",
+                "Zatrzymaj ruch na ułamek sekundy, następnie zacznij unosić sztangę z powrotem do pozycji wyjściowej, wykonując w końcowej fazie ruchu wydech. Skup się, by wyciskanie następowało z mięśnia piersiowego.",
+                "Kiedy ramiona będą proste (unikaj przeprostu w łokciach), mocno dopnij mięsień piersiowy, po czym ponownie zacznij opuszczać sztangę wraz z wdechem.",
+                "Wykonaj wyznaczoną liczbę powtórzeń."
             ]
         }
     ];
@@ -370,6 +390,5 @@ function renderPagination(totalPages) {
 }
 
 renderExercises();
-
 
 });

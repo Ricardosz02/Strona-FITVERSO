@@ -6,20 +6,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Tworzenie elementu img i przypisanie mu ścieżki do obrazka
     const logoImg = document.createElement('img');
-    logoImg.src = 'Pictures/Logo.png'; // Ścieżka do obrazka
-    logoImg.alt = 'Logo'; // Alternatywny tekst
+    logoImg.src = 'Pictures/Logo.png';
+    logoImg.alt = 'Logo';
 
     // Ustawienia rozmiaru obrazka
-    logoImg.style.height = 'auto'; // Automatyczna wysokość, zachowująca proporcje obrazu
-    logoImg.style.maxWidth = '100%'; // Zapewnienie, że obrazek nie wyjdzie poza kontener
-    logoImg.style.borderRadius = '10px'; // Zaokrąglone rogi obrazka
+    logoImg.style.height = 'auto';
+    logoImg.style.maxWidth = '100%';
+    logoImg.style.borderRadius = '10px';
 
     // Dodanie obrazka do linku logo
     logoSb.appendChild(logoImg);
 
     // Dodanie logo do kontenera
     const baner = document.getElementById('baner');
-    baner.insertBefore(logoSb, baner.firstChild); // Wstawienie logo na początek kontenera
+    baner.insertBefore(logoSb, baner.firstChild);
 
     // Efekt podświetlenia bloków
     const bloki = document.querySelectorAll(".blok");
@@ -109,131 +109,150 @@ document.addEventListener("DOMContentLoaded", function () {
     // ---------------------
     const cwiczenia = [
         {
-            nazwa: "Wspięcia na palce jednonóż z hantlami",
-            obraz: "Pictures/cwiczenie-lydki1.jpg",
+            nazwa: "Wyciskanie sztangi na ławce płaskiej",
+            obraz: "Pictures/cwiczenie-klata1.jpg",
             miesnie: {
                 glowne: [
-                    "m. brzuchaty",
-                    "m. płaszczkowaty"
+                    "m. piersiowy większy",
+                    "m. trójgłowy ramienia",
+                    "m. naramienny przedni"
                 ],
-                pomocnicze: []
+                pomocnicze: [
+                    "m. zębaty przedni",
+                    "m. kruczo-ramienny"
+                ]
             },
             pozycja_wyjsciowa: [
-                "Pozycja stojąca, plecy wyprostowane, ramię wzdłuż tułowia, sztangielka w dłoni.",
-                "Stopy ustawione na podwyższeniu, wolna ręka utrzymuje równowagę."
+                "Połóż się na ławce płaskiej.",
+                "Stopy ustaw w lekkim rozkroku i mocno zaprzyj o podłoże.",
+                "Chwyć sztangę nachwytem (palce wskazują przód, kciuki skierowane do środka) na taką szerokość, aby w połowie wykonywania ruchu kąt między ramieniem a przedramieniem wynosił 90 stopni.",
+                "Łopatki ściągnięte, barki opuszczone i mocno dociśnięte do ławeczki.",
+                "Zachowaj naturalne ustawienie kręgosłupa – odcinek lędźwiowy lekko uniesiony, pośladki na ławeczce."
             ],
             ruch: [
-                "W pozycji stojącej na podwyższeniu unieś jedną nogę w górę.",
-                "Pięta nogi, na której stoisz, powinna być mocno obniżona, a mięśnie łydki maksymalnie rozciągnięte.",
-                "Energicznym ruchem wykonaj wspięcie na palce i zatrzymaj ruch w maksymalnym punkcie.",
-                "Następnie powolnym, kontrolowanym ruchem opuść piętę aż do maksymalnego rozciągnięcia."
-            ]
-        },
-        {
-            nazwa: "Wspięcia na palcach w pozycji siedzącej ze sztangą ułożoną na kolanach",
-            obraz: "Pictures/cwiczenie-lydki2.jpg",
-            miesnie: {
-                glowne: [
-                    "m. brzuchaty",
-                    "m. płaszczkowaty",
-                    "m. strzałkowy długi"
-                ],
-                pomocnicze: []
-            },
-            pozycja_wyjsciowa: [
-                "Pozycja siedząca, nogi ugięte w kolanach, sztanga ustawiona na mięśniach czworogłowych, tuż nad stawem kolanowym.",
-                "Przednia część stóp na podwyższeniu. Pięty opuszczone, kostki w pasywnym zgięciu."
-            ],
-            ruch: [
-                "Z pozycji, w której stopa jest mocno zadarta do góry, pięta skrajnie obniżona, palce wskazują sufit, a łydka jest mocno rozciągnięta, odpychaj się od podwyższenia poprzez mocne wspięcie na palce i napięcie łydek. Unieś pięty maksymalnie w górę.",
-                "Po коротkim utrzymaniu łydki w maksymalnym napięciu opuść pięty poniżej poziomu palców, ponownie rozciągając łydkę.",
+                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i powolnym ruchem opuść sztangę do środkowej części klatki piersiowej, uginając ramiona w łokciach.",
+                "Po przytrzymaniu sztangi w okolicach klatki przez ułamek sekundy zacznij unosić sztangę z powrotem do pozycji wyjściowej, wykonując wydech powietrza. Skup się, aby wyciskanie następowało z mięśnia piersiowego.",
+                "W momencie wyprostowania ramion ze sztangą (unikaj przeprostu w łokciach) mocno dopnij mięsień piersiowy, po czym ponownie zacznij opuszczać sztangę.",
                 "Wykonaj wyznaczoną liczbę powtórzeń."
             ]
         },
         {
-            nazwa: "Wspięcia na palcach na suwnicy",
-            obraz: "Pictures/cwiczenie-lydki3.jpg",
+            nazwa: "Wyciskanie sztangielek chwytem neutralnym na ławce ze skosem dodatnim",
+            obraz: "Pictures/cwiczenie-klata2.jpg",
             miesnie: {
                 glowne: [
-                    "m. brzuchaty",
-                    "m. płaszczkowaty",
-                    "m. podeszwowy"
+                    "m. piersiowy większy",
+                    "m. trójgłowy ramienia",
+                    "m. naramienny przedni"
                 ],
-                pomocnicze: []
+                pomocnicze: [
+                    "m. zębaty przedni",
+                    "m. kruczo-ramienny"
+                ]
             },
             pozycja_wyjsciowa: [
-                "Usiądź na suwnicy do prostowania nóg.",
-                "Przednia część stopy ustawiona na platformie.",
-                "Plecy oraz głowa dotykają oparcia.",
-                "Prostując kolana, zwalniaj maszynę."
+                "Połóż się na ławce ze skosem dodatnim (kąt pochylenia 30-45 stopni).",
+                "Unieś sztangielki. Ramiona ustaw na szerokość barków, prostopadle do podłogi.",
+                "Odwróć nadgarstki tak, aby palce były skierowane ku sobie."
             ],
             ruch: [
-                "Z pozycji, w której stopa jest mocno zadarta, a łydka jest mocno rozciągnięta, odpychaj się od platformy poprzez mocne wspięcie na palce i napięcie łydek.",
-                "Po krótkim utrzymaniu łydki w maksymalnym napięciu opuszczaj pięty poniżej poziomu palców, ponownie rozciągając łydkę.",
+                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i powolnym ruchem opuść sztangielki w okolicę środkowej części klatki piersiowej.",
+                "Po przytrzymaniu sztangielek przez ułamek sekundy zacznij unosić sztangielki z powrotem do pozycji wyjściowej, wykonując wydech. Skup się, by wyciskanie następowało z mięśnia piersiowego.",
+                "W momencie wyprostowania ramion ze sztangielkami (unikaj przeprostu w łokciach) mocno dopnij mięsień piersiowy, po czym weź wdech i ponownie zacznij opuszczać ramiona.",
                 "Wykonaj wyznaczoną liczbę powtórzeń."
             ]
         },
         {
-            nazwa: "Wspięcia na palcach stojąc z wykorzystaniem suwnicy Smitha",
-            obraz: "Pictures/cwiczenie-lydki4.jpg",
+            nazwa: "Rozpiętki na maszynie butterfly",
+            obraz: "Pictures/cwiczenie-klata3.jpg",
             miesnie: {
                 glowne: [
-                    "m. brzuchaty",
-                    "m. płaszczkowaty",
-                    "m. strzałkowy długi"
+                    "m. piersiowy większy",
+                    "m. naramienny przedni"
                 ],
                 pomocnicze: []
             },
             pozycja_wyjsciowa: [
-                "Ustaw step fitnessowy lub inny rodzaj podwyższenia pod gryf suwnicy.",
-                "Stań na podwyższeniu, ustaw gryf na mięśniach grzbietu, a następnie zwolnij zaczepy suwnicy."
+                "Pozycja siedząca na maszynie. Plecy mocno dociśnięte do oparcia.",
+                "Stopy w lekkim rozkroku mocno zaparte o podłoże.",
+                "Ramiona spoczywają na uchwytach przyrządu ustawione równolegle do podłogi. Łokcie zgięte. Przedramiona rozluźnione."
             ],
             ruch: [
-                "Z pozycji, w której stopa jest mocno zadarta do góry, pięta skrajnie obniżona, palce wskazują sufit, a łydka jest mocno rozciągnięta, odpychaj się od podwyższenia poprzez mocne wspięcie na palce i napięcie łydek.",
-                "Po krótkim utrzymaniu łydki w maksymalnym napięciu opuszczaj pięty pod poziom palców, ponownie rozciągając łydkę.",
+                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i przyciągnij do siebie ramiona, mocno napinając mięśnie piersiowe. Utrzymaj maksymalne napięcie mięśniowe przez ułamek sekundy, po czym wykonaj wydech.",
+                "Weź wdech i powróć do pozycji wyjściowej.",
                 "Wykonaj wyznaczoną liczbę powtórzeń."
             ]
         },
         {
-            nazwa: "Wspięcia na palcach siedząc na maszynie",
-            obraz: "Pictures/cwiczenie-lydki5.jpg",
+            nazwa: "Wyciskanie na maszynie hammer",
+            obraz: "Pictures/cwiczenie-klata4.jpg",
             miesnie: {
                 glowne: [
-                    "m. brzuchaty",
-                    "m. płaszczkowaty"
+                    "m. piersiowy większy",
+                    "m. trójgłowy ramienia",
+                    "m. naramienny przedni"
                 ],
-                pomocnicze: []
+                pomocnicze: [
+                    "m. zębaty przedni",
+                    "m. kruczo-ramienny"
+                ]
             },
             pozycja_wyjsciowa: [
-                "Usiądź na siedzisku maszyny do łydek.",
-                "Oprzyj przednią część stopy na platformie.",
-                "Unieś lekko pięty ku górze tak, by możliwe było odciągnięcie dźwigni zwalniającej ciężar."
+                "Pozycja siedząca na maszynie hammer.",
+                "Stopy w lekkim rozkroku, mocno zaparte o podłoże.",
+                "Siedzisko ustawione tak, aby uchwyty znajdowały się na wysokości środkowej bądź dolnej części klatki piersiowej.",
+                "Plecy i głowa dociśnięte do oparcia. Łopatki ściągnięte."
             ],
             ruch: [
-                "Z pozycji, w której stopa jest mocno zadarta do góry, pięta skrajnie obniżona, palce wskazują sufit, a łydka jest mocno rozciągnięta, odpychaj się od platformy poprzez mocne wspięcie na palce i napięcie łydek.",
-                "Po krótkim utrzymaniu łydki w maksymalnym napięciu, opuszczaj pięty poniżej poziomu palców, ponownie rozciągając łydkę.",
+                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i odepchnij uchwyty od siebie, prostując ramiona w łokciach.",
+                "Kiedy ramiona są wyprostowane (unikaj przeprostu w łokciach), mocno dopnij mięsień piersiowy.",
+                "Wykonaj wydech, po czym zacznij uginać ramiona w łokciach, przyciągając uchwyty do klatki, jednocześnie wykonując płynny wdech.",
                 "Wykonaj wyznaczoną liczbę powtórzeń."
             ]
         },
         {
-            nazwa: "Wspięcia na palcach stojąc ze sztangą trzymaną na plecach",
-            obraz: "Pictures/cwiczenie-lydki6.jpg",
+            nazwa: "Wyciskanie na suwnicy Smitha leżąc na ławce skośnej głową w dół",
+            obraz: "Pictures/cwiczenie-klata5.jpg",
             miesnie: {
                 glowne: [
-                    "m. brzuchaty",
-                    "m. płaszczkowaty",
-                    "m. strzałkowy długi"
+                    "m. piersiowy większy",
+                    "m. trójgłowy ramienia",
+                    "m. naramienny przedni"
                 ],
                 pomocnicze: []
             },
             pozycja_wyjsciowa: [
-                "Ustaw sztangę na plecach (górna część mięśnia czworobocznego).",
-                "Nogi w kolanach wyprostowane, należy unikać przeprostu.",
-                "Stań na wcześniej przygotowanym podwyższeniu (step lub szeroki talerz obciążeniowy)."
+                "Połóż się na ławce ze skosem ujemnym.",
+                "Chwyć sztangę nachwytem (palce wskazują przód, kciuki skierowane do środka) na taką szerokość, by w połowie wykonywania ruchu kąt między ramieniem a przedramieniem wynosił 90 stopni.",
+                "Łopatki mocno ściągnięte, mięśnie brzucha i pośladków napięte."
             ],
             ruch: [
-                "Z pozycji, w której stopa jest mocno zadarta do góry, pięta skrajnie obniżona, palce wskazują sufit, a łydka jest mocno rozciągnięta, odpychaj się od podwyższenia poprzez mocne wspięcie na palce i napięcie łydek.",
-                "Po krótkim utrzymaniu łydki w maksymalnym napięciu, opuszczaj pięty poniżej poziomu palców, ponownie rozciągając łydkę.",
+                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i powolnym ruchem opuść sztangę w okolicę dolnej części klatki piersiowej.",
+                "Po przytrzymaniu sztangi przez ułamek sekundy zacznij unosić sztangę z powrotem do pozycji wyjściowej, wydychając powietrze w końcowej fazie ruchu.",
+                "W momencie wyprostowania ramion ze sztangą (unikaj przeprostu w łokciach), mocno dopnij mięsień piersiowy, po czym ponownie zacznij opuszczać sztangę.",
+                "Wykonaj ruch zadaną liczbę powtórzeń."
+            ]
+        },
+        {
+            nazwa: "Wyciskanie na suwnicy Smitha leżąc na ławce płaskiej",
+            obraz: "Pictures/cwiczenie-klata6.jpg",
+            miesnie: {
+                glowne: [
+                    "m. piersiowy większy, część środkowa",
+                    "m. trójgłowy ramienia",
+                    "m. naramienny przedni"
+                ],
+                pomocnicze: []
+            },
+            pozycja_wyjsciowa: [
+                "Połóż się na ławce płaskiej.",
+                "Chwyć sztangę nachwytem (palce wskazują przód, kciuki skierowane do środka) na taką szerokość, aby w połowie wykonywania ruchu kąt między ramieniem a przedramieniem wynosił 90 stopni.",
+                "Pośladki oraz plecy mocno dociśnij do ławeczki. Ściągnij łopatki."
+            ],
+            ruch: [
+                "Utrzymując prawidłową pozycję wyjściową, weź wdech i powolnym ruchem opuść sztangę w okolicę środkowej części klatki piersiowej.",
+                "Zatrzymaj ruch na ułamek sekundy, następnie zacznij unosić sztangę z powrotem do pozycji wyjściowej, wykonując w końcowej fazie ruchu wydech. Skup się, by wyciskanie następowało z mięśnia piersiowego.",
+                "Kiedy ramiona będą proste (unikaj przeprostu w łokciach), mocno dopnij mięsień piersiowy, po czym ponownie zacznij opuszczać sztangę wraz z wdechem.",
                 "Wykonaj wyznaczoną liczbę powtórzeń."
             ]
         }
@@ -371,6 +390,5 @@ function renderPagination(totalPages) {
 }
 
 renderExercises();
-
 
 });

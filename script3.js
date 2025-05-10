@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentPage = 1;
     let currentSort = 'nazwa';
     let currentFilter = '';
-    let recipeCache = { '': [] }; // Bufor dla przepisów ('' dla wszystkich)
+    let recipeCache = { '': [] };
 
     const przepisyContainer = document.getElementById("przepisy");
     const paginationContainer = document.getElementById("pagination");

@@ -235,7 +235,7 @@ nav ul li a {
     z-index: 1;
     transition: background 0.5s ease;
     animation: gradientShift 8s ease infinite;
-    width: 100%; /* Usunąć w razie czego */
+    width: 100%;
 }
 
 @keyframes gradientShift {

@@ -607,7 +607,7 @@ nav ul li a {
 }
   
 ::-webkit-scrollbar-thumb:hover {
-    background: #b30303; /* Jaśniejszy odcień czerwonego */
+    background: #b30303;
 }
 
 /* ------------------------- */

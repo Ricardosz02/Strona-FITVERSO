@@ -6,20 +6,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Tworzenie elementu img i przypisanie mu ścieżki do obrazka
     const logoImg = document.createElement('img');
-    logoImg.src = 'Pictures/Logo.png'; // Ścieżka do obrazka
-    logoImg.alt = 'Logo'; // Alternatywny tekst
+    logoImg.src = 'Pictures/Logo.png';
+    logoImg.alt = 'Logo';
 
     // Ustawienia rozmiaru obrazka
-    logoImg.style.height = 'auto'; // Automatyczna wysokość, zachowująca proporcje obrazu
-    logoImg.style.maxWidth = '100%'; // Zapewnienie, że obrazek nie wyjdzie poza kontener
-    logoImg.style.borderRadius = '10px'; // Zaokrąglone rogi obrazka
+    logoImg.style.height = 'auto';
+    logoImg.style.maxWidth = '100%';
+    logoImg.style.borderRadius = '10px';
 
     // Dodanie obrazka do linku logo
     logoSb.appendChild(logoImg);
 
     // Dodanie logo do kontenera
     const baner = document.getElementById('baner');
-    baner.insertBefore(logoSb, baner.firstChild); // Wstawienie logo na początek kontenera
+    baner.insertBefore(logoSb, baner.firstChild);
 
     // Efekt podświetlenia bloków
     const bloki = document.querySelectorAll(".blok");
@@ -109,158 +109,151 @@ document.addEventListener("DOMContentLoaded", function () {
     // ---------------------
     const cwiczenia = [
         {
-            nazwa: "Martwy ciąg sumo",
-            obraz: "Pictures/cwiczenie-dwuglowe1.jpg",
+            nazwa: "Wyciskanie sztangi na ławce płaskiej",
+            obraz: "Pictures/cwiczenie-klata1.jpg",
             miesnie: {
                 glowne: [
-                    "m. pośladkowy",
-                    "m. dwugłowe ud",
-                    "m. czworogłowe ud",
-                    "m. prostownik grzbietu"
-                ],
-                pomocnicze: []
-            },
-            pozycja_wyjsciowa: [
-                "Stań przed sztangą w bardzo szerokim rozkroku ze stopami skierowanymi na zewnątrz.",
-                "Utrzymuj zgięte kolana nad stopami, pilnuj, aby nie były skierowane do środka.",
-                "Plecy wyprostuj i pochyl około 45 stopni względem podłogi.",
-                "Sztangę trzymaj na szerokość ramion dosuniętą blisko do podudzi.",
-                "Łopatki utrzymuj dociśnięte do siebie, głowa jest przedłużeniem kręgosłupa."
-            ],
-            ruch: [
-                "Wykonaj głęboki wdech oraz mocne spięcie mięśni brzucha w celu uruchomienia tłoczni brzusznej.",
-                "Tułów utrzymaj w spięciu izometrycznym (sztywna bryła, żadnego ruchu).",
-                "Utrzymując ciało w pozycji wyjściowej, zacznij ruch od pracy wyprostnej w biodrach, równocześnie zacznij lekko prostować kolana.",
-                "Doprowadź do pełnego wyprostu w stawach biodrowych oraz kolanowych, nie odchylaj ciała w tył. Utrzymaj w pełni wyprostowaną pozycję ciała.",
-                "Spokojnym, kontrolowanym ruchem odłóż sztangę, zachowując technikę jak przy podnoszeniu."
-            ]
-        },
-        {
-            nazwa: "Zginanie nóg na maszynie leżąc",
-            obraz: "Pictures/cwiczenie-dwuglowe2.jpg",
-            miesnie: {
-                glowne: [
-                    "m. dwugłowy uda",
-                    "m. półścięgnisty",
-                    "m. półbłoniasty"
+                    "m. piersiowy większy",
+                    "m. trójgłowy ramienia",
+                    "m. naramienny przedni"
                 ],
                 pomocnicze: [
-                    "m. brzuchaty",
-                    "m. podkolanowy"
+                    "m. zębaty przedni",
+                    "m. kruczo-ramienny"
                 ]
             },
             pozycja_wyjsciowa: [
-                "Zajmij miejsce na maszynie, dostosowując ją do swojego wzrostu.",
-                "Kończyny dolne wyprostowane, wałek maszyny znajduje się kilka centymetrów poniżej łydek.",
-                "Chwyć za uchwyty znajdujące się po bokach siedziska."
+                "Połóż się na ławce płaskiej.",
+                "Stopy ustaw w lekkim rozkroku i mocno zaprzyj o podłoże.",
+                "Chwyć sztangę nachwytem (palce wskazują przód, kciuki skierowane do środka) na taką szerokość, aby w połowie wykonywania ruchu kąt między ramieniem a przedramieniem wynosił 90 stopni.",
+                "Łopatki ściągnięte, barki opuszczone i mocno dociśnięte do ławeczki.",
+                "Zachowaj naturalne ustawienie kręgosłupa – odcinek lędźwiowy lekko uniesiony, pośladki na ławeczce."
             ],
             ruch: [
-                "Ustaw miednicę w pozycji neutralnej i zegnij stopy grzbietowo (palce stóp na siebie).",
-                "Wraz z wydechem powietrza ugnij kończyny dolne, przeciągając wałek maszyny jak najdalej w stronę ud.",
-                "Utrzymuj tułów nieruchomo, postaraj się utrzymać nogi w pozycji maksymalnego napięcia mięśni przez ułamek sekundy.",
-                "Zegnij stopy podeszwowo (palce stóp od siebie).",
-                "Następnie wraz z wdechem powolnym tempem wróć do pozycji wyjściowej, kontrolując ruch.",
-                "Powtarzaj ruch wyznaczoną ilość razy."
-            ]
-        },
-        {
-            nazwa: "Zginanie nóg na maszynie siedząc",
-            obraz: "Pictures/cwiczenie-dwuglowe3.jpg",
-            miesnie: {
-                glowne: [
-                    "m. dwugłowy uda",
-                    "m. półścięgnisty",
-                    "m. półbłoniasty"
-                ],
-                pomocnicze: [
-                    "m. brzuchaty",
-                    "m. podkolanowy"
-                ]
-            },
-            pozycja_wyjsciowa: [
-                "Zajmij miejsce na maszynie, dostosowując ją do swojego wzrostu.",
-                "Kończyny dolne wyprostowane, wałek maszyny znajduje się kilka centymetrów poniżej łydek.",
-                "Chwyć za uchwyty znajdujące się po bokach siedziska."
-            ],
-            ruch: [
-                "Wraz z wydechem powietrza ugnij kończyny dolne, przeciągając wałek maszyny jak najdalej pod uda.",
-                "Utrzymuj tułów nieruchomo, postaraj się utrzymać nogi w pozycji maksymalnego napięcia mięśni przez ułamek sekundy.",
-                "Następnie wraz z wdechem powolnym tempem wróć do pozycji wyjściowej, kontrolując ruch.",
-                "Powtarzaj ruch wyznaczoną ilość razy."
-            ]
-        },
-        {
-            nazwa: "Martwy ciąg na prostych nogach",
-            obraz: "Pictures/cwiczenie-dwuglowe4.jpg",
-            miesnie: {
-                glowne: [
-                    "m. dwugłowy uda",
-                    "m. półścięgnisty",
-                    "m. półbłoniasty",
-                    "mięśnie grzbietu"
-                ],
-                pomocnicze: [
-                    "m. pośladkowy"
-                ]
-            },
-            pozycja_wyjsciowa: [
-                "Pozycja stojąca, stopy blisko siebie, ramiona wyprostowane wzdłuż tułowia, sztanga trzymana w dłoniach.",
-                "Plecy proste. Nogi minimalnie ugięte w kolanach."
-            ],
-            ruch: [
-                "Utrzymując prawidłową pozycję ciała, wykonaj wdech i rozpocznij opad tułowia w przód poprzez wysuwanie bioder w tył.",
-                "Kontynuuj ruch do momentu wyczucia rozciągania w okolicach mięśni dwugłowych ud.",
-                "Powróć do pozycji wyjściowej, prostując tułów poprzez wypchnięcie bioder w przód, i w końcowej fazie ruchu wykonaj wdech.",
+                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i powolnym ruchem opuść sztangę do środkowej części klatki piersiowej, uginając ramiona w łokciach.",
+                "Po przytrzymaniu sztangi w okolicach klatki przez ułamek sekundy zacznij unosić sztangę z powrotem do pozycji wyjściowej, wykonując wydech powietrza. Skup się, aby wyciskanie następowało z mięśnia piersiowego.",
+                "W momencie wyprostowania ramion ze sztangą (unikaj przeprostu w łokciach) mocno dopnij mięsień piersiowy, po czym ponownie zacznij opuszczać sztangę.",
                 "Wykonaj wyznaczoną liczbę powtórzeń."
             ]
         },
         {
-            nazwa: "Odwodzenie nogi w tył z wykorzystaniem linki wyciągu dolnego",
-            obraz: "Pictures/cwiczenie-dwuglowe5.jpg",
+            nazwa: "Wyciskanie sztangielek chwytem neutralnym na ławce ze skosem dodatnim",
+            obraz: "Pictures/cwiczenie-klata2.jpg",
             miesnie: {
                 glowne: [
-                    "m. pośladkowy",
-                    "m. dwugłowy uda",
-                    "m. półścięgnisty",
-                    "m. półbłoniasty"
+                    "m. piersiowy większy",
+                    "m. trójgłowy ramienia",
+                    "m. naramienny przedni"
                 ],
-                pomocnicze: []
+                pomocnicze: [
+                    "m. zębaty przedni",
+                    "m. kruczo-ramienny"
+                ]
             },
             pozycja_wyjsciowa: [
-                "Stań przodem do wyciągu. Pochyl tułów lekko w przód, a ręce oprzyj o maszynę.",
-                "Do nogi odwodzonej na wysokości kostki zamocuj linkę wyciągu dolnego.",
-                "Drugą nogę pozostaw na ziemi.",
-                "Lekko ugnij w kolanie nogę, którą odwodzisz.",
-                "Wzrok skieruj na wprost."
+                "Połóż się na ławce ze skosem dodatnim (kąt pochylenia 30-45 stopni).",
+                "Unieś sztangielki. Ramiona ustaw na szerokość barków, prostopadle do podłogi.",
+                "Odwróć nadgarstki tak, aby palce były skierowane ku sobie."
             ],
             ruch: [
-                "Zachowując prawidłową pozycję wyjściową, wraz z wydechem odwiedź nogę z zamocowaną linką w tył.",
-                "Mięsień pośladkowy powinien być teraz mocno napięty, utrzymaj tę pozycję przez sekundę.",
-                "Następnie powoli wróć nogą do pozycji wyjściowej, utrzymując napięcie mięśniowe na ile to możliwe.",
-                "Po zakończeniu serii powtórzeń wykonaj ćwiczenie na drugą nogę w taki sam sposób.",
+                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i powolnym ruchem opuść sztangielki w okolicę środkowej części klatki piersiowej.",
+                "Po przytrzymaniu sztangielek przez ułamek sekundy zacznij unosić sztangielki z powrotem do pozycji wyjściowej, wykonując wydech. Skup się, by wyciskanie następowało z mięśnia piersiowego.",
+                "W momencie wyprostowania ramion ze sztangielkami (unikaj przeprostu w łokciach) mocno dopnij mięsień piersiowy, po czym weź wdech i ponownie zacznij opuszczać ramiona.",
                 "Wykonaj wyznaczoną liczbę powtórzeń."
             ]
         },
         {
-            nazwa: "Unoszenie bioder ze sztangą w oparciu o ławeczkę",
-            obraz: "Pictures/cwiczenie-dwuglowe6.jpg",
+            nazwa: "Rozpiętki na maszynie butterfly",
+            obraz: "Pictures/cwiczenie-klata3.jpg",
             miesnie: {
                 glowne: [
-                    "m. pośladkowy",
-                    "m. dwugłowy uda",
-                    "m. czworogłowy uda"
+                    "m. piersiowy większy",
+                    "m. naramienny przedni"
                 ],
                 pomocnicze: []
             },
             pozycja_wyjsciowa: [
-                "Siad przed ławeczką prostą, z plecami opartymi o ławkę lub box na wysokości łopatek.",
-                "Nogi ugięte na podłożu, ustawione w lekkim rozkroku (nie szerzej niż szerokość bioder), stopy skierowane na wprost.",
-                "Ciężar ułożony na biodrach, ramiona przytrzymują sztangę."
+                "Pozycja siedząca na maszynie. Plecy mocno dociśnięte do oparcia.",
+                "Stopy w lekkim rozkroku mocno zaparte o podłoże.",
+                "Ramiona spoczywają na uchwytach przyrządu ustawione równolegle do podłogi. Łokcie zgięte. Przedramiona rozluźnione."
             ],
             ruch: [
-                "Wykonaj wdech do przepony, utrzymując prawidłową pozycję ciała, skieruj biodra wysoko w górę, tułów w spięciu izometrycznym (sztywna bryła, żadnego ruchu).",
-                "Przytrzymaj biodra w skrajnym górnym położeniu przez pół sekundy, nie przekraczając linii ciała, głowa jest przedłużeniem kręgosłupa.",
-                "Wraz z wydechem, w powolnym tempie wróć do pozycji wyjściowej, obniżając biodra w stronę ziemi, tak aby odłożyć ciężar/biodra na podłogę."
+                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i przyciągnij do siebie ramiona, mocno napinając mięśnie piersiowe. Utrzymaj maksymalne napięcie mięśniowe przez ułamek sekundy, po czym wykonaj wydech.",
+                "Weź wdech i powróć do pozycji wyjściowej.",
+                "Wykonaj wyznaczoną liczbę powtórzeń."
+            ]
+        },
+        {
+            nazwa: "Wyciskanie na maszynie hammer",
+            obraz: "Pictures/cwiczenie-klata4.jpg",
+            miesnie: {
+                glowne: [
+                    "m. piersiowy większy",
+                    "m. trójgłowy ramienia",
+                    "m. naramienny przedni"
+                ],
+                pomocnicze: [
+                    "m. zębaty przedni",
+                    "m. kruczo-ramienny"
+                ]
+            },
+            pozycja_wyjsciowa: [
+                "Pozycja siedząca na maszynie hammer.",
+                "Stopy w lekkim rozkroku, mocno zaparte o podłoże.",
+                "Siedzisko ustawione tak, aby uchwyty znajdowały się na wysokości środkowej bądź dolnej części klatki piersiowej.",
+                "Plecy i głowa dociśnięte do oparcia. Łopatki ściągnięte."
+            ],
+            ruch: [
+                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i odepchnij uchwyty od siebie, prostując ramiona w łokciach.",
+                "Kiedy ramiona są wyprostowane (unikaj przeprostu w łokciach), mocno dopnij mięsień piersiowy.",
+                "Wykonaj wydech, po czym zacznij uginać ramiona w łokciach, przyciągając uchwyty do klatki, jednocześnie wykonując płynny wdech.",
+                "Wykonaj wyznaczoną liczbę powtórzeń."
+            ]
+        },
+        {
+            nazwa: "Wyciskanie na suwnicy Smitha leżąc na ławce skośnej głową w dół",
+            obraz: "Pictures/cwiczenie-klata5.jpg",
+            miesnie: {
+                glowne: [
+                    "m. piersiowy większy",
+                    "m. trójgłowy ramienia",
+                    "m. naramienny przedni"
+                ],
+                pomocnicze: []
+            },
+            pozycja_wyjsciowa: [
+                "Połóż się na ławce ze skosem ujemnym.",
+                "Chwyć sztangę nachwytem (palce wskazują przód, kciuki skierowane do środka) na taką szerokość, by w połowie wykonywania ruchu kąt między ramieniem a przedramieniem wynosił 90 stopni.",
+                "Łopatki mocno ściągnięte, mięśnie brzucha i pośladków napięte."
+            ],
+            ruch: [
+                "Utrzymując prawidłową pozycję wyjściową, wykonaj wdech i powolnym ruchem opuść sztangę w okolicę dolnej części klatki piersiowej.",
+                "Po przytrzymaniu sztangi przez ułamek sekundy zacznij unosić sztangę z powrotem do pozycji wyjściowej, wydychając powietrze w końcowej fazie ruchu.",
+                "W momencie wyprostowania ramion ze sztangą (unikaj przeprostu w łokciach), mocno dopnij mięsień piersiowy, po czym ponownie zacznij opuszczać sztangę.",
+                "Wykonaj ruch zadaną liczbę powtórzeń."
+            ]
+        },
+        {
+            nazwa: "Wyciskanie na suwnicy Smitha leżąc na ławce płaskiej",
+            obraz: "Pictures/cwiczenie-klata6.jpg",
+            miesnie: {
+                glowne: [
+                    "m. piersiowy większy, część środkowa",
+                    "m. trójgłowy ramienia",
+                    "m. naramienny przedni"
+                ],
+                pomocnicze: []
+            },
+            pozycja_wyjsciowa: [
+                "Połóż się na ławce płaskiej.",
+                "Chwyć sztangę nachwytem (palce wskazują przód, kciuki skierowane do środka) na taką szerokość, aby w połowie wykonywania ruchu kąt między ramieniem a przedramieniem wynosił 90 stopni.",
+                "Pośladki oraz plecy mocno dociśnij do ławeczki. Ściągnij łopatki."
+            ],
+            ruch: [
+                "Utrzymując prawidłową pozycję wyjściową, weź wdech i powolnym ruchem opuść sztangę w okolicę środkowej części klatki piersiowej.",
+                "Zatrzymaj ruch na ułamek sekundy, następnie zacznij unosić sztangę z powrotem do pozycji wyjściowej, wykonując w końcowej fazie ruchu wydech. Skup się, by wyciskanie następowało z mięśnia piersiowego.",
+                "Kiedy ramiona będą proste (unikaj przeprostu w łokciach), mocno dopnij mięsień piersiowy, po czym ponownie zacznij opuszczać sztangę wraz z wdechem.",
+                "Wykonaj wyznaczoną liczbę powtórzeń."
             ]
         }
     ];
@@ -397,6 +390,5 @@ function renderPagination(totalPages) {
 }
 
 renderExercises();
-
 
 });

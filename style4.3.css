@@ -110,8 +110,8 @@ nav ul li a {
 }
   
 #logo:hover {
-    transform: scale(1.05); /* Lekkie powiększenie */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Subtelny cień */
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
   
 /* Logo (mobilne i tabletowe) */
@@ -130,8 +130,8 @@ nav ul li a {
 }
   
 #logo_sb:hover {
-    transform: scale(1.05); /* Lekkie powiększenie */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Subtelny cień */
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 /* ----------------------------------------- */
@@ -237,7 +237,7 @@ nav ul li a {
 }
 
 .blok2 .exercise-details.visible {
-    max-height: 800px; /* Zwiększona wartość dla większej ilości treści */
+    max-height: 800px;
     opacity: 1;
     padding: 10px 10px;
 }

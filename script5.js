@@ -6,20 +6,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Tworzenie elementu img i przypisanie mu ścieżki do obrazka
     const logoImg = document.createElement('img');
-    logoImg.src = 'Pictures/Logo.png'; // Ścieżka do obrazka
-    logoImg.alt = 'Logo'; // Alternatywny tekst
+    logoImg.src = 'Pictures/Logo.png';
+    logoImg.alt = 'Logo';
 
     // Ustawienia rozmiaru obrazka
-    logoImg.style.height = 'auto'; // Automatyczna wysokość, zachowująca proporcje obrazu
-    logoImg.style.maxWidth = '100%'; // Zapewnienie, że obrazek nie wyjdzie poza kontener
-    logoImg.style.borderRadius = '10px'; // Zaokrąglone rogi obrazka
+    logoImg.style.height = 'auto';
+    logoImg.style.maxWidth = '100%';
+    logoImg.style.borderRadius = '10px';
 
     // Dodanie obrazka do linku logo
     logoSb.appendChild(logoImg);
 
     // Dodanie logo do kontenera
     const baner = document.getElementById('baner');
-    baner.insertBefore(logoSb, baner.firstChild); // Wstawienie logo na początek kontenera
+    baner.insertBefore(logoSb, baner.firstChild);
 
     // Efekt podświetlenia bloków
     const bloki = document.querySelectorAll(".blok");
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Kalkulator BMI
     document.getElementById("calculateBMI").addEventListener("click", function () {
         const weight = parseFloat(document.getElementById("weight").value);
-        const height = parseFloat(document.getElementById("height").value) / 100;  // Zamieniamy na metry
+        const height = parseFloat(document.getElementById("height").value) / 100;
         const resultElement = document.getElementById("bmiResult");
         const infoElement = document.getElementById("bmiInfo");
         // Wskaźnik graficzny BMI
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (isNaN(weight) || isNaN(height) || height <= 0 || weight <= 0) {
             resultElement.textContent = "Wprowadź poprawne dane!";
             resultElement.style.color = "white";
-            infoElement.innerHTML = ""; // wyczyść opis
+            infoElement.innerHTML = "";
             return;
         }
 
@@ -199,9 +199,9 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
     `;
 
-    infoElement.classList.remove("fade-in");   // reset animacji
-    void infoElement.offsetWidth;              // wymuszenie przeliczenia layoutu
-    infoElement.classList.add("fade-in");      // dodanie animacji
+    infoElement.classList.remove("fade-in");
+    void infoElement.offsetWidth;
+    infoElement.classList.add("fade-in");
 
     });
 
@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 activityFactor = null; // Brak wartości dla domyślnego wyboru
                 break;
             default:
-                activityFactor = null; // Domyślnie brak wartości dla nieznanego poziomu aktywności
+                activityFactor = null;
         }
 
         // Sprawdzanie, czy wybrano poziom aktywności
@@ -265,8 +265,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const maintenanceCalories = bmr * activityFactor;
-        const calorieReduction = maintenanceCalories - 500; // Redukcja o 500 kcal na dzień
-        const calorieSurplus = maintenanceCalories + 500; // Nadwyżka o 500 kcal na dzień
+        const calorieReduction = maintenanceCalories - 500;
+        const calorieSurplus = maintenanceCalories + 500;
 
         // Wyświetlanie wyników
         calorieResultElement.classList.remove("fade-in");

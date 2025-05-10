@@ -111,8 +111,8 @@ nav ul li a {
 }
   
 #logo:hover {
-    transform: scale(1.05); /* Lekkie powiększenie */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Subtelny cień */
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
   
 /* Logo (mobilne i tabletowe) */
@@ -131,8 +131,8 @@ nav ul li a {
 }
   
 #logo_sb:hover {
-    transform: scale(1.05); /* Lekkie powiększenie */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Subtelny cień */
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 /* ----------------------------------------- */
@@ -142,7 +142,7 @@ nav ul li a {
     flex-direction: column;
     background-color: #292727;
     width: 100%;
-    min-height: 100vh; /* Zapobiega przepełnieniu */
+    min-height: 100vh;
 }
 
 .blok-container {
@@ -210,19 +210,19 @@ nav ul li a {
 
 #bmiPointer {
     position: absolute;
-    top: -15px; /* nad paskiem */
+    top: -15px;
     font-size: 20px;
     color: black;
     transition: left 0.3s ease;
     pointer-events: none;
-    opacity: 0; /* domyślnie ukryty */
+    opacity: 0;
 }
 
 
 /* animacja BMI */
 .fade-in {
     opacity: 0;
-    transform: translateY(10px); /* lekkie przesunięcie w dół */
+    transform: translateY(10px);
     animation: fadeIn 0.6s ease-out forwards;
 }
 
