@@ -118,6 +118,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const sortSelect = document.getElementById("sortSelect");
     const filterSelect = document.getElementById("filterSelect");
 
+    // Ładowanie przepisów
+    if (przepisyContainer) {
+        przepisyContainer.innerHTML = `
+            <div class="recipe-placeholder">
+                <p>Ładowanie przepisów...</p>
+                <div class="spinner"></div>
+            </div>
+        `;
+    }
+
     // Funkcja przewijająca do góry
     function scrollToTop() {
         const scrollTargets = [

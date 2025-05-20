@@ -534,6 +534,40 @@ nav ul li a {
     font-weight: bold;
 }
 
+/* Placeholder dla ładowania przepisów */
+.recipe-placeholder {
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+.recipe-placeholder p {
+    margin: 0 0 20px 0;
+    line-height: 1.5;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #312A2A;
+    border-top: 5px solid #960303;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 /* --------------------------------------- */
 /* Paginacja */
 
